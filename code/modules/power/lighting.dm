@@ -525,7 +525,7 @@
 	material = /decl/material/solid/glass
 	matter = list(/decl/material/solid/metal/aluminium = MATTER_AMOUNT_REINFORCEMENT)
 
-	b_range = 8
+	b_range = 6
 	b_power = 0.8
 	b_color = LIGHT_COLOR_HALOGEN
 	lighting_modes = list(
@@ -540,8 +540,8 @@
 /obj/item/light/tube/large
 	w_class = ITEM_SIZE_SMALL
 	name = "large light tube"
-	b_power = 4
-	b_range = 12
+	b_power = 1
+	b_range = 8
 
 /obj/item/light/tube/large/party/Initialize() //Randomly colored light tubes. Mostly for testing, but maybe someone will find a use for them.
 	. = ..()
