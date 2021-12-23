@@ -5750,7 +5750,7 @@
 	icon_state = "2-4"
 	},
 /turf/simulated/floor/tiled,
-/area/security/lobby)
+/area/hallway/primary/firstdeck/fore)
 "avO" = (
 /obj/effect/floor_decal/corner/pink/mono,
 /obj/machinery/body_scanconsole{
@@ -6069,7 +6069,7 @@
 	icon_state = "chair_preview"
 	},
 /turf/simulated/floor/tiled,
-/area/security/lobby)
+/area/hallway/primary/firstdeck/fore)
 "axN" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /obj/structure/bed/chair/office/light{
@@ -6433,7 +6433,7 @@
 	icon_state = "1-4"
 	},
 /turf/simulated/floor/tiled,
-/area/security/lobby)
+/area/hallway/primary/firstdeck/fore)
 "azi" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -6521,7 +6521,7 @@
 	},
 /obj/effect/floor_decal/corner/red/mono,
 /turf/simulated/floor/tiled,
-/area/security/lobby)
+/area/hallway/primary/firstdeck/fore)
 "aAe" = (
 /obj/effect/floor_decal/corner/red{
 	dir = 10
@@ -6530,7 +6530,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
-/area/security/lobby)
+/area/hallway/primary/firstdeck/fore)
 "aAl" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -6623,7 +6623,7 @@
 /obj/effect/wallframe_spawn/reinforced,
 /obj/effect/paint_stripe/security,
 /turf/simulated/floor/plating,
-/area/security/lobby)
+/area/hallway/primary/firstdeck/fore)
 "aBq" = (
 /obj/effect/floor_decal/industrial/outline/grey,
 /obj/structure/rack{
@@ -11330,7 +11330,7 @@
 /area/shuttle/escape_pod16/station)
 "bUH" = (
 /turf/simulated/floor/tiled,
-/area/security/lobby)
+/area/hallway/primary/firstdeck/fore)
 "bUZ" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -11369,12 +11369,6 @@
 /obj/structure/bed/chair/shuttle,
 /turf/simulated/floor/plating,
 /area/shuttle/escape_pod17/station)
-"bVw" = (
-/obj/effect/floor_decal/corner/red{
-	dir = 10
-	},
-/turf/simulated/floor/tiled,
-/area/security/lobby)
 "bVA" = (
 /obj/machinery/alarm{
 	pixel_y = 24
@@ -11828,7 +11822,7 @@
 	name = "Privacy Shutters"
 	},
 /turf/simulated/floor/tiled/dark/monotile,
-/area/security/lobby)
+/area/hallway/primary/firstdeck/fore)
 "cEb" = (
 /obj/structure/closet/secure_closet/medical_torch,
 /obj/effect/floor_decal/industrial/outline/grey,
@@ -12722,7 +12716,7 @@
 	pixel_y = 24
 	},
 /turf/simulated/floor/tiled,
-/area/security/lobby)
+/area/hallway/primary/firstdeck/fore)
 "dQb" = (
 /obj/effect/floor_decal/industrial/outline/grey,
 /turf/simulated/floor/tiled/techfloor,
@@ -14104,7 +14098,7 @@
 	},
 /obj/effect/catwalk_plated,
 /turf/simulated/floor/plating,
-/area/security/lobby)
+/area/hallway/primary/firstdeck/fore)
 "gta" = (
 /obj/structure/railing/mapped{
 	dir = 1;
@@ -14383,7 +14377,7 @@
 "gTR" = (
 /obj/effect/paint_stripe/security,
 /turf/simulated/wall/r_wall/prepainted,
-/area/security/lobby)
+/area/hallway/primary/firstdeck/fore)
 "gUp" = (
 /obj/effect/floor_decal/corner/red{
 	dir = 9
@@ -14396,7 +14390,7 @@
 	icon_state = "chair_preview"
 	},
 /turf/simulated/floor/tiled,
-/area/security/lobby)
+/area/hallway/primary/firstdeck/fore)
 "gUu" = (
 /obj/effect/wallframe_spawn/reinforced/hull,
 /obj/machinery/door/firedoor,
@@ -15283,7 +15277,7 @@
 	opacity = 0
 	},
 /turf/simulated/floor/tiled/monotile,
-/area/security/lobby)
+/area/hallway/primary/firstdeck/fore)
 "iib" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -15435,7 +15429,7 @@
 	pixel_x = 24
 	},
 /turf/simulated/floor/tiled,
-/area/security/lobby)
+/area/hallway/primary/firstdeck/fore)
 "itb" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 5;
@@ -17826,7 +17820,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/plating,
-/area/security/lobby)
+/area/hallway/primary/firstdeck/fore)
 "lKb" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 8
@@ -19179,7 +19173,7 @@
 	dir = 6
 	},
 /turf/simulated/floor/tiled,
-/area/security/lobby)
+/area/hallway/primary/firstdeck/fore)
 "nLo" = (
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 5
@@ -20968,7 +20962,7 @@
 "pUr" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /turf/simulated/floor/tiled/dark/monotile,
-/area/security/lobby)
+/area/hallway/primary/firstdeck/fore)
 "pWb" = (
 /turf/simulated/floor/tiled/white,
 /area/rnd/research)
@@ -23336,7 +23330,7 @@
 /obj/machinery/door/firedoor,
 /obj/effect/paint_stripe/security,
 /turf/simulated/floor/plating,
-/area/security/lobby)
+/area/hallway/primary/firstdeck/fore)
 "sxT" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/structure/closet/l3closet/security,
@@ -24445,7 +24439,7 @@
 "uJn" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled/dark/monotile,
-/area/security/lobby)
+/area/hallway/primary/firstdeck/fore)
 "uKa" = (
 /obj/structure/catwalk,
 /turf/simulated/floor/plating,
@@ -24928,7 +24922,7 @@
 "vTY" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled,
-/area/security/lobby)
+/area/hallway/primary/firstdeck/fore)
 "vUl" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -25854,7 +25848,7 @@
 	opacity = 0
 	},
 /turf/simulated/floor/tiled/monotile,
-/area/security/lobby)
+/area/hallway/primary/firstdeck/fore)
 "xRm" = (
 /obj/machinery/atmospherics/pipe/simple/visible{
 	dir = 9
@@ -36002,7 +35996,7 @@ nLd
 vTY
 vTY
 lJP
-bVw
+aFV
 aBd
 uJn
 aDF
@@ -36204,7 +36198,7 @@ dPA
 bUH
 bUH
 grI
-bVw
+aFV
 aBd
 uJn
 hQT
