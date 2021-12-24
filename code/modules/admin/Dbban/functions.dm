@@ -290,6 +290,16 @@
 	var/DBQuery/query_update = dbcon.NewQuery("UPDATE `erro_ban` SET `unbanned` = TRUE, `unbanned_datetime` = NOW(), `unbanned_ckey` = '[unban_ckey]', `unbanned_computerid` = '[unban_computerid]', `unbanned_ip` = '[unban_ip]' WHERE `id` = [id]")
 	query_update.Execute()
 
+/client/proc/DB_ban_panel()
+	set name = "Banning Panel"
+	set category = "Admin"
+	set desc = "Allow edit existing bans or create new ones."
+
+	if(!holder)
+		return
+
+	holder.DB_ban_panel()
+
 /datum/admins/proc/DB_ban_panel(var/playerckey = null, var/adminckey = null, var/playerip = null, var/playercid = null, var/dbbantype = null, var/match = null)
 	if(!usr.client)
 		return

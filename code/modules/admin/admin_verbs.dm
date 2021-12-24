@@ -482,16 +482,6 @@ var/global/list/admin_verbs_mod = list(
 	SSstatistics.add_field_details("admin_verb","UBP") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 	return
 
-/client/proc/DB_ban_panel()
-	set name = "Banning Panel"
-	set category = "Admin"
-	set desc = "Edit admin permissions"
-
-	if(!holder)
-		return
-
-	holder.DB_ban_panel()
-
 /client/proc/game_panel()
 	set name = "Game Panel"
 	set category = "Admin"
