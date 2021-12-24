@@ -85,7 +85,8 @@
 	if(eyeobj)
 		eyeobj.possess(src)
 
-	client.update_skybox(1)
+	spawn(1)   //temporary
+		client.update_skybox(1)
 	events_repository.raise_event(/decl/observ/logged_in, src)
 
 	hud_reset(TRUE)
