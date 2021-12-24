@@ -3,8 +3,8 @@
 	base_floor_type = /turf/simulated/floor/reinforced/airless
 	base_floor_area = /area/endeavour_exterior
 
-/area/hallway
-	area_flags = AREA_FLAG_HALLWAY
+/area/crew_quarters
+	secure = TRUE
 
 //Ported areas that do not exist in Nebula Base.
 /area/rnd/xenobiology/xenoflora
@@ -380,6 +380,7 @@
 	requires_power = 1
 	dynamic_lighting = 1
 	area_flags = AREA_FLAG_RAD_SHIELDED | AREA_FLAG_ION_SHIELDED
+	secure = TRUE
 
 /area/perseverance/cockpit
 	name = "\improper ISEO Perseverance - Cockpit"
@@ -553,6 +554,9 @@
 
 // Command
 
+/area/command
+	secure = TRUE
+
 /area/command/captainmess
 	name = "Officer's Mess"
 	icon_state = "bar"
@@ -629,6 +633,9 @@
 
 // Engineering
 
+/area/engineering
+	secure = TRUE
+
 /area/engineering/shieldbay
 	name = "Shield Bay"
 	icon_state = "engineering"
@@ -671,6 +678,7 @@
 /area/vacant
 	name = "\improper Vacant Area"
 	icon_state = "construction"
+	secure = TRUE
 
 /area/vacant/armory
 	name = "\improper Vacant Armory"
@@ -720,6 +728,9 @@
 	icon_state = "bar"
 
 // Storage
+/area/storage
+	secure = TRUE
+
 /area/storage/auxillary
 	req_access = list(access_cargo)
 
@@ -759,6 +770,7 @@
 
 /area/quartermaster
 	req_access = list(access_cargo)
+	secure = TRUE
 
 /area/quartermaster/office
 	name = "\improper Supply Office"
@@ -964,6 +976,7 @@
 
 /area/security
 	req_access = list(access_security)
+	secure = TRUE
 
 /area/security/processing
 	name = "Security - Processing Room"
@@ -1032,6 +1045,9 @@
 
 // Medbay
 
+/area/medical
+	secure = TRUE
+
 /area/medical/equipstorage
 	name = "\improper Medical Equipment Storage"
 	icon_state = "medbay4"
@@ -1045,7 +1061,7 @@
 /area/medical/foyer
 	name = "\improper Medical Foyer"
 	icon_state = "medbay"
-	req_access = list(list(access_medical,access_morgue,access_forensics_lockers))
+	req_access = list(access_medical,access_morgue,access_forensics_lockers)
 
 /area/medical/foyer/storeroom
 	name = "\improper Medical Storeroom"
@@ -1129,11 +1145,13 @@
 	icon_state = "teleporter"
 	sound_env = SMALL_ENCLOSED
 	req_access = list(access_teleporter)
+	secure = TRUE
 
 /area/eva
 	name = "\improper EVA Storage"
 	icon_state = "eva"
 	req_access = list(access_eva)
+	secure = TRUE
 
 /area/aux_eva
 	name = "\improper Command EVA Storage"
@@ -1143,6 +1161,7 @@
 /area/thruster
 	icon_state = "thruster"
 	req_access = list(access_engine)
+	secure = TRUE
 
 /area/thruster/d1port
 	name = "\improper First Deck Port Nacelle"
@@ -1177,6 +1196,7 @@
 	name = "\improper ISEO Endeavour Bridge"
 	icon_state = "bridge"
 	req_access = list(access_bridge)
+	secure = TRUE
 
 /area/bridge/hallway
 	name = "\improper Bridge Access Hallway"
@@ -1439,7 +1459,7 @@
 // Research
 /area/assembly
 	req_access = list(access_robotics)
-
+	secure = TRUE
 /area/assembly/chargebay
 	name = "\improper Mech Bay"
 	icon_state = "mechbay"
@@ -1460,6 +1480,7 @@
 
 /area/rnd
 	req_access = list(access_research)
+	secure = TRUE
 
 /area/rnd/misc_lab
 	name = "\improper Miscellaneous Research"
@@ -1526,6 +1547,7 @@
 	name = "\improper Custodial Closet"
 	icon_state = "janitor"
 	req_access = list(access_janitor)
+	secure = TRUE
 
 /area/janitor/storage
 	name = "\improper Custodial Storage Closet"
@@ -1550,9 +1572,10 @@
 	name = "\improper Cabin Four"
 
 // Tcomm
-/area/tcommsat/
+/area/tcommsat
 	ambience = list('sound/ambience/ambisin2.ogg', 'sound/ambience/signal.ogg', 'sound/ambience/signal.ogg', 'sound/ambience/ambigen10.ogg')
 	req_access = list(access_tcomsat)
+	secure = TRUE
 
 /area/tcommsat/chamber
 	name = "\improper Telecoms Central Compartment"
@@ -1563,6 +1586,8 @@
 	icon_state = "tcomsatcomp"
 
 // Chapel
+/area/chapel
+	secure = TRUE
 
 /area/chapel/main
 	name = "\improper Chapel"
