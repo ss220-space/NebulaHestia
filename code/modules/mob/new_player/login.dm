@@ -3,6 +3,9 @@
 	ASSERT(loc == null)
 
 	update_Login_details()	//handles setting lastKnownIP and computer_id for use by the ban systems as well as checking for multikeying
+	if(config.usewhitelist_database && config.overflow_server_url && !whitelist_check())
+		src << link(config.overflow_server_url)
+
 	if(join_motd)
 		to_chat(src, "<div class=\"motd\">[join_motd]</div>")
 	to_chat(src, "<div class='info'>Game ID: <div class='danger'>[game_id]</div></div>")
@@ -48,3 +51,25 @@
 		to_chat(client, SPAN_NOTICE("You have unread updates in the changelog."))
 		if(config.aggressive_changelog)
 			client.changes()
+
+	/mob/new_player/proc/whitelist_check()
+	// Admins are immune to overflow rerouting
+	if(!config.usewhitelist_database)
+		return TRUE
+	if(check_rights(rights_required = 0, show_msg = 0))
+		return TRUE
+	establish_db_connection()
+	//Whitelisted people are immune to overflow rerouting.
+	if(dbcon.IsConnected())
+		var/dbckey = sql_sanitize_text(src.ckey)
+		var/DBQuery/find_ticket = dbcon.NewQuery(
+			"SELECT ckey FROM ckey_whitelist WHERE ckey='[dbckey]' AND is_valid=true AND port=[world.port] AND date_start<=NOW() AND (NOW()<date_end OR date_end IS NULL)"
+		)
+
+		if(!find_ticket.Execute())
+			to_world_log(dbcon.ErrorMsg())
+			return FALSE
+		if(!find_ticket.NextRow())
+			return FALSE
+		return TRUE
+	return FALSE
