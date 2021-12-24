@@ -2185,6 +2185,7 @@
 	},
 /obj/machinery/light,
 /obj/effect/floor_decal/industrial/warning/corner,
+/obj/machinery/portable_atmospherics/canister/oxygen,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/exploration_shuttle/cargo)
 "fr" = (
@@ -3272,8 +3273,8 @@
 /turf/simulated/floor/tiled/monotile,
 /area/quartermaster/exploration)
 "iP" = (
-/obj/machinery/portable_atmospherics/canister/oxygen,
 /obj/effect/floor_decal/industrial/outline/yellow,
+/obj/structure/dispenser/oxygen,
 /turf/simulated/floor/tiled/monotile,
 /area/quartermaster/exploration)
 "iR" = (
@@ -7110,7 +7111,7 @@
 	icon_state = "4-8"
 	},
 /obj/effect/floor_decal/corner/green/mono,
-/turf/simulated/floor/plating,
+/turf/simulated/floor/tiled/dark/monotile,
 /area/crew_quarters/observation)
 "rC" = (
 /obj/structure/cable/cyan{
@@ -11549,7 +11550,7 @@
 	icon_state = "2-8"
 	},
 /obj/effect/floor_decal/corner/green/mono,
-/turf/simulated/floor/plating,
+/turf/simulated/floor/tiled/dark/monotile,
 /area/crew_quarters/observation)
 "Qd" = (
 /turf/simulated/wall/r_wall/map_preset/tan,
