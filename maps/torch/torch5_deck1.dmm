@@ -18641,6 +18641,9 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
 	},
+/obj/machinery/nuclear_cylinder_storage/prefilled{
+	req_access = list("ACCESS_VAULT")
+	},
 /turf/simulated/floor/tiled/dark/monotile,
 /area/security/nuke_storage)
 "mXb" = (
