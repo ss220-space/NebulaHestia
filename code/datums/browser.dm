@@ -31,10 +31,10 @@
 
 	if(ntitle)
 		set_title(ntitle)
-	
+
 	if(nwidth)
 		width = nwidth
-	
+
 	if(nheight)
 		height = nheight
 
@@ -151,9 +151,9 @@
  * Otherwise, the user mob's machine var will be reset directly.
  */
 /proc/onclose(mob/user, windowid, atom/ref)
-	if(!user || !user.client) 
+	if(!user || !user.client)
 		return
-	
+
 	var/param = ref ? "\ref[ref]" : "null"
 	addtimer(CALLBACK(user, /mob/proc/post_onclose, windowid, param), 2)
 
@@ -162,9 +162,9 @@
 		winset(src, windowid, "on-close=\".windowclose [param]\"")
 
 
-/** 
+/**
  * the on-close client verb
- * 
+ *
  * called when a browser popup window is closed after registering with proc/onclose()
  * if a valid atom reference is supplied, call the atom's Topic() with "close=1"
  * otherwise, just reset the client mob's machine var.
@@ -181,3 +181,7 @@
 
 	if (src?.mob)
 		mob.unset_machine()
+
+// Resize already opened window
+/datum/browser/proc/resize(var/new_width = width, var/new_height = height)
+    winset(user, "[window_id]", "size=[new_width]x[new_height]")
