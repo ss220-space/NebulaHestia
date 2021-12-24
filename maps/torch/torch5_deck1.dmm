@@ -7922,7 +7922,9 @@
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
-/obj/machinery/power/emitter/anchored,
+/obj/machinery/power/emitter/anchored{
+	req_access = list("ACCESS_RESEARCH")
+	},
 /obj/structure/cable/green{
 	icon_state = "0-4"
 	},

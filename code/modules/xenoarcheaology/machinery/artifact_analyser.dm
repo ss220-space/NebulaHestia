@@ -3,6 +3,8 @@
 	desc = "Studies the emissions of anomalous materials to discover their uses."
 	icon = 'icons/obj/xenoarchaeology.dmi'
 	icon_state = "xenoarch_analyser1"
+	anchored = 1
+	density = 1
 	var/obj/scanned_object
 	var/obj/machinery/artifact_scanpad/owned_scanner
 	var/scanning_counter = 0
@@ -17,7 +19,7 @@
 
 /obj/machinery/artifact_analyser/on_update_icon()
 	icon_state = "xenoarch_analyser[operable()]"
-	
+
 /obj/machinery/artifact_analyser/Initialize()
 	. = ..()
 	reconnect_scanner()
@@ -93,7 +95,7 @@
 		state("Error communicating with the scanner pad.")
 		stop_scan()
 		return
-	
+
 	if(!scanned_object || scanned_object.loc != owned_scanner.loc)
 		state("Unable to locate scanned object. Ensure it was not moved in the process.")
 		stop_scan()
@@ -123,19 +125,19 @@
 			if(O == owned_scanner || O.invisibility || !O.simulated)
 				continue
 			set_object(O)
-			scanning_counter = scan_duration	
+			scanning_counter = scan_duration
 			state("Scanning of \the [O] initiated.")
 			playsound(loc, "sound/effects/ping.ogg", 50, 1)
 			break
 		if(!scanned_object)
 			state("Unable to isolate a scan target.")
 		. = TOPIC_REFRESH
-	
+
 	if(href_list["halt_scan"])
 		stop_scan()
 		state("Scanning halted.")
 		. = TOPIC_REFRESH
-	
+
 	if(href_list["print"])
 		if(length(stored_scan))
 			playsound(loc, "sound/machines/dotprinter.ogg", 30, 1)
