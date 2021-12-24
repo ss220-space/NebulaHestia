@@ -2,7 +2,6 @@
 #define MODPACK_SS220_CONTENT
 #include "../../../code/modules/power/lighting.dm"
 #include "../../../code/modules/xenoarcheaology/machinery/artifact_analyser.dm"
-#include "../../../code/modules/admin/buildmode/build_mode.dm"
 #include "fix_override.dm"
 #include "ss220_content.dm"
 #endif
