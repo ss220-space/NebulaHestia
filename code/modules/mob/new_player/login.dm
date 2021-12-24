@@ -52,7 +52,7 @@
 		if(config.aggressive_changelog)
 			client.changes()
 
-	/mob/new_player/proc/whitelist_check()
+/mob/new_player/proc/whitelist_check()
 	// Admins are immune to overflow rerouting
 	if(!config.usewhitelist_database)
 		return TRUE
