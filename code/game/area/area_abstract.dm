@@ -1,5 +1,7 @@
 /area/hallway
 	name = "hallway"
+	secure = TRUE
+	area_flags = AREA_FLAG_HALLWAY
 
 /area/maintenance
 	area_flags = AREA_FLAG_RAD_SHIELDED
@@ -7,6 +9,7 @@
 	turf_initializer = /decl/turf_initializer/maintenance
 	forced_ambience = list('sound/ambience/maintambience.ogg')
 	req_access = list(access_maint_tunnels)
+	secure = TRUE
 
 /area/shuttle
 	requires_power = 0
