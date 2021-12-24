@@ -7,7 +7,7 @@
 
 	layer = SIDE_WINDOW_LAYER
 	anchored = 1.0
-	atom_flags = ATOM_FLAG_NO_TEMP_CHANGE | ATOM_FLAG_CAN_BE_PAINTED
+	atom_flags = ATOM_FLAG_NO_TEMP_CHANGE | ATOM_FLAG_CHECKS_BORDER | ATOM_FLAG_CAN_BE_PAINTED
 	obj_flags = OBJ_FLAG_ROTATABLE
 	alpha = 180
 	material = /decl/material/solid/glass
@@ -51,6 +51,7 @@
 		if(!isnull(dir_to_set))
 			set_dir(dir_to_set)
 		if(is_fulltile())
+			atom_flags &= ~ATOM_FLAG_CHECKS_BORDER
 			layer = FULL_WINDOW_LAYER
 		. = INITIALIZE_HINT_LATELOAD
 
