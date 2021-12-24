@@ -2352,9 +2352,6 @@
 /obj/machinery/cell_charger,
 /turf/simulated/floor/tiled/white/monotile,
 /area/medical/staging)
-"afI" = (
-/turf/simulated/wall/prepainted,
-/area/hallway/primary/firstdeck/fore)
 "afK" = (
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 5
@@ -3212,7 +3209,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/catwalk,
 /turf/simulated/floor/plating,
-/area/hallway/primary/firstdeck/fore)
+/area/maintenance/firstdeck/forestarboard)
 "ahJ" = (
 /obj/structure/table/woodentable/walnut,
 /obj/item/flashlight/lamp/green,
@@ -3714,7 +3711,7 @@
 /obj/structure/catwalk,
 /obj/machinery/door/airlock/hatch/maintenance,
 /turf/simulated/floor/plating,
-/area/hallway/primary/firstdeck/fore)
+/area/maintenance/firstdeck/forestarboard)
 "aiX" = (
 /obj/random/junk,
 /obj/structure/railing/mapped{
@@ -3869,10 +3866,6 @@
 /area/security/detectives_office)
 "ajQ" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
-/obj/machinery/light_switch{
-	pixel_x = -6;
-	pixel_y = -24
-	},
 /obj/machinery/photocopier,
 /turf/simulated/floor/tiled/monotile,
 /area/security/detectives_office)
@@ -3904,7 +3897,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/catwalk,
 /turf/simulated/floor/plating,
-/area/hallway/primary/firstdeck/fore)
+/area/maintenance/firstdeck/forestarboard)
 "ajZ" = (
 /obj/effect/paint_stripe/security,
 /turf/simulated/wall/r_wall/prepainted,
@@ -4103,7 +4096,7 @@
 /obj/structure/disposalpipe/segment,
 /obj/structure/catwalk,
 /turf/simulated/floor/plating,
-/area/hallway/primary/firstdeck/fore)
+/area/maintenance/firstdeck/forestarboard)
 "akX" = (
 /obj/effect/paint_stripe/science,
 /turf/simulated/wall/map_preset/tan,
@@ -4699,7 +4692,7 @@
 /obj/machinery/door/airlock/hatch/maintenance,
 /obj/machinery/door/firedoor,
 /turf/simulated/floor/tiled/steel_ridged,
-/area/hallway/primary/firstdeck/fore)
+/area/maintenance/firstdeck/forestarboard)
 "apk" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -5115,7 +5108,7 @@
 	},
 /obj/machinery/door/firedoor,
 /turf/simulated/floor/tiled/steel_ridged,
-/area/hallway/primary/firstdeck/fore)
+/area/maintenance/firstdeck/forestarboard)
 "asv" = (
 /obj/effect/wallframe_spawn/reinforced,
 /obj/machinery/door/blast/regular{
@@ -5447,10 +5440,7 @@
 /obj/machinery/atmospherics/pipe/simple/visible/fuel,
 /obj/machinery/door/firedoor,
 /turf/simulated/floor/tiled/steel_ridged,
-/area/hallway/primary/firstdeck/aft)
-"auk" = (
-/turf/simulated/wall/r_wall/prepainted,
-/area/hallway/primary/firstdeck/aft)
+/area/maintenance/firstdeck/aftstarboard)
 "auy" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -5594,14 +5584,11 @@
 	},
 /obj/machinery/door/firedoor,
 /turf/simulated/floor/tiled/steel_ridged,
-/area/hallway/primary/firstdeck/center)
+/area/maintenance/firstdeck/centralstarboard)
 "auM" = (
 /obj/structure/sign/warning/pods/south,
 /turf/simulated/wall/map_preset/tan,
-/area/hallway/primary/firstdeck/center)
-"auN" = (
-/turf/simulated/wall/map_preset/tan,
-/area/hallway/primary/firstdeck/center)
+/area/maintenance/firstdeck/centralstarboard)
 "auO" = (
 /obj/machinery/mech_recharger,
 /obj/effect/floor_decal/industrial/outline/yellow,
@@ -6652,13 +6639,13 @@
 /obj/machinery/door/firedoor,
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/steel_ridged,
-/area/hallway/primary/firstdeck/center)
+/area/maintenance/firstdeck/foreport)
 "aBx" = (
 /obj/structure/sign/warning/pods/south{
 	dir = 1
 	},
 /turf/simulated/wall/map_preset/tan,
-/area/hallway/primary/firstdeck/center)
+/area/maintenance/firstdeck/foreport)
 "aBy" = (
 /obj/machinery/artifact_scanpad,
 /obj/effect/floor_decal/industrial/hatch/yellow,
@@ -6957,7 +6944,7 @@
 /obj/machinery/atmospherics/pipe/simple/visible/fuel,
 /obj/machinery/door/firedoor,
 /turf/simulated/floor/tiled/steel_ridged,
-/area/hallway/primary/firstdeck/aft)
+/area/maintenance/firstdeck/aftport)
 "aDD" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -7586,7 +7573,7 @@
 "aGY" = (
 /obj/machinery/door/airlock/hatch/maintenance,
 /turf/simulated/floor/tiled/steel_ridged,
-/area/hallway/primary/firstdeck/fore)
+/area/maintenance/firstdeck/foreport)
 "aGZ" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -7920,7 +7907,9 @@
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
-/obj/machinery/power/emitter/anchored,
+/obj/machinery/power/emitter/anchored{
+	req_access = list("ACCESS_RESEARCH")
+	},
 /obj/structure/cable/green{
 	icon_state = "0-4"
 	},
@@ -8715,7 +8704,8 @@
 "aMF" = (
 /obj/machinery/door_timer/cell_1{
 	name = "Cell One";
-	pixel_y = -32
+	pixel_y = -32;
+	req_access = list("ACCESS_SECURITY")
 	},
 /obj/effect/floor_decal/corner/red/half,
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
@@ -8730,7 +8720,8 @@
 "aMJ" = (
 /obj/machinery/door_timer/cell_2{
 	name = "Cell Two";
-	pixel_y = -32
+	pixel_y = -32;
+	req_access = list("ACCESS_SECURITY")
 	},
 /obj/effect/floor_decal/corner/red/half,
 /obj/machinery/atmospherics/unary/vent_pump/on{
@@ -11432,14 +11423,13 @@
 "bZb" = (
 /obj/machinery/cryopod{
 	dir = 1;
-	icon_state = "body_scanner_0"
+	icon_state = "open"
 	},
 /turf/simulated/floor/plating,
 /area/shuttle/escape_pod15/station)
 "cab" = (
 /obj/machinery/cryopod{
-	dir = 1;
-	icon_state = "body_scanner_0"
+	dir = 1
 	},
 /turf/simulated/floor/plating,
 /area/shuttle/escape_pod16/station)
@@ -11451,7 +11441,7 @@
 "cbb" = (
 /obj/machinery/cryopod{
 	dir = 1;
-	icon_state = "body_scanner_0"
+	icon_state = "open"
 	},
 /turf/simulated/floor/plating,
 /area/shuttle/escape_pod17/station)
@@ -11675,13 +11665,15 @@
 	id_tag = "Prison Gate";
 	name = "Security Wing Entry Lockdown Control";
 	pixel_x = 6;
-	pixel_y = 24
+	pixel_y = 24;
+	req_access = list("ACCESS_ARMORY")
 	},
 /obj/machinery/button/blast_door{
 	id_tag = "bo_pshutters";
 	name = "Privacy Shutters";
 	pixel_x = -6;
-	pixel_y = 24
+	pixel_y = 24;
+	req_access = list("ACCESS_ARMORY")
 	},
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -11691,7 +11683,8 @@
 	id_tag = "BrigFoyer";
 	name = "Security Wing Entry Control";
 	pixel_x = -5;
-	pixel_y = 34
+	pixel_y = 34;
+	req_access = list("ACCESS_ARMORY")
 	},
 /turf/simulated/floor/tiled/dark/monotile,
 /area/security/bo)
@@ -15164,7 +15157,7 @@
 	},
 /obj/random/maintenance/solgov,
 /turf/simulated/floor/plating,
-/area/hallway/primary/firstdeck/fore)
+/area/maintenance/firstdeck/forestarboard)
 "hVb" = (
 /obj/item/stool/padded,
 /obj/effect/floor_decal/corner/research{
@@ -16124,7 +16117,7 @@
 "jkv" = (
 /obj/machinery/space_heater,
 /turf/simulated/floor/plating,
-/area/hallway/primary/firstdeck/fore)
+/area/maintenance/firstdeck/forestarboard)
 "jlb" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -17557,7 +17550,7 @@
 /obj/structure/disposalpipe/segment,
 /obj/structure/catwalk,
 /turf/simulated/floor/plating,
-/area/hallway/primary/firstdeck/fore)
+/area/maintenance/firstdeck/forestarboard)
 "luq" = (
 /obj/structure/table/steel,
 /obj/item/hand_labeler,
@@ -17592,19 +17585,22 @@
 	id_tag = "concheckwindow";
 	name = "Checkpoint Shutter Control";
 	pixel_x = 5;
-	pixel_y = 6
+	pixel_y = 6;
+	req_access = list("ACCESS_SECURITY")
 	},
 /obj/machinery/button/blast_door{
 	id_tag = "outercheckwindow";
 	name = "Outer Checkpoint Shutter Control";
 	pixel_x = 5;
-	pixel_y = -3
+	pixel_y = -3;
+	req_access = list("ACCESS_SECURITY")
 	},
 /obj/machinery/button/blast_door{
 	id_tag = "d1ladderwindow";
 	name = "Ladderwell Shutter Control";
 	pixel_x = -5;
-	pixel_y = 6
+	pixel_y = 6;
+	req_access = list("ACCESS_SECURITY")
 	},
 /obj/machinery/power/apc{
 	name = "south bump";
@@ -18643,6 +18639,9 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
 	},
+/obj/machinery/nuclear_cylinder_storage/prefilled{
+	req_access = list("ACCESS_VAULT")
+	},
 /turf/simulated/floor/tiled/dark/monotile,
 /area/security/nuke_storage)
 "mXb" = (
@@ -18726,7 +18725,7 @@
 /obj/item/chems/glass/beaker/vial/random/toxin,
 /obj/item/chems/drinks/juicebox/sensible_random,
 /turf/simulated/floor/plating,
-/area/hallway/primary/firstdeck/fore)
+/area/maintenance/firstdeck/forestarboard)
 "ncX" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
@@ -21510,6 +21509,10 @@
 	},
 /obj/machinery/light{
 	dir = 8
+	},
+/obj/machinery/light_switch{
+	pixel_x = -6;
+	pixel_y = -24
 	},
 /turf/simulated/floor/tiled,
 /area/security/detectives_office)
@@ -24752,7 +24755,7 @@
 /obj/random/maintenance/solgov,
 /obj/random/maintenance/solgov,
 /turf/simulated/floor/plating,
-/area/hallway/primary/firstdeck/fore)
+/area/maintenance/firstdeck/forestarboard)
 "vBV" = (
 /obj/random/obstruction,
 /turf/simulated/floor/plating,
@@ -25512,7 +25515,7 @@
 /obj/random/trash,
 /obj/random/trash,
 /turf/simulated/floor/plating,
-/area/hallway/primary/firstdeck/fore)
+/area/maintenance/firstdeck/forestarboard)
 "xoo" = (
 /obj/effect/wallframe_spawn/reinforced,
 /obj/machinery/door/blast/regular{
@@ -36791,14 +36794,14 @@ acr
 adf
 adU
 aeI
-afI
+kXS
 hUM
 nct
 vAw
 jkv
 xmT
 hUM
-afI
+kXS
 qwk
 ieP
 ksj
@@ -39022,7 +39025,7 @@ aiY
 pXG
 vMm
 jkm
-afI
+kXS
 iZg
 xDX
 qHq
@@ -41855,13 +41858,13 @@ aeh
 acD
 xTc
 atH
-auN
+acD
 ewc
 rKo
 ayg
 ure
 kdd
-auN
+aIr
 fPv
 thO
 aFf
@@ -52358,7 +52361,7 @@ alR
 sFb
 ask
 ato
-auk
+sRV
 avy
 awH
 uoC
@@ -52366,7 +52369,7 @@ ayH
 azS
 aAV
 aCr
-auk
+fwN
 aED
 aFM
 aFM

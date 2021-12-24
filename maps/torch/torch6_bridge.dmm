@@ -4326,7 +4326,7 @@
 	req_access = list("ACCESS_TORCH_CREW")
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
-/area/hallway/primary/bridge/aft)
+/area/bridge)
 "lZ" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume/shuttle{
 	id_tag = "perseverance_shuttle_pump"
@@ -10326,7 +10326,7 @@
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/steel_ridged,
-/area/hallway/primary/bridge/aft)
+/area/bridge)
 "Hh" = (
 /obj/machinery/disposal,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -10923,7 +10923,7 @@
 	req_access = list("ACCESS_TORCH_CREW")
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
-/area/hallway/primary/bridge/aft)
+/area/bridge)
 "Jh" = (
 /obj/structure/bed/chair/comfy/captain{
 	dir = 8
@@ -11118,7 +11118,7 @@
 	},
 /obj/effect/paint_stripe/command,
 /turf/simulated/floor/plating,
-/area/hallway/primary/bridge/aft)
+/area/bridge)
 "Kd" = (
 /obj/effect/floor_decal/corner/grey/diagonal,
 /obj/machinery/firealarm{
@@ -11217,7 +11217,7 @@
 /obj/structure/closet/emcloset/torch,
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled,
-/area/hallway/primary/bridge/aft)
+/area/bridge)
 "KB" = (
 /obj/machinery/door/airlock/hatch{
 	name = "Crew Area"
@@ -11357,7 +11357,7 @@
 	icon_state = "tube1"
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/primary/bridge/aft)
+/area/bridge)
 "Lh" = (
 /obj/machinery/camera/network/command{
 	c_tag = "Chief Engineer - Office";
@@ -11527,7 +11527,7 @@
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/steel_grid,
-/area/hallway/primary/bridge/aft)
+/area/bridge)
 "Md" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 9
@@ -11678,7 +11678,7 @@
 /obj/structure/cable/green,
 /obj/effect/paint_stripe/command,
 /turf/simulated/floor/plating,
-/area/hallway/primary/bridge/aft)
+/area/bridge)
 "Ne" = (
 /obj/effect/floor_decal/corner/darkblue{
 	dir = 6
@@ -11882,7 +11882,7 @@
 	pixel_y = 24
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
-/area/hallway/primary/bridge/aft)
+/area/bridge)
 "NN" = (
 /obj/machinery/vending/wallmed1{
 	pixel_y = 32;
@@ -12842,6 +12842,9 @@
 	},
 /turf/simulated/floor/tiled/dark/monotile,
 /area/perseverance/passenger)
+"Sk" = (
+/turf/simulated/wall/r_wall/map_preset/tan,
+/area/bridge)
 "Sn" = (
 /obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -32256,12 +32259,12 @@ xi
 je
 it
 je
-Zj
+Sk
 Kc
 Hg
 Nc
-fI
-Zj
+Ie
+Sk
 ad
 ad
 ad
@@ -32458,12 +32461,12 @@ Zj
 Zj
 Zj
 Zj
-Zj
+Sk
 Ky
 Mc
 Lg
-fI
-Zj
+Ie
+Sk
 ad
 ad
 ad
@@ -32660,12 +32663,12 @@ ad
 ad
 ad
 ad
-Zj
-Zj
+Sk
+Sk
 Jg
-Zj
-Zj
-Zj
+Sk
+Sk
+Sk
 ad
 ad
 ad
@@ -32863,9 +32866,9 @@ ad
 ad
 SA
 Ww
-Zj
+Sk
 NM
-Zj
+Sk
 Ww
 Ww
 Ww
@@ -33065,9 +33068,9 @@ iv
 iv
 jh
 ke
-Zj
+Sk
 lX
-Zj
+Sk
 Yb
 Yb
 Yb
