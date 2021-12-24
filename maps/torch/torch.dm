@@ -1,5 +1,7 @@
 #if !defined(USING_MAP_DATUM)
 
+	#include "..\..\mods\content\ss220_content\_ss220_content.dme"
+
 	#include "..\..\mods\content\mundane.dm"
 	#include "..\..\mods\content\corporate\_corporate.dme"
 	#include "..\..\mods\content\government\_government.dme"
