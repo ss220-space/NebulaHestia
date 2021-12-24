@@ -13,7 +13,7 @@
 "ac" = (
 /obj/machinery/cryopod{
 	dir = 1;
-	icon_state = "body_scanner_0"
+	icon_state = "open"
 	},
 /obj/item/radio/intercom{
 	dir = 1;
@@ -16626,7 +16626,7 @@
 "Sl" = (
 /obj/machinery/cryopod{
 	dir = 1;
-	icon_state = "body_scanner_0"
+	icon_state = "open"
 	},
 /obj/machinery/computer/cryopod{
 	pixel_y = -32

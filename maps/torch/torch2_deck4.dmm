@@ -3729,7 +3729,7 @@
 	dir = 4;
 	icon_state = "tube1"
 	},
-/obj/machinery/suit_cycler/engineering/alt,
+/obj/machinery/suit_cycler/engineering/prepared/atmospheric/alt,
 /turf/simulated/floor/tiled/dark,
 /area/eva)
 "ow" = (
@@ -4677,6 +4677,7 @@
 	icon_state = "1-4"
 	},
 /obj/effect/catwalk_plated/dark,
+/obj/structure/table/steel,
 /turf/simulated/floor/plating,
 /area/eva)
 "sn" = (
@@ -5795,11 +5796,11 @@
 /obj/effect/floor_decal/corner/red{
 	dir = 10
 	},
-/obj/structure/table/steel,
 /obj/machinery/light{
 	dir = 4;
 	icon_state = "tube1"
 	},
+/obj/structure/dispenser/oxygen,
 /turf/simulated/floor/tiled/dark,
 /area/eva)
 "vm" = (
@@ -7818,7 +7819,6 @@
 /obj/effect/floor_decal/corner/orange{
 	dir = 5
 	},
-/obj/structure/table/steel,
 /obj/machinery/light{
 	dir = 4;
 	icon_state = "tube1"
@@ -7864,11 +7864,21 @@
 /turf/simulated/floor/tiled/dark,
 /area/hallway/primary/fourthdeck/aft)
 "Dx" = (
-/obj/effect/floor_decal/corner/orange{
-	dir = 6
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
 	},
-/obj/machinery/suit_cycler/engineering/alt,
-/turf/simulated/floor/tiled/dark,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/effect/catwalk_plated/dark,
+/obj/structure/table/steel,
+/turf/simulated/floor/plating,
 /area/eva)
 "DA" = (
 /obj/structure/cable{
@@ -24783,7 +24793,7 @@ ng
 ot
 vW
 Jn
-sn
+Dx
 tP
 tS
 Vp
@@ -25183,7 +25193,7 @@ zj
 Jd
 Zt
 md
-Dx
+md
 ov
 Dk
 vO
