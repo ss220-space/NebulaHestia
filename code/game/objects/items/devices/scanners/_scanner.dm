@@ -28,6 +28,7 @@
 	var/datum/browser/written_digital/popup = new(user, "scanner", scan_title, window_width, window_height)
 	popup.set_content("[get_header()]<hr>[scan_data]")
 	popup.open()
+	popup.resize(window_width,window_height)
 
 /obj/item/scanner/proc/get_header()
 	return "<a href='?src=\ref[src];print=1'>Print Report</a><a href='?src=\ref[src];clear=1'>Clear data</a>"
