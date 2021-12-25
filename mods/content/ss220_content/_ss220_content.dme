@@ -3,6 +3,7 @@
 #include "../../../code/modules/power/lighting.dm"
 #include "../../../code/modules/xenoarcheaology/machinery/artifact_analyser.dm"
 #include "fix_override.dm"
+#include "../../../code/controllers/subsystems/ticker.dm"
 #include "ss220_content.dm"
 #endif
 // BEGIN_INTERNALS
