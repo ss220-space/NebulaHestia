@@ -191,9 +191,6 @@
 /turf/simulated/floor/plating,
 /area/maintenance/fifthdeck/aftstarboard)
 "aI" = (
-/obj/effect/floor_decal/corner/mauve{
-	dir = 10
-	},
 /obj/machinery/light,
 /turf/simulated/floor/tiled,
 /area/hallway/primary/fifthdeck/fore)
@@ -2548,12 +2545,6 @@
 /obj/effect/paint_stripe/supply,
 /turf/simulated/wall/r_wall/map_preset/tan,
 /area/maintenance/fifthdeck/aftport)
-"gv" = (
-/obj/effect/floor_decal/corner/brown{
-	dir = 4
-	},
-/turf/simulated/floor/tiled,
-/area/hallway/primary/fifthdeck/fore)
 "gw" = (
 /obj/machinery/light/spot{
 	dir = 1
@@ -2826,9 +2817,6 @@
 /turf/simulated/floor/tiled/monotile,
 /area/hallway/primary/fifthdeck/fore)
 "hv" = (
-/obj/effect/floor_decal/corner/brown/half{
-	dir = 1
-	},
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/monotile,
 /area/hallway/primary/fifthdeck/fore)
@@ -3027,12 +3015,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/quartermaster/hangar)
-"ii" = (
-/obj/effect/floor_decal/corner/brown/half{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/monotile,
-/area/hallway/primary/fifthdeck/fore)
 "im" = (
 /obj/effect/catwalk_plated,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -4896,9 +4878,6 @@
 /turf/simulated/floor/tiled/steel_ridged,
 /area/hallway/primary/fifthdeck/fore)
 "mN" = (
-/obj/effect/floor_decal/corner/brown{
-	dir = 6
-	},
 /obj/machinery/alarm{
 	alarm_id = "curiosity3";
 	dir = 8;
@@ -5967,7 +5946,6 @@
 /turf/simulated/floor/tiled,
 /area/hallway/primary/fifthdeck/fore)
 "oX" = (
-/obj/effect/floor_decal/corner/mauve/half,
 /obj/machinery/light,
 /obj/machinery/camera/network/fifth_deck{
 	c_tag = "Fifth Deck Hallway - Lift";
@@ -5981,18 +5959,6 @@
 /area/hallway/primary/fifthdeck/fore)
 "oY" = (
 /obj/effect/floor_decal/corner/mauve,
-/turf/simulated/floor/tiled,
-/area/hallway/primary/fifthdeck/fore)
-"oZ" = (
-/obj/effect/floor_decal/corner/mauve/half{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/monotile,
-/area/hallway/primary/fifthdeck/fore)
-"pa" = (
-/obj/effect/floor_decal/corner/mauve{
-	dir = 6
-	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/fifthdeck/fore)
 "pb" = (
@@ -6050,9 +6016,6 @@
 /turf/simulated/wall/prepainted,
 /area/maintenance/substation/fifthdeck)
 "pk" = (
-/obj/effect/floor_decal/corner/brown/half{
-	dir = 4
-	},
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
@@ -6769,7 +6732,6 @@
 	name = "west bump";
 	pixel_x = -24
 	},
-/obj/effect/floor_decal/corner/mauve/half,
 /obj/structure/disposalpipe/segment,
 /obj/structure/cable/green{
 	icon_state = "0-2"
@@ -6800,9 +6762,6 @@
 /turf/simulated/floor/tiled/dark,
 /area/quartermaster/expedition/atmos)
 "qR" = (
-/obj/effect/floor_decal/corner/mauve{
-	dir = 6
-	},
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 8
 	},
@@ -7459,9 +7418,6 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
 	},
-/obj/effect/floor_decal/corner/brown{
-	dir = 6
-	},
 /obj/machinery/light{
 	dir = 4
 	},
@@ -7471,12 +7427,7 @@
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/fifthdeck/fore)
-"sn" = (
-/obj/effect/floor_decal/corner/mauve/mono,
-/turf/simulated/floor/tiled/monotile,
-/area/hallway/primary/fifthdeck/fore)
 "so" = (
-/obj/effect/floor_decal/corner/brown/mono,
 /obj/structure/closet/hydrant{
 	pixel_y = 32
 	},
@@ -26348,9 +26299,9 @@ mg
 ic
 fl
 ct
-ii
+aF
 pk
-ii
+aF
 rd
 iy
 iy
@@ -26754,14 +26705,14 @@ fl
 so
 mN
 sm
-ii
-gv
+aF
+iE
 rO
-oY
-oZ
+iE
+aF
 qR
-pa
-sn
+iE
+aF
 fl
 mH
 uT
