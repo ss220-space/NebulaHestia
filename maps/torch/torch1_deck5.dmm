@@ -2770,7 +2770,7 @@
 	},
 /obj/structure/sign/warning/pods/south,
 /turf/simulated/wall/map_preset/tan,
-/area/hallway/primary/fifthdeck/aft)
+/area/maintenance/fifthdeck/aftstarboard)
 "hk" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/mining/brace{
@@ -3296,7 +3296,7 @@
 	dir = 9
 	},
 /turf/simulated/floor/tiled,
-/area/quartermaster/hangar)
+/area/hallway/primary/fifthdeck/aft)
 "iT" = (
 /obj/machinery/door/airlock/glass/science{
 	name = "Exploration Equipment"
@@ -4435,7 +4435,7 @@
 /obj/structure/closet/emcloset/torch,
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled,
-/area/quartermaster/hangar)
+/area/hallway/primary/fifthdeck/aft)
 "lw" = (
 /obj/structure/cable/cyan{
 	icon_state = "4-8"
@@ -4444,7 +4444,7 @@
 	dir = 9
 	},
 /turf/simulated/floor/tiled,
-/area/quartermaster/hangar)
+/area/hallway/primary/fifthdeck/aft)
 "lx" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/structure/anomaly_container,
@@ -5814,7 +5814,7 @@
 	},
 /obj/machinery/door/airlock/hatch/maintenance,
 /turf/simulated/floor/tiled/steel_ridged,
-/area/hallway/primary/fifthdeck/aft)
+/area/maintenance/fifthdeck/aftstarboard)
 "oE" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/hatch/maintenance,
@@ -5825,7 +5825,7 @@
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/steel_ridged,
-/area/hallway/primary/fifthdeck/aft)
+/area/maintenance/fifthdeck/aftport)
 "oF" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -6674,7 +6674,7 @@
 	pixel_y = 3
 	},
 /turf/simulated/wall/r_wall/map_preset/tan,
-/area/hallway/primary/fifthdeck/aft)
+/area/maintenance/fifthdeck/aftport)
 "qF" = (
 /obj/effect/floor_decal/corner/brown{
 	dir = 10
@@ -7588,7 +7588,7 @@
 	pixel_y = 3
 	},
 /turf/simulated/wall/r_wall/map_preset/tan,
-/area/hallway/primary/fifthdeck/aft)
+/area/maintenance/fifthdeck/aftport)
 "sI" = (
 /obj/abstract/landmark{
 	name = "xeno_spawn";
@@ -9086,7 +9086,7 @@
 "zb" = (
 /obj/machinery/cryopod{
 	dir = 1;
-	icon_state = "body_scanner_0"
+	icon_state = "open"
 	},
 /obj/machinery/computer/cryopod{
 	pixel_y = -32
@@ -9187,9 +9187,6 @@
 	icon_state = "walnut_broken0"
 	},
 /area/vacant/bar)
-"zS" = (
-/turf/simulated/wall/r_wall/map_preset/tan,
-/area/hallway/primary/fifthdeck/aft)
 "zV" = (
 /obj/structure/cable/cyan{
 	icon_state = "1-2"
@@ -10024,9 +10021,6 @@
 /obj/machinery/atmospherics/valve/shutoff,
 /turf/simulated/floor/plating,
 /area/maintenance/fifthdeck/aftstarboard)
-"Fk" = (
-/turf/simulated/wall/map_preset/tan,
-/area/hallway/primary/fifthdeck/aft)
 "Fn" = (
 /obj/structure/disposalpipe/segment{
 	dir = 2;
@@ -11758,7 +11752,7 @@
 "Rp" = (
 /obj/structure/sign/warning/pods,
 /turf/simulated/wall/map_preset/tan,
-/area/hallway/primary/fifthdeck/aft)
+/area/maintenance/fifthdeck/aftport)
 "Rv" = (
 /obj/structure/cable/cyan{
 	icon_state = "1-2"
@@ -12553,7 +12547,7 @@
 "Xl" = (
 /obj/machinery/cryopod{
 	dir = 1;
-	icon_state = "body_scanner_0"
+	icon_state = "open"
 	},
 /obj/machinery/computer/cryopod{
 	pixel_y = -32
@@ -12627,7 +12621,7 @@
 	},
 /obj/structure/sign/warning/compressed_gas,
 /turf/simulated/wall/map_preset/tan,
-/area/hallway/primary/fifthdeck/aft)
+/area/maintenance/fifthdeck/aftstarboard)
 "XI" = (
 /turf/simulated/wall/prepainted,
 /area/vacant/bar)
@@ -12886,7 +12880,7 @@
 	pixel_y = -4
 	},
 /turf/simulated/wall/r_wall/map_preset/tan,
-/area/hallway/primary/fifthdeck/aft)
+/area/maintenance/fifthdeck/aftport)
 "ZR" = (
 /obj/structure/bed/chair/armchair/beige{
 	dir = 4
@@ -35040,11 +35034,11 @@ WU
 qB
 Sc
 tQ
-zS
+ws
 qE
-zS
+ws
 sF
-zS
+ws
 HG
 MS
 MS
@@ -35242,7 +35236,7 @@ XE
 Sr
 Zo
 qF
-Fk
+gI
 ul
 wj
 wj
@@ -35844,11 +35838,11 @@ wH
 wH
 wH
 EL
-zS
+ZG
 HQ
 qC
 tF
-zS
+ws
 YL
 HS
 aC
