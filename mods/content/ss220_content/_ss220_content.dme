@@ -1,9 +1,16 @@
 #ifndef MODPACK_SS220_CONTENT
 #define MODPACK_SS220_CONTENT
+// Fix start
 #include "../../../code/modules/power/lighting.dm"
 #include "../../../code/modules/xenoarcheaology/machinery/artifact_analyser.dm"
 #include "fix_override.dm"
 #include "../../../code/controllers/subsystems/ticker.dm"
+// Fix end
+// Hijack pods start
+#include "../../../code/modules/shuttles/escape_pods.dm"
+#include "../../../code/game/machinery/embedded_controller/embedded_controller_base.dm"
+#include "hijack_pods.dm"
+// Hijack pods end
 #include "ss220_content.dm"
 #endif
 // BEGIN_INTERNALS
