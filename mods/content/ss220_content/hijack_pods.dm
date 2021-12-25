@@ -5,9 +5,6 @@
 /datum/computer/file/embedded_program/docking/simple/escape_pod_berth
 	var/arming = FALSE
 
-/datum/shuttle/autodock/ferry/escape_pod
-	var/need_people	= 0
-
 /datum/computer/file/embedded_program/docking/simple/escape_pod_berth/arm()
 	if(!armed)
 		armed = 1
@@ -136,25 +133,6 @@
 		signal_door("secure_close")
 	else if(memory["door_status"]["lock"] == "unlocked")
 		signal_door("lock")
-
-/datum/shuttle/autodock/ferry/escape_pod/proc/check_load()
-	var/list/counted = list()
-	var/i = 0
-	EVAC_CHAIR(temp)
-	for(temp in shuttle_area[1])
-		if(temp.buckled_mob)
-			counted += temp.buckled_mob
-			if(counted.len >= need_people)
-				return TRUE
-		i++
-	if(i < need_people)	// someone broke a chair
-		for(var/mob/living/M in shuttle_area[1])
-			if(M in counted)
-				continue
-			counted += M
-			if(counted.len >= need_people)
-				return TRUE
-	return FALSE
 
 /obj/machinery/embedded_controller/radio/simple_docking_controller/escape_pod_berth/attackby(var/obj/item/T, var/mob/living/carbon/human/user)
 	if(emagged)
