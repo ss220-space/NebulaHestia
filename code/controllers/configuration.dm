@@ -82,7 +82,7 @@ var/global/list/gamemode_cache = list()
 	var/disable_player_mice = 0
 	var/uneducated_mice = 0 //Set to 1 to prevent newly-spawned mice from understanding human speech
 
-	var/var/usewhitelist_database = FALSE
+	var/usewhitelist_database = FALSE
 	var/usealienwhitelist = 0
 	var/usealienwhitelistSQL = 0;
 	var/limitalienplayers = 0
@@ -951,6 +951,8 @@ var/global/list/gamemode_cache = list()
 				sqllogin = value
 			if ("password")
 				sqlpass = value
+			if ("utility_database")
+				sqldbutil = value
 			else
 				log_misc("Unknown setting in configuration: '[name]'")
 
