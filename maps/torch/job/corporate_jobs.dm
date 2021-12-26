@@ -63,6 +63,9 @@
 	max_skill = list(   SKILL_COMBAT      = SKILL_EXPERT,
 	                    SKILL_WEAPONS     = SKILL_EXPERT,
 	                    SKILL_FORENSICS   = SKILL_EXPERT)
+
+	required_role = list("Workplace Liaison")
+
 	alt_titles = list(
 		"Union Enforcer",
 		"Loss Prevention Associate",
