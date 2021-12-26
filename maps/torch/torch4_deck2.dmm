@@ -5150,7 +5150,7 @@
 /area/engineering/engine_monitoring)
 "mE" = (
 /turf/simulated/floor/tiled,
-/area/engineering/engineering_monitoring)
+/area/engineering/engineering_bay)
 "mF" = (
 /obj/structure/disposalpipe/segment,
 /obj/effect/floor_decal/techfloor{
@@ -11763,6 +11763,11 @@
 	},
 /turf/simulated/wall/r_wall/map_preset/tan,
 /area/engineering/atmos)
+"Er" = (
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/structure/closet/secure_closet/engineering_trainee_torch,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/engineering/locker_room)
 "Es" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
@@ -13170,8 +13175,8 @@
 /area/vacant/prototype/control)
 "Ik" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
-/obj/structure/closet/secure_closet/engineering_torch,
 /obj/machinery/light,
+/obj/structure/closet/secure_closet/engineering_trainee_torch,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/engineering/locker_room)
 "Il" = (
@@ -38080,7 +38085,7 @@ kH
 wK
 ly
 nz
-kH
+Er
 nv
 pv
 qE

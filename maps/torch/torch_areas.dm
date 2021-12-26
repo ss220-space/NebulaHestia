@@ -639,7 +639,7 @@
 /area/engineering/shieldbay
 	name = "Shield Bay"
 	icon_state = "engineering"
-	req_access = list(access_engine, access_engine_equip)
+	req_access = list(access_engine_equip)
 
 /area/engineering/bluespace
 	name = "Superluminal Drive Containment"
@@ -1061,11 +1061,12 @@
 /area/medical/foyer
 	name = "\improper Medical Foyer"
 	icon_state = "medbay"
-	req_access = list(access_medical,access_morgue,access_forensics_lockers)
+	req_access = list(access_medical)
 
 /area/medical/foyer/storeroom
 	name = "\improper Medical Storeroom"
 	icon_state = "medbay"
+	req_access = list(access_morgue,access_forensics_lockers)
 
 /area/medical/locker
 	name = "\improper Medical Locker Room"
@@ -1438,12 +1439,12 @@
 /area/engineering/locker_room
 	name = "\improper Engineering Locker Room"
 	icon_state = "engineering_locker"
-	req_access = list(access_engine)
+	req_access = list(access_engine_equip)
 
 /area/engineering/engineering_bay
 	name = "\improper Engineering Bay"
 	icon_state = "engineering_locker"
-	req_access = list(access_engine)
+	req_access = list(access_engine_equip)
 
 /area/engineering/storage
 	name = "\improper Engineering Storage"

@@ -118,7 +118,7 @@
 	                    SKILL_CHEMISTRY   = SKILL_MAX)
 
 	access = list(
-		access_medical, access_morgue, access_maint_tunnels,
+		access_medical, access_morgue, access_senmed, access_maint_tunnels,
 		access_external_airlocks, access_emergency_storage,
 		access_eva, access_surgery, access_medical_equip,
 		access_solgov_crew, access_hangar, access_radio_med
@@ -172,7 +172,7 @@
 	access = list(
 		access_medical, access_morgue, access_maint_tunnels,
 		access_external_airlocks, access_emergency_storage,
-		access_surgery, access_medical_equip, access_solgov_crew,
+		access_surgery, access_medical_equip, access_senmed, access_solgov_crew,
 		access_radio_med
 	)
 
@@ -208,7 +208,7 @@
 	access = list(
 		access_medical, access_maint_tunnels, access_emergency_storage,
 		access_medical_equip, access_solgov_crew, access_chemistry,
-	 	access_virology, access_morgue, access_crematorium, access_radio_med
+	 	access_virology, access_morgue, access_crematorium, access_senmed, access_radio_med
 	)
 
 	minimal_access = list()
@@ -252,7 +252,7 @@
 	)
 	access = list(
 		access_medical, access_psychiatrist,
-		access_solgov_crew, access_medical_equip, access_radio_med
+		access_solgov_crew, access_medical_equip, access_senmed, access_radio_med
 	)
 
 	minimal_access = list()
