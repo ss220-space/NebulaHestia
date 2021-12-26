@@ -137,26 +137,27 @@
 	if(emagged)
 		if(isWrench(T) && user.skill_check(SKILL_ELECTRICAL, SKILL_ADEPT))     // позже нужно поменять на мультиметр, но для этого его нужно добавить в игру
 			to_chat(user, "<font size='3'><span class='notice'>Ты начал сбрасывать настройки [src], чтобы починить его.</span></font>")
-			if(do_after(user, 100, src))
-				emagged = FALSE
-				state("<font size='3'>Сброс до заводских настроек завершен!</font>")
-				sleep(5)
-				state("<font size='3'>Поиск центрального контроллера...</font>")
-				sleep(10)
-				state("<font size='3'>Найдено!")
-				sleep(10)
-				state("<font size='3'>Первичная настройка капсулы...</font>")
-				sleep(20)
-				state("<font size='3'>Успешно!</font>")
-				if (istype(program, /datum/computer/file/embedded_program/docking/simple/escape_pod_berth))
-					var/datum/computer/file/embedded_program/docking/simple/escape_pod_berth/arming_program = program
-					for(var/datum/shuttle/autodock/ferry/escape_pod/pod in escape_pods)
-						if(pod.arming_controller == arming_program)
-							pod.toggle_bds(TRUE)
-							break
-					if (arming_program.armed || arming_program.arming)
-						arming_program.unarm()
+			if(!do_after(user, 100, src))
 				return
+			emagged = FALSE
+			state("<font size='3'>Сброс до заводских настроек завершен!</font>")
+			sleep(5)
+			state("<font size='3'>Поиск центрального контроллера...</font>")
+			sleep(10)
+			state("<font size='3'>Найдено!")
+			sleep(10)
+			state("<font size='3'>Первичная настройка капсулы...</font>")
+			sleep(20)
+			state("<font size='3'>Успешно!</font>")
+			if (istype(program, /datum/computer/file/embedded_program/docking/simple/escape_pod_berth))
+				var/datum/computer/file/embedded_program/docking/simple/escape_pod_berth/arming_program = program
+				for(var/datum/shuttle/autodock/ferry/escape_pod/pod in escape_pods)
+					if(pod.arming_controller == arming_program)
+						pod.toggle_bds(TRUE)
+						break
+				if (arming_program.armed || arming_program.arming)
+					arming_program.unarm()
+
 		else
 			to_chat(user, "<font size='3'><span class='notice'>Ты не понимаешь что произошло с [src], но он выглядит не как обычно.</span></font>")
 
