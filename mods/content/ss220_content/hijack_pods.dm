@@ -6,10 +6,11 @@
 	var/arming = FALSE
 
 /datum/computer/file/embedded_program/docking/simple/escape_pod_berth/arm()
-	if(!armed)
-		armed = 1
-		arming = FALSE
-		toggleDoor(memory["door_status"], tag_door, TRUE, "open")
+	if(armed)
+		return
+	armed = 1
+	arming = FALSE
+	toggleDoor(memory["door_status"], tag_door, TRUE, "open")
 
 /datum/shuttle/autodock/ferry/escape_pod/can_force()
 	if (arming_controller && arming_controller.master.emagged)
