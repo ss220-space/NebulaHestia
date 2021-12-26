@@ -47,10 +47,9 @@
 			overlays += image(icon, "screen_fill")
 
 /obj/machinery/embedded_controller/radio/simple_docking_controller/escape_pod/ui_interact(mob/user, ui_key = "main", var/datum/nanoui/ui = null, var/force_open = 1)
-	var/data[0]
 	var/datum/computer/file/embedded_program/docking/simple/docking_program = program
 
-	data = list(
+	var/list/data = list(
 		"docking_status" = docking_program.get_docking_status(),
 		"override_enabled" = docking_program.override_enabled,
 		"door_state" = 	docking_program.memory["door_status"]["state"],
