@@ -376,6 +376,18 @@ var/global/const/access_heads = "ACCESS_HEADS" //67
 	desc = "Command"
 	region = ACCESS_REGION_COMMAND
 
+var/global/const/access_engine_trainee_equip = "ACCESS_ENGINE_TRAINEE_EQUIP" //68
+/datum/access/engine_trainee_equip
+	id = access_engine_trainee_equip
+	desc = "Trainee's locker room"
+	region = ACCESS_REGION_ENGINEERING
+
+var/global/const/access_engine_normal_equip = "ACCESS_ENGINE_NORMAL_EQUIP" //69
+/datum/access/engine_normal_equip
+	id = access_engine_normal_equip
+	desc = "Normal's locker room"
+	region = ACCESS_REGION_ENGINEERING
+
 /******************
 * Central Command *
 ******************/
