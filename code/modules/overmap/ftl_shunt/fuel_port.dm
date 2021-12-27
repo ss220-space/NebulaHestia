@@ -62,6 +62,7 @@
 		user.put_in_hands(fuel)
 		fuel = null
 		to_chat(user, SPAN_NOTICE("You remove the fuel assembly!"))
+		update_icon()
 		return TRUE
 
 	. = ..()
@@ -80,7 +81,7 @@
 
 //
 // Jump cores down here
-// 
+//
 /obj/item/jumpcore
 	name = "superluminal fuel core"
 	icon = 'icons/obj/ftlshunt_fuelport.dmi'

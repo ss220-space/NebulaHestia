@@ -37,9 +37,10 @@
 	var/target_charge
 	var/cooldown_delay = 5 MINUTES
 	var/cooldown
-	var/max_jump_distance = 8 //How many overmap tiles can this move the ship?
-	var/moderate_jump_distance = 6
-	var/safe_jump_distance = 3
+	var/cooldown_timer
+	var/max_jump_distance = 14 //How many overmap tiles can this move the ship?
+	var/moderate_jump_distance = 8
+	var/safe_jump_distance = 4
 	var/sabotaged
 	var/sabotaged_amt = 0 //amount of crystals used to sabotage us.
 	var/max_power_usage = 5 MEGAWATTS //how much power can we POSSIBLY consume.
@@ -111,7 +112,7 @@
 	conduits.icon_state = "conduits"
 	portal = new
 	portal.icon_state = "loop-base"
-	charge_indicator = new 
+	charge_indicator = new
 	charge_indicator.icon_state = null
 	pumps = new
 	pumps.icon_state = "coolant_pumps_composite_off"
@@ -154,11 +155,11 @@
 	if(chargepercent == 0 || isnull(chargepercent))
 		new_charge_color ="#fa0a0a"
 	else
-	#if DM_VERSION > 513 
+	#if DM_VERSION > 513
 		new_charge_color = gradient("#fa0a0a", "#0de405", clamp(chargepercent/100, 0, 100))
 	#endif
 	#if DM_VERSION < 514
-		new_charge_color = HSVtoRGB(RotateHue(hsv(0, 255, 255), 120 * (1 - chargepercent/100))) 
+		new_charge_color = HSVtoRGB(RotateHue(hsv(0, 255, 255), 120 * (1 - chargepercent/100)))
 	#endif
 	animate(charge_indicator, color = new_charge_color, 1 SECOND)
 
@@ -359,9 +360,9 @@
 				continue
 			if(H.skill_check(SKILL_ENGINES, SKILL_EXPERT))
 				to_chat(H, SPAN_DANGER("The deck vibrates with a harmonic that sets your teeth on edge and fills you with dread."))
-	
+
 	var/announcetxt = replacetext(shunt_start_text, "%%TIME%%", "[round(jump_delay/600)] minutes.")
-	
+
 	ftl_announcement.Announce(announcetxt, "FTL Shunt Management System", new_sound = sound('sound/misc/notice2.ogg'))
 
 	cached_security_level = security_state.current_security_level
@@ -379,7 +380,16 @@
 		var/vessel_mass = ftl_computer.linked.get_vessel_mass()
 		var/shunt_turf = locate(shunt_x, shunt_y, O.z)
 		shunt_distance = get_dist(get_turf(ftl_computer.linked), shunt_turf)
-		required_jump_cores = shunt_distance
+		required_jump_cores = 1
+		if(shunt_distance >= 3)
+			required_jump_cores = 2
+		if(shunt_distance >= 6)
+			required_jump_cores = 3
+		if(shunt_distance >= 9)
+			required_jump_cores = 4
+		if(shunt_distance >= 12)
+			required_jump_cores = 5
+		//required_jump_cores = shunt_distance
 		required_charge = ((shunt_distance * vessel_mass)* REQUIRED_CHARGE_MULTIPLIER)*1000
 
 //Cancels the in-progress shunt.
@@ -589,7 +599,7 @@
 /obj/machinery/ftl_shunt/core/proc/get_status()
 	if(stat & (BROKEN|NOPOWER))
 		return FTL_STATUS_OFFLINE
-	if(cooldown)
+	if(world.time <= cooldown)
 		return FTL_STATUS_COOLDOWN
 	if(jump_timer)
 		return FTL_STATUS_SPOOLING_UP
@@ -645,7 +655,7 @@
 	if(!use_power_oneoff(input,EQUIP))
 		last_power_drawn = input
 		accumulated_charge += input * CELLRATE
-	
+
 		return TRUE
 	else
 		return FALSE
@@ -671,9 +681,9 @@
 				shake_camera(M, rand(1,2), rand(1,2))
 			last_stress_sound = world.time
 
-// 
+//
 // Construction MacGuffins down here.
-// 
+//
 
 /obj/item/stock_parts/circuitboard/ftl_shunt
 	name = "circuit board (superluminal shunt)"
