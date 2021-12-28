@@ -1,5 +1,3 @@
-#define EVAC_CHAIR(varName) var/obj/structure/bed/chair/shuttle/##varName
-
 // Rewrited files start
 
 /datum/computer/file/embedded_program/docking/simple/escape_pod_berth
@@ -169,5 +167,3 @@
 			to_chat(user, "<font size='3'><span class='notice'>Ты не понимаешь что произошло с [src], но он выглядит не как обычно.</span></font>")
 
 // New files end
-
-#undef EVAC_CHAIR
