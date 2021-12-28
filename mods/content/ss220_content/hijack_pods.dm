@@ -69,9 +69,10 @@
 
 /obj/machinery/embedded_controller/radio/simple_docking_controller/escape_pod_berth/emag_act(var/remaining_charges, var/mob/user)
 	if (!emagged)
+		var/obj/item/radio/announcer = get_global_announcer()
 		to_chat(user, "<font size='3'><span class='notice'>You emag the [src], arming the escape pod!</span></font>")
 		emagged = TRUE
-		get_global_announcer().autosay("<font size='4'><b>Несанкционированный доступ</b> к контроллеру эвакуации. Потеряно управление от <b><i>[src]</i></b>. Службе безопасности рекомендуется проследовать к этой капсуле. Местоположение капсулы: [get_area(src)]</font>", "Automatic Security System", "Security")
+		announcer.autosay("<font size='4'><b>Несанкционированный доступ</b> к контроллеру эвакуации. Потеряно управление от <b><i>[src]</i></b>. Службе безопасности рекомендуется проследовать к этой капсуле. Местоположение капсулы: [get_area(src)]</font>", "Automatic Security System", "Security")
 		state("<font size='3'>Ошибка центрального контроллера!</font>")
 		sleep(5)
 		state("<font size='3'>Обнаружена аварийная ситуация!</font>")
@@ -93,28 +94,33 @@
 /obj/machinery/embedded_controller/radio/simple_docking_controller/escape_pod/OnTopic(user, href_list)
 	if(href_list["command"] == "manual_arm")
 		if(pod.arming_controller.arming)
-			to_chat(user, "<font size='3'><span class='notice'>Ошибка! Подготовка капсулы уже производится, ожидайте.</span></font>")
+			to_chat(user, "<font size='3'><span class='notice'>Ошибка! Взведение капсулы уже производится, ожидайте.</span></font>")
 		else
 			pod.arming_controller.arm()
 		return TOPIC_REFRESH
 
 	if(href_list["command"] == "force_launch")
-		if (pod.can_force())
-			get_global_announcer().autosay("<font size='4'>Несанкционированный запуск капсулы <b>[pod]</b>! Возможна разгерметизация!</font>", "Evacuation Controller")
-			pod.force_launch(src)
-		else if (SSevac.evacuation_controller?.has_evacuated() && pod.can_launch())	//allow players to manually launch ahead of time if the shuttle leaves
+		var/obj/item/radio/announcer = get_global_announcer()
+		if (pod.can_launch())
+			pod.toggle_bds()
+			announcer.autosay("Несанкционированный запуск капсулы <b>[pod]</b>! Возможна разгерметизация!", "Evacuation Controller")
+			to_chat(user, "<font size='3'><span class='notice'>Процедура эвакуации активирована, для немедленной эвакуации активируйте её повторно.</span></font>")
 			pod.launch(src)
+		else if (pod.can_force())
+			pod.toggle_bds()
+			to_chat(user, "<font size='5'><span class='notice'>Немедленная эвакуация активирована, возможна разгерметизация.</span></font>")
+			pod.force_launch(src)
 		return TOPIC_REFRESH
 
 // Rewrited files end
 // New files start
 /datum/shuttle/autodock/ferry/escape_pod/proc/toggle_bds(var/CLOSE = FALSE)
-	for(var/obj/machinery/door/blast/regular/escape_pod/ES in world)
-		if(ES.id_tag == shuttle_docking_controller.id_tag)
+	for(var/obj/machinery/door/blast/regular/escape_pod/open_when_escape in SSmachines.machinery)
+		if(open_when_escape.id_tag == shuttle_docking_controller.id_tag)
 			if(CLOSE)
-				INVOKE_ASYNC(ES, /obj/machinery/door/blast/proc/force_close)
+				INVOKE_ASYNC(open_when_escape, /obj/machinery/door/blast/proc/force_close)
 			else
-				INVOKE_ASYNC(ES, /obj/machinery/door/blast/proc/force_open)
+				INVOKE_ASYNC(open_when_escape, /obj/machinery/door/blast/proc/force_open)
 
 /datum/computer/file/embedded_program/docking/simple/escape_pod_berth/proc/unarm()
 	if(armed)
@@ -134,9 +140,9 @@
 	else if(memory["door_status"]["lock"] == "unlocked")
 		signal_door("lock")
 
-/obj/machinery/embedded_controller/radio/simple_docking_controller/escape_pod_berth/attackby(var/obj/item/T, var/mob/living/carbon/human/user)
+/obj/machinery/embedded_controller/radio/simple_docking_controller/escape_pod_berth/attackby(var/obj/item/interact, var/mob/living/carbon/human/user)
 	if(emagged)
-		if(isWrench(T) && user.skill_check(SKILL_ELECTRICAL, SKILL_ADEPT))     // позже нужно поменять на мультиметр, но для этого его нужно добавить в игру
+		if(isWrench(interact) && user.skill_check(SKILL_ELECTRICAL, SKILL_ADEPT))     // позже нужно поменять на мультиметр, но для этого его нужно добавить в игру
 			to_chat(user, "<font size='3'><span class='notice'>Ты начал сбрасывать настройки [src], чтобы починить его.</span></font>")
 			if(!do_after(user, 100, src))
 				return

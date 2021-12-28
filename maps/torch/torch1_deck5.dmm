@@ -1685,13 +1685,6 @@
 /obj/machinery/light/small{
 	dir = 1
 	},
-/obj/machinery/embedded_controller/radio/simple_docking_controller/escape_pod{
-	dir = 4;
-	id_tag = "escape_pod_18";
-	name = "escape pod thirteen controller";
-	pixel_x = -32;
-	tag_door = "escape_pod_18_hatch"
-	},
 /turf/simulated/floor/tiled/white/monotile,
 /area/shuttle/escape_pod18/station)
 "ed" = (
@@ -9074,6 +9067,13 @@
 /obj/item/radio/intercom{
 	pixel_y = 23
 	},
+/obj/machinery/embedded_controller/radio/simple_docking_controller/escape_pod{
+	dir = 8;
+	id_tag = "escape_pod_18";
+	name = "escape pod thirteen controller";
+	pixel_x = 23;
+	tag_door = "escape_pod_18_hatch"
+	},
 /turf/simulated/floor/tiled/monotile,
 /area/shuttle/escape_pod18/station)
 "za" = (
@@ -9278,7 +9278,7 @@
 /area/exploration_shuttle/cargo)
 "AM" = (
 /obj/machinery/door/airlock/external/escapepod{
-	id_tag = "escape_pod_10_berth_hatch";
+	id_tag = "escape_pod_19_berth_hatch";
 	name = "Escape Pod Five"
 	},
 /obj/machinery/embedded_controller/radio/simple_docking_controller/escape_pod_berth{
@@ -9424,7 +9424,9 @@
 /area/shuttle/escape_pod18/station)
 "BV" = (
 /obj/machinery/door/blast/regular/escape_pod{
-	dir = 4
+	dir = 4;
+	id_tag = "escape_pod_19";
+	name = "Escape Pod release Door 19"
 	},
 /turf/simulated/floor/reinforced/airless,
 /area/maintenance/fifthdeck/aftport)
@@ -11715,13 +11717,6 @@
 /obj/machinery/light/small{
 	dir = 1
 	},
-/obj/machinery/embedded_controller/radio/simple_docking_controller/escape_pod{
-	dir = 4;
-	id_tag = "escape_pod_19";
-	name = "escape pod fourteen controller";
-	pixel_x = -32;
-	tag_door = "escape_pod_19_hatch"
-	},
 /turf/simulated/floor/tiled/white/monotile,
 /area/shuttle/escape_pod19/station)
 "Rj" = (
@@ -12131,7 +12126,9 @@
 /area/maintenance/fifthdeck/aftstarboard)
 "Un" = (
 /obj/machinery/door/blast/regular/escape_pod{
-	dir = 4
+	dir = 4;
+	id_tag = "escape_pod_18";
+	name = "Escape Pod release Door 18"
 	},
 /turf/simulated/floor/reinforced/airless,
 /area/maintenance/fifthdeck/aftstarboard)
@@ -12896,6 +12893,13 @@
 	},
 /obj/item/radio/intercom{
 	pixel_y = 23
+	},
+/obj/machinery/embedded_controller/radio/simple_docking_controller/escape_pod{
+	dir = 8;
+	id_tag = "escape_pod_19";
+	name = "escape pod fourteen controller";
+	pixel_x = 23;
+	tag_door = "escape_pod_19_hatch"
 	},
 /turf/simulated/floor/tiled/monotile,
 /area/shuttle/escape_pod19/station)
