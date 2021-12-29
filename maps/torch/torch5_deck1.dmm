@@ -3909,6 +3909,9 @@
 /obj/machinery/computer/cryopod{
 	pixel_x = -32
 	},
+/obj/machinery/light/small{
+	dir = 4
+	},
 /turf/simulated/floor/plating,
 /area/shuttle/escape_pod12/station)
 "ake" = (
@@ -4484,6 +4487,9 @@
 	},
 /obj/machinery/computer/cryopod{
 	pixel_x = -32
+	},
+/obj/machinery/light/small{
+	dir = 4
 	},
 /turf/simulated/floor/plating,
 /area/shuttle/escape_pod13/station)
@@ -11146,9 +11152,6 @@
 	dir = 1;
 	icon_state = "shuttle_chair_preview"
 	},
-/obj/machinery/light/small{
-	dir = 8
-	},
 /turf/simulated/floor/plating,
 /area/shuttle/escape_pod12/station)
 "bNL" = (
@@ -11162,9 +11165,6 @@
 /obj/structure/bed/chair/shuttle{
 	dir = 1;
 	icon_state = "shuttle_chair_preview"
-	},
-/obj/machinery/light/small{
-	dir = 8
 	},
 /turf/simulated/floor/plating,
 /area/shuttle/escape_pod13/station)
@@ -11288,9 +11288,6 @@
 	dir = 4;
 	pixel_x = -21
 	},
-/obj/machinery/light/small{
-	dir = 4
-	},
 /obj/machinery/embedded_controller/radio/simple_docking_controller/escape_pod{
 	dir = 8;
 	id_tag = "escape_pod_15";
@@ -11305,9 +11302,6 @@
 /obj/item/radio/intercom{
 	dir = 4;
 	pixel_x = -21
-	},
-/obj/machinery/light/small{
-	dir = 4
 	},
 /obj/machinery/embedded_controller/radio/simple_docking_controller/escape_pod{
 	dir = 8;
@@ -11346,9 +11340,6 @@
 /obj/item/radio/intercom{
 	dir = 4;
 	pixel_x = -21
-	},
-/obj/machinery/light/small{
-	dir = 4
 	},
 /obj/machinery/embedded_controller/radio/simple_docking_controller/escape_pod{
 	dir = 8;
@@ -11425,11 +11416,17 @@
 	dir = 1;
 	icon_state = "open"
 	},
+/obj/machinery/light/small{
+	dir = 4
+	},
 /turf/simulated/floor/plating,
 /area/shuttle/escape_pod15/station)
 "cab" = (
 /obj/machinery/cryopod{
 	dir = 1
+	},
+/obj/machinery/light/small{
+	dir = 4
 	},
 /turf/simulated/floor/plating,
 /area/shuttle/escape_pod16/station)
@@ -11442,6 +11439,9 @@
 /obj/machinery/cryopod{
 	dir = 1;
 	icon_state = "open"
+	},
+/obj/machinery/light/small{
+	dir = 4
 	},
 /turf/simulated/floor/plating,
 /area/shuttle/escape_pod17/station)
