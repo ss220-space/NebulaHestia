@@ -274,9 +274,6 @@
 /turf/simulated/floor/tiled/monotile,
 /area/shuttle/escape_pod6/station)
 "bk" = (
-/obj/effect/floor_decal/corner/red/half{
-	dir = 8
-	},
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
@@ -860,6 +857,10 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 9
 	},
+/obj/structure/sign/warning/docking_area{
+	name = "\improper ESCAPE POD LAUNCH PATHWAY";
+	pixel_x = 32
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/fourthdeck/port)
 "dh" = (
@@ -880,6 +881,17 @@
 	},
 /turf/simulated/floor/plating,
 /area/hallway/primary/fourthdeck/fore)
+"di" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden,
+/obj/effect/catwalk_plated/dark,
+/obj/structure/disposalpipe/segment,
+/obj/machinery/status_display{
+	pixel_x = 32
+	},
+/turf/simulated/floor/plating,
+/area/hallway/primary/fourthdeck/aft)
 "dj" = (
 /obj/structure/bed/chair/shuttle{
 	dir = 4;
@@ -1072,6 +1084,13 @@
 	},
 /turf/simulated/floor/tiled/monotile,
 /area/shuttle/escape_pod7/station)
+"dT" = (
+/obj/machinery/door/blast/regular/escape_pod{
+	id_tag = "escape_pod_9";
+	name = "Escape Pod release Door"
+	},
+/turf/simulated/floor/reinforced/airless,
+/area/maintenance/fourthdeck/aft)
 "dU" = (
 /obj/structure/ladder,
 /obj/structure/catwalk,
@@ -1333,16 +1352,15 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 4
 	},
-/obj/machinery/camera/network/fourth_deck{
-	c_tag = "Fourth Deck - Starboard Escape Pods";
-	dir = 4
-	},
 /obj/effect/floor_decal/corner/green/half{
 	dir = 8
 	},
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 8;
 	icon_state = "warningcorner"
+	},
+/obj/effect/floor_decal/corner/green{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/dark/monotile,
 /area/hallway/primary/fourthdeck/aft)
@@ -1351,11 +1369,11 @@
 	dir = 10
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden,
-/obj/machinery/light{
-	dir = 4
-	},
 /obj/effect/floor_decal/industrial/warning/corner,
 /obj/structure/disposalpipe/segment,
+/obj/effect/floor_decal/corner/green/half{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/dark/monotile,
 /area/hallway/primary/fourthdeck/aft)
 "fa" = (
@@ -1596,7 +1614,7 @@
 /obj/effect/catwalk_plated/dark,
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /obj/structure/disposalpipe/segment,
-/obj/structure/closet/hydrant{
+/obj/machinery/status_display{
 	pixel_x = 32
 	},
 /turf/simulated/floor/plating,
@@ -1615,8 +1633,8 @@
 	dir = 8;
 	id_tag = "escape_pod_7_berth";
 	name = "escape pod two berth controller";
-	pixel_x = 24;
-	pixel_y = 24;
+	pixel_x = 25;
+	pixel_y = 30;
 	tag_door = "escape_pod_7_berth_hatch"
 	},
 /obj/structure/disposalpipe/segment,
@@ -1809,14 +1827,13 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden,
-/obj/machinery/firealarm{
-	dir = 4;
-	pixel_x = 24
-	},
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 4
 	},
 /obj/structure/disposalpipe/segment,
+/obj/machinery/light{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/dark/monotile,
 /area/hallway/primary/fourthdeck/aft)
 "gM" = (
@@ -2242,7 +2259,10 @@
 	dir = 1;
 	icon_state = "warning"
 	},
-/obj/machinery/door/blast/regular/escape_pod,
+/obj/machinery/door/blast/regular/escape_pod{
+	id_tag = "escape_pod_6";
+	name = "Escape Pod release Door"
+	},
 /turf/simulated/floor/reinforced,
 /area/maintenance/fourthdeck/starboard)
 "ig" = (
@@ -2531,9 +2551,6 @@
 /obj/machinery/oxygen_pump{
 	pixel_x = 32
 	},
-/obj/machinery/light{
-	dir = 4
-	},
 /obj/effect/catwalk_plated/dark,
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/plating,
@@ -2543,7 +2560,10 @@
 /turf/simulated/floor/plating,
 /area/maintenance/fourthdeck/aft)
 "jX" = (
-/obj/machinery/door/blast/regular/escape_pod,
+/obj/machinery/door/blast/regular/escape_pod{
+	id_tag = "escape_pod_8";
+	name = "Escape Pod release Door"
+	},
 /turf/simulated/floor/reinforced/airless,
 /area/maintenance/fourthdeck/port)
 "ka" = (
@@ -2795,18 +2815,6 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/eva)
-"la" = (
-/obj/effect/floor_decal/corner/red{
-	dir = 1
-	},
-/obj/effect/floor_decal/corner/white{
-	dir = 8
-	},
-/obj/machinery/status_display{
-	pixel_x = -32
-	},
-/turf/simulated/floor/tiled/dark,
-/area/hallway/primary/fourthdeck/aft)
 "lb" = (
 /obj/machinery/door/firedoor,
 /obj/structure/cable/green{
@@ -4623,7 +4631,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /obj/effect/catwalk_plated/dark,
 /obj/structure/disposalpipe/segment,
-/obj/structure/closet/hydrant{
+/obj/machinery/status_display{
 	pixel_x = 32
 	},
 /turf/simulated/floor/plating,
@@ -5500,11 +5508,9 @@
 /turf/simulated/floor/tiled,
 /area/hallway/primary/fourthdeck/center)
 "uj" = (
-/obj/effect/floor_decal/corner/white{
-	dir = 1
-	},
-/obj/effect/floor_decal/corner/red{
-	dir = 8
+/obj/machinery/camera/network/fourth_deck{
+	c_tag = "Fourth Deck - Starboard Escape Pods";
+	dir = 4
 	},
 /turf/simulated/floor/tiled/dark,
 /area/hallway/primary/fourthdeck/aft)
@@ -6067,7 +6073,10 @@
 /area/maintenance/fourthdeck/starboard)
 "wc" = (
 /obj/effect/floor_decal/industrial/warning,
-/obj/machinery/door/blast/regular/escape_pod,
+/obj/machinery/door/blast/regular/escape_pod{
+	id_tag = "escape_pod_9";
+	name = "Escape Pod release Door"
+	},
 /turf/simulated/floor/reinforced,
 /area/maintenance/fourthdeck/aft)
 "wd" = (
@@ -6121,7 +6130,10 @@
 /turf/simulated/wall/map_preset/tan,
 /area/maintenance/fourthdeck/aft)
 "wp" = (
-/obj/machinery/door/blast/regular/escape_pod,
+/obj/machinery/door/blast/regular/escape_pod{
+	id_tag = "escape_pod_7";
+	name = "Escape Pod release Door"
+	},
 /turf/simulated/floor/reinforced/airless,
 /area/maintenance/fourthdeck/aft)
 "wq" = (
@@ -6331,7 +6343,10 @@
 /turf/simulated/floor/plating,
 /area/maintenance/fourthdeck/port)
 "wW" = (
-/obj/machinery/door/blast/regular/escape_pod,
+/obj/machinery/door/blast/regular/escape_pod{
+	id_tag = "escape_pod_6";
+	name = "Escape Pod release Door"
+	},
 /turf/simulated/floor/reinforced/airless,
 /area/maintenance/fourthdeck/starboard)
 "wX" = (
@@ -6380,10 +6395,6 @@
 /obj/structure/disposalpipe/segment,
 /obj/structure/cable{
 	icon_state = "1-2"
-	},
-/obj/machinery/alarm{
-	dir = 8;
-	pixel_x = 21
 	},
 /turf/simulated/floor/plating,
 /area/hallway/primary/fourthdeck/aft)
@@ -7408,7 +7419,10 @@
 /area/maintenance/fourthdeck/aft)
 "By" = (
 /obj/effect/floor_decal/industrial/warning,
-/obj/machinery/door/blast/regular/escape_pod,
+/obj/machinery/door/blast/regular/escape_pod{
+	id_tag = "escape_pod_8";
+	name = "Escape Pod release Door"
+	},
 /turf/simulated/floor/reinforced,
 /area/maintenance/fourthdeck/port)
 "BD" = (
@@ -8314,9 +8328,6 @@
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
 	},
-/obj/machinery/newscaster{
-	pixel_x = -32
-	},
 /obj/machinery/light{
 	dir = 8
 	},
@@ -8510,30 +8521,17 @@
 	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/storage/upper)
-"FP" = (
-/obj/effect/floor_decal/corner/red{
-	dir = 1
-	},
-/obj/effect/floor_decal/corner/white{
-	dir = 8
-	},
-/obj/structure/closet/walllocker/skinsuit{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/dark,
-/area/hallway/primary/fourthdeck/aft)
 "FS" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 9
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden,
-/obj/machinery/alarm{
-	dir = 8;
-	pixel_x = 21
-	},
 /obj/effect/floor_decal/industrial/warning/corner,
 /obj/structure/disposalpipe/segment,
+/obj/machinery/light{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/dark/monotile,
 /area/hallway/primary/fourthdeck/aft)
 "FV" = (
@@ -8718,8 +8716,8 @@
 	does_spin = null;
 	id_tag = "escape_pod_9_berth";
 	name = "escape pod four berth controller";
-	pixel_x = 24;
-	pixel_y = -24;
+	pixel_x = 25;
+	pixel_y = -30;
 	tag_door = "escape_pod_9_berth_hatch"
 	},
 /obj/structure/disposalpipe/segment,
@@ -8882,13 +8880,12 @@
 	dir = 9
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden,
-/obj/machinery/light{
-	dir = 4
-	},
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 4
 	},
-/obj/structure/disposalpipe/segment,
+/obj/effect/floor_decal/corner/green{
+	dir = 10
+	},
 /turf/simulated/floor/tiled/dark/monotile,
 /area/hallway/primary/fourthdeck/aft)
 "Hm" = (
@@ -9069,8 +9066,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /obj/effect/catwalk_plated/dark,
 /obj/structure/disposalpipe/segment,
-/obj/structure/closet/walllocker/skinsuit{
-	dir = 8
+/obj/machinery/firealarm{
+	dir = 4;
+	pixel_x = 24
 	},
 /turf/simulated/floor/plating,
 /area/hallway/primary/fourthdeck/aft)
@@ -9330,9 +9328,6 @@
 /obj/effect/catwalk_plated/dark,
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /obj/structure/disposalpipe/segment,
-/obj/machinery/status_display{
-	pixel_x = 32
-	},
 /turf/simulated/floor/plating,
 /area/hallway/primary/fourthdeck/aft)
 "IC" = (
@@ -9451,7 +9446,10 @@
 	dir = 1;
 	icon_state = "warning"
 	},
-/obj/machinery/door/blast/regular/escape_pod,
+/obj/machinery/door/blast/regular/escape_pod{
+	id_tag = "escape_pod_7";
+	name = "Escape Pod release Door"
+	},
 /turf/simulated/floor/reinforced,
 /area/maintenance/fourthdeck/aft)
 "Jn" = (
@@ -9498,28 +9496,8 @@
 "Jt" = (
 /turf/simulated/wall/r_wall/prepainted,
 /area/hallway/primary/fourthdeck/aft)
-"Jx" = (
-/obj/machinery/light{
-	dir = 8
-	},
-/obj/effect/floor_decal/corner/white{
-	dir = 1
-	},
-/obj/effect/floor_decal/corner/red{
-	dir = 8
-	},
-/obj/structure/sign/warning/docking_area{
-	name = "\improper ESCAPE POD LAUNCH PATHWAY";
-	pixel_x = -32
-	},
-/turf/simulated/floor/tiled/dark,
-/area/hallway/primary/fourthdeck/aft)
 "Jy" = (
 /obj/machinery/atmospherics/pipe/simple/hidden,
-/obj/machinery/firealarm{
-	dir = 4;
-	pixel_x = 24
-	},
 /obj/structure/disposalpipe/segment,
 /obj/structure/sign/warning/docking_area{
 	name = "\improper ESCAPE POD LAUNCH PATHWAY";
@@ -9616,9 +9594,6 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/hallway/primary/fourthdeck/aft)
 "JP" = (
-/obj/effect/floor_decal/corner/red/half{
-	dir = 8
-	},
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
@@ -9984,6 +9959,7 @@
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 1
 	},
+/obj/effect/floor_decal/corner/green,
 /turf/simulated/floor/tiled/dark/monotile,
 /area/hallway/primary/fourthdeck/aft)
 "KW" = (
@@ -10284,9 +10260,6 @@
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
 	},
-/obj/machinery/newscaster{
-	pixel_x = -32
-	},
 /obj/machinery/light{
 	dir = 8
 	},
@@ -10496,12 +10469,6 @@
 /area/maintenance/fourthdeck/aft)
 "Mx" = (
 /obj/machinery/light{
-	dir = 8
-	},
-/obj/effect/floor_decal/corner/red{
-	dir = 1
-	},
-/obj/effect/floor_decal/corner/white{
 	dir = 8
 	},
 /obj/structure/sign/warning/docking_area{
@@ -10935,7 +10902,7 @@
 	dir = 1;
 	id_tag = "escape_pod_8";
 	name = "escape pod three controller";
-	pixel_y = -32;
+	pixel_y = -25;
 	tag_door = "escape_pod_8_hatch"
 	},
 /turf/simulated/floor/tiled/monotile,
@@ -10998,15 +10965,14 @@
 /turf/simulated/floor/wood/walnut,
 /area/crew_quarters/lounge)
 "Oa" = (
-/obj/structure/catwalk,
-/obj/structure/sign/warning/docking_area{
-	name = "\improper ESCAPE POD LAUNCH PATHWAY";
-	pixel_y = -32
+/obj/machinery/atmospherics/pipe/simple/hidden,
+/obj/effect/catwalk_plated/dark,
+/obj/structure/disposalpipe/segment,
+/obj/structure/closet/hydrant{
+	pixel_x = 32
 	},
-/obj/machinery/door/firedoor,
-/obj/machinery/door/airlock/hatch/maintenance,
 /turf/simulated/floor/plating,
-/area/maintenance/fourthdeck/port)
+/area/hallway/primary/fourthdeck/aft)
 "Ob" = (
 /obj/machinery/light/spot{
 	dir = 4
@@ -11224,8 +11190,13 @@
 /turf/simulated/open,
 /area/maintenance/fourthdeck/foreport)
 "OT" = (
-/obj/machinery/status_display,
-/turf/simulated/wall/r_wall/map_preset/tan,
+/obj/effect/floor_decal/corner/green{
+	dir = 9
+	},
+/obj/machinery/newscaster{
+	pixel_x = -32
+	},
+/turf/simulated/floor/tiled/dark,
 /area/hallway/primary/fourthdeck/aft)
 "OU" = (
 /obj/structure/sign/directions/engineering{
@@ -12409,7 +12380,7 @@
 	dir = 1;
 	id_tag = "escape_pod_9";
 	name = "escape pod four controller";
-	pixel_y = -32;
+	pixel_y = -25;
 	tag_door = "escape_pod_9_hatch"
 	},
 /obj/item/radio/intercom{
@@ -12846,7 +12817,7 @@
 /obj/machinery/embedded_controller/radio/simple_docking_controller/escape_pod{
 	id_tag = "escape_pod_6";
 	name = "escape pod one controller";
-	pixel_y = 32;
+	pixel_y = 25;
 	tag_door = "escape_pod_6_hatch"
 	},
 /obj/item/radio/intercom{
@@ -13016,8 +12987,8 @@
 	dir = 4;
 	id_tag = "escape_pod_8_berth";
 	name = "escape pod three berth controller";
-	pixel_x = -24;
-	pixel_y = -24;
+	pixel_x = -25;
+	pixel_y = -30;
 	tag_door = "escape_pod_8_berth_hatch"
 	},
 /obj/effect/floor_decal/corner/green{
@@ -13313,8 +13284,8 @@
 	dir = 4;
 	id_tag = "escape_pod_6_berth";
 	name = "escape pod one berth controller";
-	pixel_x = -24;
-	pixel_y = 24;
+	pixel_x = -25;
+	pixel_y = 30;
 	tag_door = "escape_pod_6_berth_hatch"
 	},
 /obj/effect/floor_decal/corner/green{
@@ -14433,10 +14404,26 @@
 /obj/effect/paint_stripe/supply,
 /turf/simulated/wall/map_preset/tan,
 /area/quartermaster/storage/upper)
+"Yg" = (
+/obj/effect/floor_decal/corner/green{
+	dir = 9
+	},
+/obj/machinery/alarm{
+	alarm_id = "curiosity1";
+	dir = 4;
+	pixel_x = -24
+	},
+/turf/simulated/floor/tiled/dark,
+/area/hallway/primary/fourthdeck/aft)
 "Yj" = (
-/obj/machinery/door/firedoor,
-/obj/effect/wallframe_spawn/reinforced/hull,
-/turf/simulated/floor/plating,
+/obj/effect/floor_decal/corner/green{
+	dir = 9
+	},
+/obj/machinery/firealarm{
+	dir = 8;
+	pixel_x = -24
+	},
+/turf/simulated/floor/tiled/dark,
 /area/hallway/primary/fourthdeck/aft)
 "Yk" = (
 /turf/simulated/floor/tiled/monotile,
@@ -14663,12 +14650,6 @@
 /turf/simulated/floor/plating,
 /area/maintenance/fourthdeck/forestarboard)
 "YR" = (
-/obj/effect/floor_decal/corner/red{
-	dir = 1
-	},
-/obj/effect/floor_decal/corner/white{
-	dir = 8
-	},
 /turf/simulated/floor/tiled/dark,
 /area/hallway/primary/fourthdeck/aft)
 "YS" = (
@@ -14866,12 +14847,6 @@
 /turf/simulated/floor/tiled/monotile,
 /area/quartermaster/storage/upper)
 "Zn" = (
-/obj/effect/floor_decal/corner/white{
-	dir = 1
-	},
-/obj/effect/floor_decal/corner/red{
-	dir = 8
-	},
 /obj/structure/closet/walllocker/skinsuit{
 	dir = 4
 	},
@@ -15058,7 +15033,7 @@
 /obj/machinery/embedded_controller/radio/simple_docking_controller/escape_pod{
 	id_tag = "escape_pod_7";
 	name = "escape pod two controller";
-	pixel_y = 32;
+	pixel_y = 25;
 	tag_door = "escape_pod_7_hatch"
 	},
 /obj/item/radio/intercom{
@@ -37943,7 +37918,7 @@ Ds
 Of
 Of
 iO
-Oa
+GW
 GT
 Kl
 Gt
@@ -39120,13 +39095,13 @@ UH
 LA
 LA
 LA
-NW
-NW
+LA
+LA
 LA
 Yw
 LA
-NW
-NW
+LA
+LA
 LA
 LA
 Xn
@@ -39144,13 +39119,13 @@ Xn
 Xn
 LA
 LA
-NW
-NW
+LA
+LA
 LA
 ZA
 LA
-NW
-NW
+LA
+LA
 LA
 LA
 LA
@@ -39320,17 +39295,17 @@ RR
 aJ
 bk
 Mx
-la
-FP
+Zn
+Zn
 YR
-YR
+uj
 eX
 US
 LU
-ag
+OT
 ag
 ZP
-ag
+Yj
 kD
 mQ
 ag
@@ -39344,18 +39319,18 @@ JA
 mD
 Ae
 Ve
-ag
+Yg
 Dw
 ag
-ag
+OT
 Fk
 Ud
 KU
 uj
-uj
+YR
 Zn
 Zn
-Jx
+Mx
 JP
 aJ
 Px
@@ -39524,7 +39499,7 @@ UR
 bJ
 sd
 HT
-Xc
+Oa
 Xc
 eY
 fP
@@ -39532,7 +39507,7 @@ gL
 Ya
 Ya
 jE
-Ya
+di
 Zc
 zp
 ZU
@@ -39546,15 +39521,15 @@ xr
 bd
 YI
 Nk
-Ya
+di
 Wl
 Ya
 Ya
 FS
 Gu
 Hg
-Xc
-Xc
+HT
+Oa
 IB
 fK
 Jy
@@ -39726,13 +39701,13 @@ bm
 LA
 LA
 LA
-NW
-NW
+LA
+LA
 LA
 dd
 LA
-NW
-NW
+LA
+LA
 LA
 LA
 Xn
@@ -39748,15 +39723,15 @@ QW
 Xn
 Hd
 Bo
-OT
 LA
-Yj
-Yj
+LA
+LA
+LA
 LA
 Gv
 LA
-NW
-NW
+LA
+LA
 LA
 LA
 LA
@@ -39964,7 +39939,7 @@ DX
 wc
 JS
 Ki
-wp
+dT
 pp
 Gt
 Gt
@@ -40166,7 +40141,7 @@ DX
 wc
 JS
 PV
-wp
+dT
 pp
 Gt
 Gt
@@ -40368,7 +40343,7 @@ JX
 wc
 JS
 MM
-wp
+dT
 pp
 Gt
 Gt
@@ -40570,7 +40545,7 @@ DX
 wc
 JS
 OB
-wp
+dT
 pp
 Gt
 Gt
@@ -40772,7 +40747,7 @@ DX
 wc
 JS
 OB
-wp
+dT
 pp
 Gt
 Gt

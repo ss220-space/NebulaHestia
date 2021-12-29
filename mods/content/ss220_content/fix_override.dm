@@ -8,3 +8,7 @@
 /obj/machinery/artifact_analyser
 	anchored = 1
 	density = 1
+
+/datum/controller/subsystem/ticker/handle_tickets()
+	message_staff("<span class='warning'><b>Рестарт через [restart_timeout/10] секунд если администраторы не приостановят его.</b></span>")
+	end_game_state = END_GAME_ENDING

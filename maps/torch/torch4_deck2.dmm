@@ -23,7 +23,7 @@
 	dir = 4;
 	id_tag = "escape_pod_11";
 	name = "escape pod six controller";
-	pixel_x = -32;
+	pixel_x = -25;
 	tag_door = "escape_pod_11_hatch"
 	},
 /turf/simulated/floor/tiled/monotile,
@@ -5848,7 +5848,7 @@
 	dir = 4;
 	id_tag = "escape_pod_10";
 	name = "escape pod five controller";
-	pixel_x = -32;
+	pixel_x = -25;
 	tag_door = "escape_pod_10_hatch"
 	},
 /turf/simulated/floor/tiled/monotile,
@@ -14647,7 +14647,9 @@
 /area/engineering/engine_room)
 "MQ" = (
 /obj/machinery/door/blast/regular/escape_pod{
-	dir = 4
+	dir = 4;
+	id_tag = "escape_pod_10";
+	name = "Escape Pod release Door 10"
 	},
 /turf/simulated/floor/reinforced/airless,
 /area/maintenance/seconddeck/foreport)
@@ -15759,7 +15761,9 @@
 /area/maintenance/seconddeck/forestarboard)
 "PP" = (
 /obj/machinery/door/blast/regular/escape_pod{
-	dir = 4
+	dir = 4;
+	id_tag = "escape_pod_11";
+	name = "Escape Pod release Door 11"
 	},
 /turf/simulated/floor/reinforced/airless,
 /area/maintenance/seconddeck/forestarboard)
