@@ -1,23 +1,32 @@
 {{if data.functional}}
 <table>
   <tr>
-  <td>
-    {{if data.color_selectable}}
-    <div><font color="{{:data.color}}">Color</font></div>
-    {{:helper.link('(Set)', null, {'color_select' : 1})}}
+    <td>
+      {{if data.network}}
+      <div style="float: left">Connected to local network:</div>
+      <div style="float: right">
+        {{:helper.link(data.network, null, { 'settings': 1 }, null)}}
+      </div>
+    </td>
     {{/if}}
-    {{if data.network}}
-    <div>Connected to local network.</div>
-    <div>{{:helper.link(data.network, null, { 'settings': 1 }, null)}}</div>
-    {{/if}}
-	</td>
+    <td>
+      {{if data.color_selectable}}
+      <div style="float: left"><font color="{{:data.color}}">Color:</font></div>
+      <div style="float: right">
+        {{:helper.link('(Set)', null, {'color_select' : 1})}}
+      </div>
+      {{/if}}
+    </td>
   </tr>
   <tr>
     <td style="vertical-align: top">
       <table width="100%">
         <tr>
           <td colspan="2">
-            <table width="100%" style="border: 1px solid #333333">
+            <table
+              width="100%"
+              style="border: 1px solid #333333; text-align: center"
+            >
               <tr>
                 <th><b>Resource</b></th>
                 <th><b>Storage</b></th>
@@ -32,7 +41,9 @@
                   {{:value.stored}}/{{:value.max}}
                 </td>
                 <td align="center" style="border: 1px solid #777777">
-                  {{:helper.link(value.eject_label, null, {'eject_mat' : value.eject_key})}}
+                  <div style="display: inline-block">
+                    {{:helper.link(value.eject_label, null, {'eject_mat' : value.eject_key})}}
+                  </div>
                 </td>
               </tr>
               {{/for}}
@@ -58,7 +69,10 @@
         </tr>
         <tr>
           <td colspan="2">
-            <table width="100%" style="border: 1px solid #333333">
+            <table
+              width="100%"
+              style="border: 1px solid #333333; text-align: center"
+            >
               <tr>
                 <th><b>Design</b></th>
                 <th><b>Cost</b></th>
@@ -80,9 +94,13 @@
                 </td>
                 <td align="center" style="border: 1px solid #999999">
                   {{if !value.unavailable}}
-                  {{:helper.link('Queue', null, {'make' : value.reference, 'multiplier' : 1})}}
+                  <div style="display: inline-block">
+                    {{:helper.link('Queue', null, {'make' : value.reference, 'multiplier' : 1})}}
+                  </div>
                   {{for value.multiplier :multValue:multIndex}}
-                  {{:helper.link(multValue.label, null, {'make' : value.reference, 'multiplier' : multValue.multiplier})}}
+                  <div style="display: inline-block">
+                    {{:helper.link(multValue.label, null, {'make' : value.reference, 'multiplier' : multValue.multiplier})}}
+                  </div>
                   {{/for}}
                   {{else}}
                   Insufficient resources.
