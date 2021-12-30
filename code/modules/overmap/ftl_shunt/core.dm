@@ -37,7 +37,6 @@
 	var/target_charge
 	var/cooldown_delay = 5 MINUTES
 	var/cooldown
-	var/cooldown_timer
 	var/max_jump_distance = 14 //How many overmap tiles can this move the ship?
 	var/moderate_jump_distance = 8
 	var/safe_jump_distance = 4
