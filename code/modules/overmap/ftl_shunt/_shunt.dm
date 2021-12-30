@@ -11,6 +11,8 @@
 
 #define FTL_START_CONFIRMED 6 //All good.
 
+#define FTL_BAD_DIST 7 // prevent jump with dist 0
+
 #define SHUNT_SEVERITY_MINOR 1
 #define SHUNT_SEVERITY_MAJOR 2
 #define SHUNT_SEVERITY_CRITICAL 3

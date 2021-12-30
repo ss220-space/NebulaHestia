@@ -78,6 +78,9 @@
 	if(fuel && !fuel.spent)
 		fuel.use_charge()
 		fuel.update_icon()
+		return TRUE
+	else
+		return FALSE
 
 //
 // Jump cores down here

@@ -344,7 +344,10 @@
 		if(!length(fuel_ports))
 			return FTL_START_FAILURE_OTHER
 
-	calculate_jump_requirements()
+	var/calcRes  = calculate_jump_requirements()
+
+	if(calcRes == FTL_BAD_DIST) // check for jump on departure square.  get_dist will return -1
+		return FTL_BAD_DIST
 
 	if(accumulated_charge < required_charge)
 		return FTL_START_FAILURE_POWER
@@ -380,15 +383,12 @@
 		var/vessel_mass = ftl_computer.linked.get_vessel_mass()
 		var/shunt_turf = locate(shunt_x, shunt_y, O.z)
 		shunt_distance = get_dist(get_turf(ftl_computer.linked), shunt_turf)
-		required_jump_cores = 1
-		if(shunt_distance >= 3)
-			required_jump_cores = 2
-		if(shunt_distance >= 6)
-			required_jump_cores = 3
-		if(shunt_distance >= 9)
-			required_jump_cores = 4
-		if(shunt_distance >= 12)
-			required_jump_cores = 5
+		if(shunt_distance == -1)
+			return FTL_BAD_DIST
+
+		required_jump_cores = round(shunt_distance / 2)
+		if(required_jump_cores == 0)
+			required_jump_cores = 1
 		//required_jump_cores = shunt_distance
 		required_charge = ((shunt_distance * vessel_mass)* REQUIRED_CHARGE_MULTIPLIER)*1000
 
@@ -437,7 +437,7 @@
 			sound_to(M, 'sound/machines/hyperspace_begin.ogg')
 
 /obj/machinery/ftl_shunt/core/proc/enter_shunt(var/shunt_x, var/shunt_x, var/jumpdist, var/destination)
-	var/announcetxt = replacetext(shunt_entered_text, "%%TIME%%", "[round((jumpdist*JUMP_TIME_PER_TILE)/60)]")
+	var/announcetxt = replacetext(shunt_entered_text, "%%TIME%%", "[round((jumpdist*JUMP_TIME_PER_TILE)/10)]")
 	var/datum/event_meta/EM = new(EVENT_LEVEL_MUNDANE, "FTL", /datum/event/ftl, add_to_queue = FALSE, is_one_shot = TRUE)
 	ftl_event = new /datum/event/ftl(EM)
 	ftl_event.startWhen = 0
@@ -617,17 +617,17 @@
 
 /obj/machinery/ftl_shunt/core/proc/use_fuel(var/charges_required)
 	var/avaliable_charges
-	var/used_charges
+	var/used_charges = 0
 
 	for(var/obj/machinery/ftl_shunt/fuel_port/F in fuel_ports)
 		avaliable_charges += F.get_charge()
 	if(avaliable_charges >= charges_required)
 		for(var/obj/machinery/ftl_shunt/fuel_port/F in fuel_ports)
-			F.use_charge()
-			F.update_icon()
-			used_charges++
-			if(used_charges == charges_required)
-				break
+			if(F.use_charge())
+				F.update_icon()
+				used_charges++
+				if(used_charges >= charges_required)
+					break
 
 /obj/machinery/ftl_shunt/core/proc/get_charges()
 	for(var/obj/machinery/ftl_shunt/fuel_port/F in fuel_ports)

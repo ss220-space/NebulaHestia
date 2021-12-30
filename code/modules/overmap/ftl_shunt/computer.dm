@@ -116,21 +116,13 @@
 			return
 
 
-	var/core_ftl = 1
-	var/dist_ftl
+	var/core_ftl //cores to jump
+	var/dist_ftl //dist to jump
 
 	dist_ftl = recalc_cost()
-
-	if(dist_ftl >= 3)
-		core_ftl = 2
-	if(dist_ftl >= 6)
-		core_ftl = 3
-	if(dist_ftl >= 9)
-		core_ftl = 4
-	if(dist_ftl >= 12)
-		core_ftl = 5
-
-
+	core_ftl = round(dist_ftl / 2)
+	if(core_ftl == 0)
+		core_ftl = 1
 
 	data["ftlstatus"] = linked_core.get_status()
 	data["shunt_x"] = linked_core.shunt_x
@@ -139,8 +131,10 @@
 	data["to_plot_y"] = to_plot_y
 	data["fuel_joules"] = linked_core.get_charges() || 0
 	data["jumpcost"] = core_ftl
+	//data["jumpcost"] = recalc_cost()
 	data["powercost"] = recalc_cost_power()/1000
 	data["chargetime"] = linked_core.get_charge_time()
+	data["accumulated_charge"] = round(linked_core.accumulated_charge / 1000)
 	data["chargepercent"] = linked_core.chargepercent
 	data["maxfuel"] = linked_core.get_max_charges()
 	data["jump_status"] = get_status()
@@ -231,6 +225,8 @@
 					to_chat(user, SPAN_WARNING("Superluminal shunt inoperable: cooldown interlocks engaged."))
 				if(FTL_START_FAILURE_OTHER)
 					to_chat(user, SPAN_WARNING("Superluminal shunt inoperable: unknown error."))
+				if(FTL_BAD_DIST)
+					to_chat(user, SPAN_NOTICE("Superluminal shunt inoperable: check target coordinates."))
 				if(FTL_START_CONFIRMED)
 					to_chat(user, SPAN_NOTICE("Superluminal shunt operational: spooling up."))
 			return TOPIC_REFRESH
