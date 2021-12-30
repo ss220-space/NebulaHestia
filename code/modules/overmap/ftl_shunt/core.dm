@@ -386,9 +386,7 @@
 		if(shunt_distance == -1)
 			return FTL_BAD_DIST
 
-		required_jump_cores = round(shunt_distance / 2)
-		if(required_jump_cores == 0)
-			required_jump_cores = 1
+		required_jump_cores = max(1, round(shunt_distance / 2))
 		//required_jump_cores = shunt_distance
 		required_charge = ((shunt_distance * vessel_mass)* REQUIRED_CHARGE_MULTIPLIER)*1000
 
