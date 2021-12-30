@@ -5,8 +5,8 @@
 
 /obj/item/clothing/Initialize()
 	. = ..()
-	if(bodytype_equip_flags & BODY_FLAG_EXCLUDE)
-		bodytype_equip_flags |= BODY_FLAG_FELINE
+	//if(bodytype_equip_flags & BODY_FLAG_EXCLUDE)
+	bodytype_equip_flags |= BODY_FLAG_FELINE
 
 /decl/modpack/tajaran
 	name = "Tajaran"
