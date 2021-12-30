@@ -116,13 +116,7 @@
 			return
 
 
-	var/core_ftl //cores to jump
-	var/dist_ftl //dist to jump
-
-	dist_ftl = recalc_cost()
-	core_ftl = round(dist_ftl / 2)
-	if(core_ftl == 0)
-		core_ftl = 1
+	var/core_ftl  = max(1, round(recalc_cost() / 2)) //cores to jump
 
 	data["ftlstatus"] = linked_core.get_status()
 	data["shunt_x"] = linked_core.shunt_x
