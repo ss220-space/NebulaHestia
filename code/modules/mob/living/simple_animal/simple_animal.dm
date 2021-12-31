@@ -119,7 +119,7 @@
 	icon_state = ICON_STATE_WORLD
 	if(stat == DEAD && (mob_icon_state_flags & MOB_ICON_HAS_DEAD_STATE))
 		icon_state += "-dead"
-	else if(!incapacitated() && resting && (mob_icon_state_flags & MOB_ICON_HAS_REST_STATE))
+	else if((resting || incapacitated()) && (mob_icon_state_flags & MOB_ICON_HAS_REST_STATE))
 		icon_state += "-resting"
 	else if((lying || incapacitated()) && (mob_icon_state_flags & MOB_ICON_HAS_SLEEP_STATE))
 		icon_state += "-sleeping"
