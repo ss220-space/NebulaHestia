@@ -63,6 +63,9 @@
 	max_skill = list(   SKILL_COMBAT      = SKILL_EXPERT,
 	                    SKILL_WEAPONS     = SKILL_EXPERT,
 	                    SKILL_FORENSICS   = SKILL_EXPERT)
+
+	required_role = list("Workplace Liaison")
+
 	alt_titles = list(
 		"Union Enforcer",
 		"Loss Prevention Associate",
@@ -75,15 +78,6 @@
 		access_nanotrasen, access_commissary,
 		access_sec_guard, access_torch_fax, access_radio_serv
 	)
-
-	defer_roundstart_spawn = TRUE
-
-/datum/job/bodyguard/is_position_available()
-	if(..())
-		for(var/mob/M in player_list)
-			if(M.client && M.mind && M.mind.assigned_role == "Workplace Liaison")
-				return TRUE
-	return FALSE
 
 /datum/job/bodyguard/get_description_blurb()
 	return "You are the Executive Assistant. You are an employee of one of the corporations that make up the Expeditionary Corps Organisation, and your job is to assist the Liason in corporate affairs. You are also expected to protect the Liason's life, though not in any way that breaks the law."
