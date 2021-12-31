@@ -1061,11 +1061,12 @@
 /area/medical/foyer
 	name = "\improper Medical Foyer"
 	icon_state = "medbay"
-	req_access = list(access_medical,access_morgue,access_forensics_lockers)
+	req_access = list(access_medical)
 
 /area/medical/foyer/storeroom
 	name = "\improper Medical Storeroom"
 	icon_state = "medbay"
+	req_access = list(access_morgue,access_forensics_lockers)
 
 /area/medical/locker
 	name = "\improper Medical Locker Room"
