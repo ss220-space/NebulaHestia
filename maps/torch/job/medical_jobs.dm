@@ -171,6 +171,8 @@
 	                    SKILL_ANATOMY     = SKILL_MAX,
 	                    SKILL_CHEMISTRY   = SKILL_MAX)
 
+	required_role = list("Chief Medical Officer", "Physician")
+
 	access = list(
 		access_medical, access_morgue, access_maint_tunnels,
 		access_external_airlocks, access_emergency_storage,
