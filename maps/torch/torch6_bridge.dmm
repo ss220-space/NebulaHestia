@@ -740,9 +740,6 @@
 /turf/simulated/floor/plating,
 /area/crew_quarters/heads/office/co)
 "bR" = (
-/obj/structure/cable/green{
-	icon_state = "1-2"
-	},
 /turf/simulated/floor/tiled/dark,
 /area/bridge/hallway/starboard)
 "bS" = (
@@ -763,6 +760,9 @@
 "bY" = (
 /obj/effect/floor_decal/corner/darkblue{
 	dir = 4
+	},
+/obj/structure/cable/green{
+	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/bridge/hallway/starboard)
@@ -910,9 +910,6 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/structure/cable/green{
-	icon_state = "1-4"
-	},
 /turf/simulated/floor/tiled/dark,
 /area/bridge/hallway/starboard)
 "cm" = (
@@ -1035,6 +1032,7 @@
 /obj/effect/wallframe_spawn/reinforced/polarized{
 	id = "bridge_starboard"
 	},
+/obj/effect/paint_stripe/command,
 /turf/simulated/floor/plating,
 /area/bridge)
 "cx" = (
@@ -1134,12 +1132,11 @@
 /obj/machinery/camera/network/command{
 	c_tag = "Bridge - Conference Room Starboard"
 	},
-/obj/machinery/light_switch{
-	pixel_x = -23;
-	pixel_y = 25
-	},
 /obj/machinery/light/spot{
 	dir = 1
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/bridge/meeting_room)
@@ -1149,6 +1146,9 @@
 	},
 /obj/structure/cable/green{
 	icon_state = "1-2"
+	},
+/obj/structure/cable/green{
+	icon_state = "2-8"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/bridge/meeting_room)
@@ -1290,6 +1290,9 @@
 /obj/effect/floor_decal/corner/darkblue{
 	dir = 5
 	},
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/tiled/dark/monotile,
 /area/bridge/meeting_room)
 "cV" = (
@@ -1321,14 +1324,11 @@
 /obj/effect/floor_decal/corner/darkblue/three_quarters{
 	dir = 1
 	},
-/obj/structure/sign/warning/smoking{
-	pixel_x = 26
-	},
 /obj/machinery/light/spot{
 	dir = 4
 	},
-/obj/machinery/status_display{
-	pixel_y = 32
+/obj/structure/sign/ecplaque{
+	pixel_y = 30
 	},
 /turf/simulated/floor/tiled/dark/monotile,
 /area/bridge/meeting_room)
@@ -1371,6 +1371,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 10
 	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/tiled/dark,
 /area/bridge/meeting_room)
 "dc" = (
@@ -1382,6 +1385,9 @@
 	},
 /obj/structure/cable/green{
 	icon_state = "2-4"
+	},
+/obj/structure/cable/green{
+	icon_state = "2-8"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/bridge/meeting_room)
@@ -1716,6 +1722,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 9
 	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/tiled/dark,
 /area/bridge/meeting_room)
 "ee" = (
@@ -1733,6 +1742,9 @@
 	},
 /obj/structure/cable/green{
 	icon_state = "1-2"
+	},
+/obj/structure/cable/green{
+	icon_state = "1-8"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/bridge/meeting_room)
@@ -1913,11 +1925,10 @@
 	c_tag = "Bridge - Conference Room Port";
 	dir = 1
 	},
-/obj/machinery/light_switch{
-	pixel_x = -23;
-	pixel_y = -25
-	},
 /obj/machinery/light/spot,
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/tiled/dark,
 /area/bridge/meeting_room)
 "eE" = (
@@ -1927,6 +1938,12 @@
 /obj/structure/disposalpipe/segment,
 /obj/structure/cable/green{
 	icon_state = "1-2"
+	},
+/obj/structure/cable/green{
+	icon_state = "1-8"
+	},
+/obj/structure/cable/green{
+	icon_state = "1-4"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/bridge/meeting_room)
@@ -1940,6 +1957,9 @@
 	dir = 10
 	},
 /obj/effect/floor_decal/industrial/outline/grey,
+/obj/structure/cable/green{
+	icon_state = "2-8"
+	},
 /turf/simulated/floor/tiled/dark/monotile,
 /area/bridge/meeting_room)
 "eH" = (
@@ -1975,9 +1995,6 @@
 	dir = 4
 	},
 /obj/effect/floor_decal/industrial/hatch/yellow,
-/obj/structure/sign/ecplaque{
-	pixel_x = 29
-	},
 /obj/machinery/light/spot{
 	dir = 4
 	},
@@ -2255,6 +2272,9 @@
 	dir = 5
 	},
 /obj/structure/bed/chair/padded/blue,
+/obj/structure/sign/warning/secure_area{
+	pixel_y = 32
+	},
 /turf/simulated/floor/tiled/dark,
 /area/bridge/hallway/starboard)
 "fy" = (
@@ -2266,9 +2286,6 @@
 	},
 /obj/effect/floor_decal/corner/darkblue{
 	dir = 5
-	},
-/obj/machinery/computer/guestpass{
-	pixel_y = 32
 	},
 /turf/simulated/floor/tiled/dark,
 /area/bridge/hallway/port)
@@ -2285,9 +2302,6 @@
 /obj/machinery/light{
 	dir = 1;
 	icon_state = "tube1"
-	},
-/obj/item/radio/intercom{
-	pixel_y = 23
 	},
 /turf/simulated/floor/tiled/dark,
 /area/bridge/hallway/port)
@@ -2492,9 +2506,6 @@
 "fO" = (
 /obj/item/stamp/co,
 /obj/structure/table/woodentable_reinforced/ebony/walnut,
-/obj/machinery/newscaster{
-	pixel_y = -32
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
@@ -2756,12 +2767,18 @@
 /turf/simulated/floor/tiled/dark,
 /area/crew_quarters/heads/office/sea)
 "gH" = (
-/obj/structure/sign/warning/high_voltage{
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/unary/vent_pump/on,
+/obj/effect/floor_decal/corner/darkblue{
+	dir = 5
+	},
+/obj/machinery/light{
 	dir = 1
 	},
-/obj/effect/paint_stripe/engineering,
-/turf/simulated/wall/r_wall/prepainted,
-/area/crew_quarters/heads/office/ce)
+/turf/simulated/floor/tiled,
+/area/hallway/primary/bridge/fore)
 "gJ" = (
 /obj/machinery/atmospherics/pipe/manifold4w/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/manifold4w/hidden/supply,
@@ -2983,6 +3000,9 @@
 	},
 /obj/effect/paint_stripe/command,
 /obj/machinery/door/firedoor,
+/obj/structure/cable/green{
+	icon_state = "0-2"
+	},
 /turf/simulated/floor/plating,
 /area/bridge/meeting_room)
 "hs" = (
@@ -5481,7 +5501,6 @@
 /obj/effect/floor_decal/corner/darkblue{
 	dir = 10
 	},
-/obj/machinery/light,
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
@@ -5892,6 +5911,9 @@
 /obj/structure/extinguisher_cabinet{
 	pixel_y = 32
 	},
+/obj/machinery/light{
+	dir = 1
+	},
 /turf/simulated/floor/plating,
 /area/hallway/primary/bridge/fore)
 "rl" = (
@@ -6189,7 +6211,6 @@
 	dir = 8;
 	icon_state = "pipe-c"
 	},
-/obj/machinery/light,
 /obj/machinery/camera/network/bridge{
 	c_tag = "Bridge Hallway - Aft Center Starboard";
 	dir = 8
@@ -6276,6 +6297,10 @@
 	},
 /obj/structure/bed/chair/padded/blue{
 	dir = 1
+	},
+/obj/item/radio/intercom{
+	dir = 1;
+	pixel_y = -28
 	},
 /turf/simulated/floor/tiled/dark,
 /area/bridge/hallway/port)
@@ -6390,26 +6415,11 @@
 /obj/effect/floor_decal/corner/darkblue{
 	dir = 5
 	},
-/obj/structure/cable/green{
-	icon_state = "0-2"
-	},
-/obj/machinery/power/apc{
-	dir = 1;
-	name = "north bump";
-	pixel_y = 24;
-	req_access = list("ACCESS_ENGINE_EQUIP")
+/obj/machinery/computer/guestpass{
+	pixel_y = 32
 	},
 /turf/simulated/floor/tiled/dark,
 /area/bridge/hallway/starboard)
-"sW" = (
-/obj/effect/wallframe_spawn/reinforced/polarized{
-	id = "co_windows"
-	},
-/obj/effect/paint_stripe/command,
-/obj/structure/cable/green,
-/obj/machinery/door/firedoor,
-/turf/simulated/floor/plating,
-/area/crew_quarters/heads/office/co)
 "sY" = (
 /obj/effect/paint/sun,
 /turf/simulated/wall/titanium,
@@ -6756,6 +6766,10 @@
 /obj/effect/floor_decal/corner/darkblue/mono,
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/item/clipboard,
+/obj/machinery/firealarm{
+	dir = 8;
+	pixel_x = -24
+	},
 /turf/simulated/floor/tiled/dark/monotile,
 /area/crew_quarters/heads/office/sea)
 "ub" = (
@@ -6925,14 +6939,12 @@
 /turf/simulated/floor/airless,
 /area/perseverance/secure_storage)
 "uB" = (
-/obj/machinery/camera/network/command{
-	c_tag = "Bridge Storage";
-	dir = 1
-	},
 /obj/effect/floor_decal/corner/darkblue{
 	dir = 10
 	},
-/obj/structure/closet/walllocker/skinsuit/command,
+/obj/structure/closet/walllocker/skinsuit/command{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/dark,
 /area/bridge/storage)
 "uC" = (
@@ -7610,9 +7622,6 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/machinery/computer/guestpass{
-	pixel_y = -32
-	},
 /turf/simulated/floor/tiled/dark,
 /area/bridge/hallway/starboard)
 "wz" = (
@@ -7632,6 +7641,9 @@
 	dir = 4
 	},
 /obj/machinery/light,
+/obj/structure/cable/green{
+	icon_state = "1-4"
+	},
 /turf/simulated/floor/tiled/dark,
 /area/bridge/hallway/starboard)
 "wA" = (
@@ -8060,6 +8072,9 @@
 /obj/effect/floor_decal/corner/darkblue{
 	dir = 5
 	},
+/obj/machinery/light{
+	dir = 1
+	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/bridge/fore)
 "xV" = (
@@ -8082,14 +8097,14 @@
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
-/obj/machinery/light{
-	dir = 1
-	},
 /obj/effect/floor_decal/corner/darkblue{
 	dir = 5
 	},
 /obj/machinery/firealarm{
 	pixel_y = 24
+	},
+/obj/machinery/light{
+	dir = 1
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/bridge/fore)
@@ -8151,6 +8166,15 @@
 "yg" = (
 /obj/effect/floor_decal/corner/darkblue/mono,
 /obj/structure/bed/chair/padded/blue,
+/obj/structure/cable/green{
+	icon_state = "0-2"
+	},
+/obj/machinery/power/apc{
+	dir = 1;
+	name = "north bump";
+	pixel_y = 24;
+	req_access = list("ACCESS_ENGINE_EQUIP")
+	},
 /turf/simulated/floor/tiled/dark/monotile,
 /area/bridge/hallway/starboard)
 "yh" = (
@@ -8292,7 +8316,9 @@
 /obj/effect/floor_decal/corner/darkblue{
 	dir = 10
 	},
-/obj/structure/closet/walllocker/skinsuit/command,
+/obj/structure/closet/walllocker/skinsuit/command{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/dark,
 /area/bridge/storage)
 "yV" = (
@@ -8302,6 +8328,7 @@
 /obj/effect/wallframe_spawn/reinforced/polarized{
 	id = "bridge_starboard"
 	},
+/obj/effect/paint_stripe/command,
 /turf/simulated/floor/plating,
 /area/bridge)
 "yW" = (
@@ -8309,12 +8336,22 @@
 /turf/simulated/wall/prepainted,
 /area/security/bridgecheck)
 "za" = (
-/obj/structure/sign/warning/secure_area{
-	pixel_y = -7
+/obj/machinery/door/blast/shutters{
+	density = 0;
+	dir = 2;
+	icon_state = "shutter0";
+	id_tag = "heads_meeting";
+	name = "Meeting Room Window Shutters";
+	opacity = 0
+	},
+/obj/effect/wallframe_spawn/reinforced/polarized{
+	id = "meeting_windows"
 	},
 /obj/effect/paint_stripe/command,
-/turf/simulated/wall/r_wall/prepainted,
-/area/crew_quarters/heads/office/co)
+/obj/machinery/door/firedoor,
+/obj/structure/cable/green,
+/turf/simulated/floor/plating,
+/area/bridge/meeting_room)
 "zb" = (
 /obj/effect/shuttle_landmark/merc/deck1{
 	name = "B-Deck, Aft"
@@ -8743,6 +8780,9 @@
 	name = "Meeting Room Window Shutters";
 	opacity = 0
 	},
+/obj/structure/cable/green{
+	icon_state = "0-4"
+	},
 /turf/simulated/floor/plating,
 /area/bridge)
 "AI" = (
@@ -8900,6 +8940,9 @@
 "Bs" = (
 /obj/machinery/computer/modular/preset/cardslot/command,
 /obj/item/modular_computer/tablet/lease/preset/command,
+/obj/machinery/newscaster{
+	pixel_y = 32
+	},
 /turf/simulated/floor/wood/walnut,
 /area/crew_quarters/heads/office/co)
 "Bw" = (
@@ -9923,6 +9966,9 @@
 	name = "Meeting Room Window Shutters";
 	opacity = 0
 	},
+/obj/structure/cable/green{
+	icon_state = "0-4"
+	},
 /turf/simulated/floor/plating,
 /area/bridge)
 "Fy" = (
@@ -10008,6 +10054,9 @@
 	dir = 4
 	},
 /obj/effect/floor_decal/industrial/warning/fulltile,
+/obj/machinery/status_display{
+	pixel_y = -32
+	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/bridge/fore)
 "Gb" = (
@@ -10660,9 +10709,6 @@
 /turf/simulated/floor/plating,
 /area/bridge/storage)
 "Ik" = (
-/obj/machinery/firealarm{
-	pixel_y = 24
-	},
 /obj/machinery/light_switch{
 	pixel_x = 23;
 	pixel_y = 24
@@ -10870,9 +10916,6 @@
 /obj/machinery/light/spot{
 	dir = 4
 	},
-/obj/machinery/status_display{
-	pixel_x = 32
-	},
 /turf/simulated/floor/tiled/techfloor,
 /area/bridge)
 "Jb" = (
@@ -11006,13 +11049,6 @@
 	id_tag = "heads_meeting";
 	name = "Bridge Meeting Room Shutters Control";
 	pixel_x = -26;
-	pixel_y = 7;
-	req_access = list("ACCESS_BRIDGE")
-	},
-/obj/machinery/button/blast_door{
-	id_tag = "bblastdoors";
-	name = "Bridge Internal Hallway Lockdown Control";
-	pixel_x = -38;
 	pixel_y = 7;
 	req_access = list("ACCESS_BRIDGE")
 	},
@@ -11305,6 +11341,9 @@
 	},
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 1
+	},
+/obj/machinery/status_display{
+	pixel_x = -32
 	},
 /turf/simulated/floor/tiled/dark,
 /area/bridge/meeting_room)
@@ -12025,6 +12064,17 @@
 "OD" = (
 /obj/effect/floor_decal/corner/darkblue{
 	dir = 9
+	},
+/obj/machinery/button/blast_door{
+	id_tag = "bblastdoors";
+	name = "Bridge Internal Hallway Lockdown Control";
+	pixel_x = -26;
+	pixel_y = -7;
+	req_access = list("ACCESS_BRIDGE")
+	},
+/obj/machinery/light_switch{
+	pixel_x = -24;
+	pixel_y = 7
 	},
 /turf/simulated/floor/tiled/dark,
 /area/bridge/meeting_room)
@@ -13066,6 +13116,9 @@
 	dir = 9
 	},
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
+/obj/machinery/status_display{
+	pixel_x = -32
+	},
 /turf/simulated/floor/tiled/dark,
 /area/bridge/meeting_room)
 "Tl" = (
@@ -14028,6 +14081,12 @@
 	dir = 10
 	},
 /obj/effect/floor_decal/industrial/outline/grey,
+/obj/structure/cable/green{
+	icon_state = "2-8"
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/tiled/dark/monotile,
 /area/bridge/meeting_room)
 "Xx" = (
@@ -14231,6 +14290,10 @@
 "Yn" = (
 /obj/effect/floor_decal/corner/darkblue{
 	dir = 10
+	},
+/obj/machinery/camera/network/command{
+	c_tag = "Bridge Storage";
+	dir = 1
 	},
 /turf/simulated/floor/tiled/dark,
 /area/bridge/storage)
@@ -23970,18 +24033,18 @@ cp
 fO
 sl
 eL
-za
+Zs
 fx
 bS
 wx
 fa
 AH
 Fv
-AH
+yf
 yf
 LG
 yf
-AH
+yf
 Fv
 AH
 fa
@@ -24590,7 +24653,7 @@ bP
 ab
 ta
 Xt
-hq
+za
 fE
 fT
 uI
@@ -24792,7 +24855,7 @@ Ze
 Qv
 ek
 eG
-hq
+za
 fG
 fU
 rR
@@ -25183,8 +25246,8 @@ Zs
 iN
 et
 DF
-sW
-Qe
+Zs
+gH
 qg
 hs
 hs
@@ -27421,7 +27484,7 @@ Wh
 ck
 Gb
 Aq
-gH
+Uf
 vM
 YV
 qW
