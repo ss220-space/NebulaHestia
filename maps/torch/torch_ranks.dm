@@ -357,8 +357,8 @@
 	sort_order = 12
 
 /datum/mil_rank/espatier/o3
-	name = "Captain"
-	name_short = "CPT"
+	name = "Commander"
+	name_short = "COM"
 	accessory = list(/obj/item/clothing/accessory/rank/espatier/officer/o3)
 	sort_order = 13
 
