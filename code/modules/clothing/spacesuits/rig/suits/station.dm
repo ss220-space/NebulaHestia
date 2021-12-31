@@ -107,7 +107,7 @@
 
 	allowed = list(/obj/item/flashlight,/obj/item/tank,/obj/item/suit_cooling_unit,/obj/item/storage/toolbox,/obj/item/storage/briefcase/inflatable,/obj/item/inflatable_dispenser,/obj/item/t_scanner,/obj/item/rcd)
 
-	req_access = list(access_engine_equip)
+	req_access = list(access_engine_engineer)
 
 /obj/item/clothing/head/helmet/space/rig/eva
 	light_overlay = "helmet_light_dual"
