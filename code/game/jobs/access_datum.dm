@@ -382,6 +382,12 @@ var/global/const/access_engine_engineer = "ACCESS_ENGINE_ENGINEER" //68
 	desc = "Engineer's Equipment"
 	region = ACCESS_REGION_ENGINEERING
 
+var/global/const/access_medical_doctor = "ACCESS_MEDICAL_DOCTOR" //69
+/datum/access/medical_doctor
+	id = access_medical_doctor
+	desc = "Doctor's Equipment"
+	region = ACCESS_REGION_MEDBAY
+
 /******************
 * Central Command *
 ******************/
