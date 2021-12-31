@@ -156,6 +156,8 @@
 	                    SKILL_ATMOS        = SKILL_MAX,
 	                    SKILL_ENGINES      = SKILL_MAX)
 
+	required_role = list("Chief Engineer", "Senior Engineer")
+
 	access = list(
 		access_engine_equip, access_maint_tunnels, access_external_airlocks, access_emergency_storage,
 		access_eva, access_tech_storage, access_janitor, access_construction,
