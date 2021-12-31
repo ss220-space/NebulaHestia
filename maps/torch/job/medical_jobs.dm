@@ -39,7 +39,7 @@
 	access = list(
 		access_medical, access_morgue, access_virology, access_maint_tunnels, access_emergency_storage,
 		access_crematorium, access_chemistry, access_surgery,
-		access_medical_equip, access_solgov_crew, access_senmed, access_radio_med
+		access_medical_equip, access_medical_doctor, access_solgov_crew, access_senmed, access_radio_med
 	)
 
 	software_on_spawn = list(/datum/computer_file/program/suit_sensors,
@@ -80,7 +80,7 @@
 	access = list(
 		access_medical, access_morgue, access_virology, access_maint_tunnels, access_emergency_storage,
 		access_crematorium, access_chemistry, access_surgery,
-		access_medical_equip, access_solgov_crew, access_senmed, access_radio_med
+		access_medical_equip, access_medical_doctor, access_solgov_crew, access_senmed, access_radio_med
 	)
 
 	software_on_spawn = list(/datum/computer_file/program/suit_sensors,
@@ -124,7 +124,7 @@
 	access = list(
 		access_medical, access_morgue, access_maint_tunnels,
 		access_external_airlocks, access_emergency_storage,
-		access_eva, access_surgery, access_medical_equip,
+		access_eva, access_surgery, access_medical_equip, access_medical_doctor,
 		access_solgov_crew, access_hangar, access_radio_med
 	)
 
