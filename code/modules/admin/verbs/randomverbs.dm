@@ -534,6 +534,28 @@ Traitors and the like can also be revived with the previous role mostly intact.
 		command_announcement.Announce("Ion storm detected near the [station_name()]. Please check all AI-controlled equipment for errors.", "Anomaly Alert", new_sound = 'sound/AI/ionstorm.ogg')
 	SSstatistics.add_field_details("admin_verb","IONC") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
+/client/proc/cmd_offer_to_ghosts_to_be_somebody(mob/living/selected_mob as mob in living_mob_list_)
+	set category = "Special Verbs"
+	set name = "Offer Ghost To Become This"
+
+	if(!holder)
+		to_chat(src, "Только администратор может использовать эту команду.")
+		return
+	if(selected_mob.check_have_client())
+		alert("Невозможно предложить уже занятого моба.")
+		return
+
+	if(alert("Вы уверены?", "Confirm", "Да", "Нет") == "Нет")
+		return
+	for(var/mob/observer/ghost/player_ghost in global.player_list)
+		spawn() if(alert(player_ghost, "Вам предложили вселиться в [selected_mob], вы согласны?", "Offer", "Да", "Нет") == "Да")
+			if(selected_mob?.check_have_client())
+				alert(player_ghost, "Извините, но вы опоздали, кто-то ответил на запрос быстрее вас.")
+			else if(selected_mob)
+				selected_mob.ckey = player_ghost.ckey
+
+	SSstatistics.add_field_details("admin_verb", "OFRM") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
+
 /client/proc/cmd_admin_rejuvenate(mob/living/M as mob in SSmobs.mob_list)
 	set category = "Special Verbs"
 	set name = "Rejuvenate"

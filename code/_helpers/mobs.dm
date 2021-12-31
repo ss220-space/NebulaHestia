@@ -20,7 +20,7 @@
 /proc/random_name(gender, species)
 	if(species)
 		var/decl/species/current_species = get_species_by_key(species)
-		if(current_species) 
+		if(current_species)
 			var/decl/cultural_info/current_culture = GET_DECL(current_species.default_cultural_info[TAG_CULTURE])
 			if(current_culture)
 				return current_culture.get_random_name(null, gender)
@@ -181,6 +181,9 @@
 		if(!M.is_physically_disabled())
 			mobs += M
 	return mobs
+// client check in mob
+/mob/proc/check_have_client()
+	return (client || (key && copytext(key, 1, 2) != "@"))
 
 // Returns true if M was not already in the dead mob list
 /mob/proc/switch_from_living_to_dead_mob_list()
