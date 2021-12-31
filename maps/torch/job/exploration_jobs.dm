@@ -109,6 +109,8 @@
 	                    SKILL_COMBAT      = SKILL_EXPERT,
 	                    SKILL_WEAPONS     = SKILL_EXPERT)
 
+	required_role = list("Pathfinder", "Shuttle Pilot")
+
 	access = list(
 		access_explorer, access_maint_tunnels, access_eva, access_emergency_storage,
 		access_opportunity_helm, access_solgov_crew, access_expedition_shuttle, access_opportunity, access_hangar,
