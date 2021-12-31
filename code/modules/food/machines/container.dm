@@ -7,7 +7,7 @@
 	var/shortname
 	var/max_space = 20//Maximum sum of w-classes of foods in this container at once
 	volume = 80//Maximum units of reagents
-	atom_flags = ATOM_FLAG_OPEN_CONTAINER | ATOM_FLAG_NO_REACT
+	atom_flags = ATOM_FLAG_OPEN_CONTAINER
 	var/list/insertable = list(
 		/obj/item/chems/food,
 		/obj/item/holder,
@@ -203,6 +203,7 @@
 	max_space = 30
 	volume = 120
 	appliancetype = APPLIANCE_OVEN
+	atom_flags = ATOM_FLAG_NO_REACT
 	material = /decl/material/solid/stone/ceramic
 
 /obj/item/chems/cooking_container/skillet
@@ -213,6 +214,7 @@
 	volume = 30
 	hitsound = 'sound/weapons/smash.ogg'
 	atom_flags = ATOM_FLAG_OPEN_CONTAINER // Will still react
+	possible_transfer_amounts = @"[5,10,15,25,30]"
 	appliancetype = APPLIANCE_SKILLET
 
 /obj/item/chems/cooking_container/saucepan
@@ -224,6 +226,7 @@
 	slot_flags = SLOT_HEAD
 	hitsound = 'sound/weapons/smash.ogg'
 	atom_flags = ATOM_FLAG_OPEN_CONTAINER // Will still react
+	possible_transfer_amounts = @"[5,10,15,25,30,60]"
 	appliancetype = APPLIANCE_SAUCEPAN
 
 /obj/item/chems/cooking_container/pot
@@ -235,6 +238,7 @@
 	volume = 180
 	hitsound = 'sound/weapons/smash.ogg'
 	atom_flags = ATOM_FLAG_OPEN_CONTAINER // Will still react
+	possible_transfer_amounts = @"[10,20,30,60,120,150,180]"
 	appliancetype = APPLIANCE_POT
 	w_class = ITEM_SIZE_LARGE
 
@@ -244,6 +248,7 @@
 	desc = "Put ingredients in this; designed for use with a deep fryer. Warranty void if used."
 	icon_state = "basket"
 	appliancetype = APPLIANCE_FRYER
+	atom_flags = ATOM_FLAG_NO_REACT
 
 /obj/item/chems/cooking_container/grill_grate/can_fit()
 	if(length(contents) >= 3)
