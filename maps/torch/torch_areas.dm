@@ -1439,12 +1439,12 @@
 /area/engineering/locker_room
 	name = "\improper Engineering Locker Room"
 	icon_state = "engineering_locker"
-	req_access = list(access_engine)
+	req_access = list(access_engine_equip)
 
 /area/engineering/engineering_bay
 	name = "\improper Engineering Bay"
 	icon_state = "engineering_locker"
-	req_access = list(access_engine)
+	req_access = list(access_engine_equip)
 
 /area/engineering/storage
 	name = "\improper Engineering Storage"
