@@ -92,6 +92,12 @@
 		/decl/stock_part_preset/radio/event_transmitter/airlock/external_air = 1
 	)
 
+/obj/machinery/door/airlock/research/xenobio
+	stock_part_presets = list(
+		/decl/stock_part_preset/radio/receiver/airlock/external_air = 1,
+		/decl/stock_part_preset/radio/event_transmitter/airlock/external_air = 1
+	)
+
 /obj/machinery/door/airlock/glass/mining
 	door_color = COLOR_PALE_ORANGE
 	stripe_color = COLOR_BEASTY_BROWN
