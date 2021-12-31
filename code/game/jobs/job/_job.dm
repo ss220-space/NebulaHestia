@@ -1,5 +1,5 @@
 /datum/job
-	var/title                                 // The name of the job	
+	var/title                                 // The name of the job
 	var/list/software_on_spawn = list()       // Defines the software files that spawn on tablets and labtops
 	var/list/department_types = list()        // What departments the job is in.
 	var/autoset_department = TRUE             // If department list is empty, use map default.
@@ -35,6 +35,7 @@
 	var/latejoin_at_spawnpoints               // If this job should use roundstart spawnpoints for latejoin (offstation jobs etc)
 	var/forced_spawnpoint                     // If set to a spawnpoint name, will use that spawn point for joining as this job.
 	var/hud_icon						      // icon used for Sec HUD overlay
+	var/required_role = null			      //a role which necessery to join as the job. For an example, explorers cannot be without EL
 
 	//Job access. The use of minimal_access or access is determined by a config setting: config.jobs_have_minimal_access
 	var/list/minimal_access = list()          // Useful for servers which prefer to only have access given to the places a job absolutely needs (Larger server population)
@@ -227,6 +228,10 @@
 		to_chat(feedback, "<span class='boldannounce'>Not old enough. Minimum character age is [minimum_character_age[S.get_root_species_name()]].</span>")
 		return TRUE
 
+	if(!is_required_roles_filled())
+		to_chat(feedback, "<span class='boldannounce'>For joining as [title] there should be [jointext(required_role, ", ")] in crew.</span>")
+		return TRUE
+
 	if(!S.check_background(src, prefs))
 		to_chat(feedback, "<span class='boldannounce'>Incompatible background for [title].</span>")
 		return TRUE
@@ -378,6 +383,8 @@
 		reasons["You are semi-antagonist banned."] = TRUE
 	if(!player_old_enough(caller))
 		reasons["Your player age is too low."] = TRUE
+	if(!is_required_roles_filled())
+		reasons["There are no employees who can train you."] = TRUE
 	if(!is_position_available())
 		reasons["There are no positions left."] = TRUE
 	if(!isnull(allowed_branches) && (!caller.prefs.branches[title] || !is_branch_allowed(caller.prefs.branches[title])))
@@ -426,6 +433,22 @@
 		return pick(loc_list)
 	else
 		return locate("start*[title]") // use old stype
+
+/datum/job/proc/is_required_roles_filled()
+	if(!required_role) return 1
+
+	// Abstract submap jobs is not writing to SStrade.primary_job_datums
+	if(istype(src, /datum/job/submap))
+		for(var/mob/player as anything in global.player_list)
+			if(player.mind?.assigned_job?.title in required_role)
+				return 1
+
+	for(var/datum/job/primary_job as anything in SSjobs.primary_job_datums)
+		if(!(primary_job.title in required_role))
+			return
+
+		if(primary_job.current_positions || !primary_job.total_positions)
+			return 1
 
 /**
  *  Return appropriate /decl/spawnpoint for given client
