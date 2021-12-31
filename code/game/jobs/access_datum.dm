@@ -376,6 +376,12 @@ var/global/const/access_heads = "ACCESS_HEADS" //67
 	desc = "Command"
 	region = ACCESS_REGION_COMMAND
 
+var/global/const/access_engine_engineer = "ACCESS_ENGINE_ENGINEER" //68
+/datum/access/engine_engineer
+	id = access_engine_engineer
+	desc = "Engineer's Equipment"
+	region = ACCESS_REGION_ENGINEERING
+
 /******************
 * Central Command *
 ******************/
