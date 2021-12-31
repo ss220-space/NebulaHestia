@@ -120,6 +120,8 @@
 	                    SKILL_DEVICES     = SKILL_MAX,
 	                    SKILL_SCIENCE     = SKILL_MAX)
 
+	required_role = list("Chief Science Officer", "Senior Researcher")
+
 	access = list(
 		access_tox, access_tox_storage, access_research, access_curiosity,
 		access_mining_office, access_mining_station, access_xenobiology, access_opportunity_helm,
