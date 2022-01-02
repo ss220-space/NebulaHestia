@@ -97,7 +97,7 @@
 			return
 
 		status = !status
-		
+
 		if(status)
 			to_chat(user, SPAN_NOTICE("You secure the welder."))
 		else
@@ -111,6 +111,7 @@
 		R.use(1)
 		add_fingerprint(user)
 		user.drop_from_inventory(src)
+		qdel(src)
 		var/obj/item/flamethrower/F = new(get_turf(src), src)
 		user.put_in_hands(F)
 		return
@@ -123,7 +124,7 @@
 		if(!(src in user.get_held_items()))
 			to_chat(user, SPAN_WARNING("You must hold the welder in your hands to attach a tank."))
 			return
-		
+
 		if(!user.unEquip(W, src))
 			return
 
