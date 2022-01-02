@@ -70,9 +70,9 @@
 /obj/item/chems/glass/standard_feed_mob(var/mob/user, var/mob/target)
 	if(!ATOM_IS_OPEN_CONTAINER(src))
 		to_chat(user, "<span class='notice'>You need to open \the [src] first.</span>")
-		return 1
+		return TRUE
 	if(user.a_intent == I_HURT)
-		return 1
+		return FALSE
 	return ..()
 
 /obj/item/chems/glass/self_feed_message(var/mob/user)
