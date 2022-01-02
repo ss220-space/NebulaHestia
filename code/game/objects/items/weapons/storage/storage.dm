@@ -22,6 +22,9 @@
 	var/collection_mode = TRUE //FALSE = pick one at a time, TRUE = pick all on tile
 	var/use_sound = "rustle" //sound played when used. null for no sound.
 
+	///If true, will not permit use of the storage UI
+	var/virtual
+
 	//initializes the contents of the storage with some items based on an assoc list. The assoc key must be an item path,
 	//the assoc value can either be the quantity, or a list whose first value is the quantity and the rest are args.
 	var/list/startswith
@@ -88,6 +91,8 @@
 		storage_ui.hide_from(user)
 
 /obj/item/storage/proc/open(mob/user)
+	if (virtual)
+		return
 	if(!opened)
 		playsound(src.loc, src.open_sound, 50, 0, -5)
 		opened = 1
