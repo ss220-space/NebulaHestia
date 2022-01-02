@@ -99,28 +99,32 @@
 	if(!isliving(usr))
 		return
 
-	var/mob/living/M = usr
+	var/mob/living/player = usr
 
-	if(M.stat)
+	if(player.stat)
 		return
 
 	if(!LAZYLEN(accessories))
 		return
 
-	var/obj/item/clothing/accessory/A
+	var/obj/item/clothing/accessory/target_to_remove = null
 	if(LAZYLEN(accessories) > 1)
 		var/list/options = list()
-		for(var/obj/item/clothing/accessory/i in accessories)
-			var/image/radial_button = image(icon = i.icon, icon_state = i.icon_state)
-			options[i] = radial_button
-		A = show_radial_menu(M, M, options, radius = 42, tooltips = TRUE)
+		for(var/obj/item/clothing/accessory/equipped AS_ANYTHING in accessories)
+			var/image/radial_button = image(icon = equipped.icon, icon_state = equipped.icon_state)
+			options[equipped] = radial_button
+		target_to_remove = show_radial_menu(player, player, options, radius = 42, tooltips = TRUE)
 	else
-		A = accessories[1]
+		target_to_remove = accessories[1]
 
-	remove_accessory(usr, A)
+	remove_accessory(usr, target_to_remove)
 
 	if(!LAZYLEN(accessories))
 		verbs -= /obj/item/clothing/proc/removetie_verb
+
+/obj/item/clothing/AltClick(var/mob/user)
+	if(CanPhysicallyInteract(user))
+		removetie_verb()
 
 /obj/item/clothing/emp_act(severity)
 	if(length(accessories))
