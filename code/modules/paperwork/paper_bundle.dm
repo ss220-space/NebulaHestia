@@ -166,6 +166,7 @@
 				var/obj/item/paper/P = src[1]
 				usr.drop_from_inventory(src)
 				usr.put_in_hands(P)
+				close_browser(usr, "window=[name]")
 				qdel(src)
 
 				return
