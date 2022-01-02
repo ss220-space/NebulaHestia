@@ -219,7 +219,7 @@ var/global/list/time_prefs_fixed = list()
 		return
 
 	winshow(user, "preferences_window", TRUE)
-	var/datum/browser/popup = new(user, "preferences_browser", "Character Setup", 800, 800)
+	var/datum/browser/popup = new(user, "preferences_browser", "Character Setup", 1000, 800)
 	var/content = {"
 	<script type='text/javascript'>
 		function update_content(data){
