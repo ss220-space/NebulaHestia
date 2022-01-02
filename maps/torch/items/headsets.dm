@@ -108,30 +108,6 @@
 	item_state = "com_headset_alt"
 	max_keys = 4
 
-/obj/item/radio/headset/exploration
-	name = "exploration headset"
-	desc = "A headset with access to the exploration channel. It has an inbuilt subspace antenna for better reception."
-	icon_state = "exp_headset"
-	item_state = "headset"
-	ks1type = /obj/item/encryptionkey/exploration
-
-/obj/item/radio/headset/exploration/alt
-	name = "exploration bowman headset"
-	icon_state = "exp_headset_alt"
-	item_state = "exp_headset_alt"
-
-/obj/item/radio/headset/pathfinder
-	name = "pathfinder's headset"
-	desc = "A headset with access to the command and exploration channels. It has an inbuilt subspace antenna for better reception."
-	icon_state = "exp_headset"
-	item_state = "headset"
-	ks1type = /obj/item/encryptionkey/pathfinder
-
-/obj/item/radio/headset/pathfinder/alt
-	name = "pathfinder's bowman headset"
-	icon_state = "exp_headset_alt"
-	item_state = "exp_headset_alt"
-
 /obj/item/radio/headset/headset_cargo
 	desc = "A headset used by the Deck Chief and his slaves."
 
