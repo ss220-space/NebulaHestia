@@ -114,7 +114,9 @@
 		if(!linked_core)
 			to_chat(user, SPAN_WARNING("Unable to establish connection to superluminal shunt."))
 			return
-	recalc_cost()
+
+
+	var/core_ftl  = max(1, round(recalc_cost() / 2)) //cores to jump
 
 	data["ftlstatus"] = linked_core.get_status()
 	data["shunt_x"] = linked_core.shunt_x
@@ -122,9 +124,11 @@
 	data["to_plot_x"] = to_plot_x
 	data["to_plot_y"] = to_plot_y
 	data["fuel_joules"] = linked_core.get_charges() || 0
-	data["jumpcost"] = recalc_cost()
+	data["jumpcost"] = core_ftl
+	//data["jumpcost"] = recalc_cost()
 	data["powercost"] = recalc_cost_power()/1000
 	data["chargetime"] = linked_core.get_charge_time()
+	data["accumulated_charge"] = round(linked_core.accumulated_charge / 1000)
 	data["chargepercent"] = linked_core.chargepercent
 	data["maxfuel"] = linked_core.get_max_charges()
 	data["jump_status"] = get_status()
@@ -190,7 +194,7 @@
 			if(linked_core.get_status() != FTL_STATUS_GOOD)
 				to_chat(user, SPAN_WARNING("Superluminal shunt inoperable. Please try again later."))
 				return TOPIC_REFRESH
-			
+
 			var/datum/overmap/overmap = global.overmaps_by_name[overmap_id]
 			var/dist = get_dist(locate(linked_core.shunt_x, linked_core.shunt_y, overmap.assigned_z), get_turf(linked))
 			if(is_jump_unsafe()) //We are above the safe jump distance, give them a warning.
@@ -215,6 +219,8 @@
 					to_chat(user, SPAN_WARNING("Superluminal shunt inoperable: cooldown interlocks engaged."))
 				if(FTL_START_FAILURE_OTHER)
 					to_chat(user, SPAN_WARNING("Superluminal shunt inoperable: unknown error."))
+				if(FTL_BAD_DIST)
+					to_chat(user, SPAN_NOTICE("Superluminal shunt inoperable: check target coordinates."))
 				if(FTL_START_CONFIRMED)
 					to_chat(user, SPAN_NOTICE("Superluminal shunt operational: spooling up."))
 			return TOPIC_REFRESH
