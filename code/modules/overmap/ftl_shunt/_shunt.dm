@@ -1,6 +1,6 @@
 #define CHARGE_TIME_PER_TON 0.1 //In deciseconds.
 #define JOULES_PER_TON 5000
-#define REQUIRED_CHARGE_MULTIPLIER 0.005
+#define REQUIRED_CHARGE_MULTIPLIER 0.001
 #define JUMP_TIME_PER_TILE 20 SECONDS
 
 #define FTL_START_FAILURE_FUEL 1 //Not enough fuel.
@@ -10,6 +10,8 @@
 #define FTL_START_FAILURE_OTHER 5 //Unspecific failure.
 
 #define FTL_START_CONFIRMED 6 //All good.
+
+#define FTL_BAD_DIST 7 // prevent jump with dist 0
 
 #define SHUNT_SEVERITY_MINOR 1
 #define SHUNT_SEVERITY_MAJOR 2

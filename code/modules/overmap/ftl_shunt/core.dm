@@ -37,9 +37,9 @@
 	var/target_charge
 	var/cooldown_delay = 5 MINUTES
 	var/cooldown
-	var/max_jump_distance = 8 //How many overmap tiles can this move the ship?
-	var/moderate_jump_distance = 6
-	var/safe_jump_distance = 3
+	var/max_jump_distance = 14 //How many overmap tiles can this move the ship?
+	var/moderate_jump_distance = 8
+	var/safe_jump_distance = 4
 	var/sabotaged
 	var/sabotaged_amt = 0 //amount of crystals used to sabotage us.
 	var/max_power_usage = 5 MEGAWATTS //how much power can we POSSIBLY consume.
@@ -343,7 +343,10 @@
 		if(!length(fuel_ports))
 			return FTL_START_FAILURE_OTHER
 
-	calculate_jump_requirements()
+	var/calcRes  = calculate_jump_requirements()
+
+	if(calcRes == FTL_BAD_DIST) // check for jump on departure square.  get_dist will return -1
+		return FTL_BAD_DIST
 
 	if(accumulated_charge < required_charge)
 		return FTL_START_FAILURE_POWER
@@ -379,7 +382,11 @@
 		var/vessel_mass = ftl_computer.linked.get_vessel_mass()
 		var/shunt_turf = locate(shunt_x, shunt_y, O.z)
 		shunt_distance = get_dist(get_turf(ftl_computer.linked), shunt_turf)
-		required_jump_cores = shunt_distance
+		if(shunt_distance == -1)
+			return FTL_BAD_DIST
+
+		required_jump_cores = max(1, round(shunt_distance / 2))
+		//required_jump_cores = shunt_distance
 		required_charge = ((shunt_distance * vessel_mass)* REQUIRED_CHARGE_MULTIPLIER)*1000
 
 //Cancels the in-progress shunt.
@@ -427,7 +434,7 @@
 			sound_to(M, 'sound/machines/hyperspace_begin.ogg')
 
 /obj/machinery/ftl_shunt/core/proc/enter_shunt(var/shunt_x, var/shunt_x, var/jumpdist, var/destination)
-	var/announcetxt = replacetext(shunt_entered_text, "%%TIME%%", "[round((jumpdist*JUMP_TIME_PER_TILE)/60)]")
+	var/announcetxt = replacetext(shunt_entered_text, "%%TIME%%", "[round((jumpdist*JUMP_TIME_PER_TILE)/10)]")
 	var/datum/event_meta/EM = new(EVENT_LEVEL_MUNDANE, "FTL", /datum/event/ftl, add_to_queue = FALSE, is_one_shot = TRUE)
 	ftl_event = new /datum/event/ftl(EM)
 	ftl_event.startWhen = 0
@@ -589,7 +596,7 @@
 /obj/machinery/ftl_shunt/core/proc/get_status()
 	if(stat & (BROKEN|NOPOWER))
 		return FTL_STATUS_OFFLINE
-	if(cooldown)
+	if(world.time <= cooldown)
 		return FTL_STATUS_COOLDOWN
 	if(jump_timer)
 		return FTL_STATUS_SPOOLING_UP
@@ -607,17 +614,17 @@
 
 /obj/machinery/ftl_shunt/core/proc/use_fuel(var/charges_required)
 	var/avaliable_charges
-	var/used_charges
+	var/used_charges = 0
 
 	for(var/obj/machinery/ftl_shunt/fuel_port/F in fuel_ports)
 		avaliable_charges += F.get_charge()
 	if(avaliable_charges >= charges_required)
 		for(var/obj/machinery/ftl_shunt/fuel_port/F in fuel_ports)
-			F.use_charge()
-			F.update_icon()
-			used_charges++
-			if(used_charges == charges_required)
-				break
+			if(F.use_charge())
+				F.update_icon()
+				used_charges++
+				if(used_charges >= charges_required)
+					break
 
 /obj/machinery/ftl_shunt/core/proc/get_charges()
 	for(var/obj/machinery/ftl_shunt/fuel_port/F in fuel_ports)
