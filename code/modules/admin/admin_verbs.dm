@@ -134,6 +134,7 @@ var/global/list/admin_verbs_spawn = list(
 	/datum/admins/proc/spawn_atom,		// allows us to spawn instances,
 	/client/proc/respawn_character,
 	/client/proc/respawn_as_self,
+	/client/proc/cmd_offer_to_ghosts_to_be_somebody,
 	/client/proc/spawn_chemdisp_cartridge,
 	/datum/admins/proc/mass_debug_closet_icons
 	)

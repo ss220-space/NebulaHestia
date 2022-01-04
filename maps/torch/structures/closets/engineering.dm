@@ -30,6 +30,11 @@
 		"exped" = COLOR_CLOSET_GOLD
 	)
 
+/decl/closet_appearance/secure_closet/torch/engineering/trainee
+	extra_decals = list(
+		"exped" = COLOR_WARM_YELLOW
+	)
+
 /obj/structure/closet/secure_closet/engineering_chief_torch
 	name = "chief engineer's locker"
 	req_access = list(access_ce)
@@ -70,10 +75,35 @@
 
 /obj/structure/closet/secure_closet/engineering_torch
 	name = "engineer's locker"
-	req_access = list(access_engine_equip)
+	req_access = list(access_engine_engineer)
 	closet_appearance = /decl/closet_appearance/secure_closet/torch/engineering
 
 /obj/structure/closet/secure_closet/engineering_torch/WillContain()
+	return list(
+		/obj/item/clothing/under/hazard,
+		/obj/item/clothing/accessory/storage/vest,
+		/obj/item/storage/belt/utility/full,
+		/obj/item/radio/headset/headset_eng,
+		/obj/item/radio/headset/headset_eng/alt,
+		/obj/item/clothing/suit/storage/hazardvest,
+		/obj/item/clothing/mask/gas,
+		/obj/item/clothing/glasses/meson,
+		/obj/item/taperoll/engineering,
+		/obj/item/flashlight,
+		/obj/item/taperoll/atmos,
+		/obj/item/clothing/gloves/insulated,
+		/obj/item/knife/folding/swiss/engineer,
+		/obj/item/clothing/head/hardhat/damage_control,
+		new /datum/atom_creator/weighted(list(/obj/item/storage/backpack/industrial, /obj/item/storage/backpack/satchel/eng)),
+		new /datum/atom_creator/weighted(list(/obj/item/storage/backpack/dufflebag/eng, /obj/item/storage/backpack/messenger/engi))
+	)
+
+/obj/structure/closet/secure_closet/engineering_trainee_torch
+	name = "engineer trainee's locker"
+	req_access = list(access_engine_equip)
+	closet_appearance = /decl/closet_appearance/secure_closet/torch/engineering/trainee
+
+/obj/structure/closet/secure_closet/engineering_trainee_torch/WillContain()
 	return list(
 		/obj/item/clothing/under/hazard,
 		/obj/item/clothing/accessory/storage/vest,

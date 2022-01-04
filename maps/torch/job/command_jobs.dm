@@ -32,13 +32,13 @@
 
 	access = list(
 		access_captain, access_security, access_brig, access_armory, access_forensics_lockers, access_heads, access_medical, access_morgue, access_tox, access_tox_storage,
-		access_engine, access_engine_equip, access_maint_tunnels, access_external_airlocks, access_emergency_storage, access_change_ids,
+		access_engine, access_engine_equip, access_engine_engineer, access_maint_tunnels, access_external_airlocks, access_emergency_storage, access_change_ids,
 		access_ai_upload, access_teleporter, access_eva, access_bridge, access_all_personal_lockers, access_chapel_office, access_tech_storage,
 		access_atmospherics, access_bar, access_janitor, access_crematorium, access_kitchen, access_robotics, access_cargo, access_construction,
 		access_chemistry, access_cargo_bot, access_hydroponics, access_manufacturing, access_library, access_lawyer, access_virology, access_cmo,
 		access_qm, access_network, access_surgery, access_research, access_mining, access_mining_office, access_mailsorting, access_heads_vault,
 		access_mining_station, access_xenobiology, access_ce, access_hop, access_hos, access_RC_announce, access_keycard_auth, access_tcomsat,
-		access_gateway, access_sec_doors, access_psychiatrist, access_xenoarch, access_medical_equip, access_heads, access_hangar, access_opportunity_helm,
+		access_gateway, access_sec_doors, access_psychiatrist, access_xenoarch, access_medical_equip, access_medical_doctor, access_heads, access_hangar, access_opportunity_helm,
 		access_expedition_shuttle_helm, access_perseverance, access_perseverance_helm, access_solgov_crew, access_nanotrasen,
 		access_emergency_armory, access_sec_guard, access_gun, access_expedition_shuttle, access_opportunity, access_seneng, access_senmed, access_senadv,
 		access_explorer, access_pathfinder, access_pilot, access_commissary, access_curiosity, access_curiosity_helm, access_curiosity_analysis, access_curiosity_phoron,
@@ -48,13 +48,13 @@
 
 	minimal_access = list(
 		access_captain, access_security, access_brig, access_armory, access_forensics_lockers, access_heads, access_medical, access_morgue, access_tox, access_tox_storage,
-		access_engine, access_engine_equip, access_maint_tunnels, access_external_airlocks, access_emergency_storage, access_change_ids,
+		access_engine, access_engine_equip, access_engine_engineer, access_maint_tunnels, access_external_airlocks, access_emergency_storage, access_change_ids,
 		access_ai_upload, access_teleporter, access_eva, access_bridge, access_all_personal_lockers, access_chapel_office, access_tech_storage,
 		access_atmospherics, access_bar, access_janitor, access_crematorium, access_kitchen, access_robotics, access_cargo, access_construction,
 		access_chemistry, access_cargo_bot, access_hydroponics, access_manufacturing, access_library, access_lawyer, access_virology, access_cmo,
 		access_qm, access_network, access_surgery, access_research, access_mining, access_mining_office, access_mailsorting, access_heads_vault,
 		access_mining_station, access_xenobiology, access_ce, access_hop, access_hos, access_RC_announce, access_keycard_auth, access_tcomsat,
-		access_gateway, access_sec_doors, access_psychiatrist, access_xenoarch, access_medical_equip, access_heads, access_hangar, access_opportunity_helm,
+		access_gateway, access_sec_doors, access_psychiatrist, access_xenoarch, access_medical_equip, access_medical_doctor, access_heads, access_hangar, access_opportunity_helm,
 		access_expedition_shuttle_helm, access_perseverance, access_perseverance_helm, access_solgov_crew, access_nanotrasen,
 		access_emergency_armory, access_sec_guard, access_gun, access_expedition_shuttle, access_opportunity, access_seneng, access_senmed, access_senadv,
 		access_explorer, access_pathfinder, access_pilot, access_commissary, access_curiosity, access_curiosity_helm, access_curiosity_analysis, access_curiosity_phoron,
@@ -104,13 +104,13 @@
 
 	access = list(
 		access_security, access_brig, access_armory, access_forensics_lockers, access_heads, access_medical, access_morgue, access_tox, access_tox_storage,
-		access_engine, access_engine_equip, access_maint_tunnels, access_external_airlocks, access_emergency_storage, access_change_ids,
+		access_engine, access_engine_equip, access_engine_engineer, access_maint_tunnels, access_external_airlocks, access_emergency_storage, access_change_ids,
 		access_ai_upload, access_teleporter, access_eva, access_bridge, access_all_personal_lockers, access_chapel_office, access_tech_storage,
 		access_atmospherics, access_bar, access_janitor, access_crematorium, access_kitchen, access_robotics, access_cargo, access_construction,
 		access_chemistry, access_cargo_bot, access_hydroponics, access_manufacturing, access_library, access_lawyer, access_virology, access_cmo,
 		access_qm, access_network, access_surgery, access_research, access_mining, access_mining_office, access_mailsorting, access_heads_vault,
 		access_mining_station, access_xenobiology, access_ce, access_hop, access_hos, access_RC_announce, access_keycard_auth, access_tcomsat,
-		access_gateway, access_sec_doors, access_psychiatrist, access_xenoarch, access_medical_equip, access_heads, access_hangar, access_opportunity_helm,
+		access_gateway, access_sec_doors, access_psychiatrist, access_xenoarch, access_medical_equip, access_medical_doctor, access_heads, access_hangar, access_opportunity_helm,
 		access_expedition_shuttle_helm, access_perseverance, access_perseverance_helm, access_solgov_crew, access_nanotrasen,
 		access_emergency_armory, access_sec_guard, access_gun, access_expedition_shuttle, access_opportunity, access_seneng, access_senmed, access_senadv,
 		access_explorer, access_pathfinder, access_pilot, access_commissary, access_curiosity, access_curiosity_helm, access_curiosity_analysis, access_curiosity_phoron,
@@ -120,13 +120,13 @@
 
 	minimal_access = list(
 		access_security, access_brig, access_armory, access_forensics_lockers, access_heads, access_medical, access_morgue, access_tox, access_tox_storage,
-		access_engine, access_engine_equip, access_maint_tunnels, access_external_airlocks, access_emergency_storage, access_change_ids,
+		access_engine, access_engine_equip, access_engine_engineer, access_maint_tunnels, access_external_airlocks, access_emergency_storage, access_change_ids,
 		access_ai_upload, access_teleporter, access_eva, access_bridge, access_all_personal_lockers, access_chapel_office, access_tech_storage,
 		access_atmospherics, access_bar, access_janitor, access_crematorium, access_kitchen, access_robotics, access_cargo, access_construction,
 		access_chemistry, access_cargo_bot, access_hydroponics, access_manufacturing, access_library, access_lawyer, access_virology, access_cmo,
 		access_qm, access_network, access_surgery, access_research, access_mining, access_mining_office, access_mailsorting, access_heads_vault,
 		access_mining_station, access_xenobiology, access_ce, access_hop, access_hos, access_RC_announce, access_keycard_auth, access_tcomsat,
-		access_gateway, access_sec_doors, access_psychiatrist, access_xenoarch, access_medical_equip, access_heads, access_hangar, access_opportunity_helm,
+		access_gateway, access_sec_doors, access_psychiatrist, access_xenoarch, access_medical_equip, access_medical_doctor, access_heads, access_hangar, access_opportunity_helm,
 		access_expedition_shuttle_helm, access_perseverance, access_perseverance_helm, access_solgov_crew, access_nanotrasen,
 		access_emergency_armory, access_sec_guard, access_gun, access_expedition_shuttle, access_opportunity, access_seneng, access_senmed, access_senadv,
 		access_explorer, access_pathfinder, access_pilot, access_commissary, access_curiosity, access_curiosity_helm, access_curiosity_analysis, access_curiosity_phoron,
@@ -240,7 +240,7 @@
 		access_teleporter, access_eva, access_bridge, access_heads,
 		access_chapel_office, access_crematorium, access_chemistry, access_virology, access_perseverance,
 		access_cmo, access_surgery, access_RC_announce, access_keycard_auth, access_psychiatrist,
-		access_medical_equip, access_solgov_crew, access_senmed, access_hangar, access_torch_fax, access_radio_comm,
+		access_medical_equip, access_medical_doctor, access_solgov_crew, access_senmed, access_hangar, access_torch_fax, access_radio_comm,
 		access_radio_med
 	)
 
@@ -293,7 +293,7 @@
 	skill_points = 30
 
 	access = list(
-		access_engine, access_engine_equip, access_maint_tunnels, access_external_airlocks, access_emergency_storage,
+		access_engine, access_engine_equip, access_engine_engineer, access_maint_tunnels, access_external_airlocks, access_emergency_storage,
 		access_ai_upload, access_teleporter, access_eva, access_bridge, access_heads,
 		access_tech_storage, access_robotics, access_atmospherics, access_janitor, access_construction,
 		access_network, access_ce, access_RC_announce, access_keycard_auth, access_tcomsat,
@@ -303,7 +303,7 @@
 
 
 	minimal_access = list(
-		access_engine, access_engine_equip, access_maint_tunnels, access_external_airlocks, access_emergency_storage,
+		access_engine, access_engine_equip, access_engine_engineer, access_maint_tunnels, access_external_airlocks, access_emergency_storage,
 		access_ai_upload, access_teleporter, access_eva, access_bridge, access_heads,
 		access_tech_storage, access_atmospherics, access_janitor, access_construction,
 		access_network, access_ce, access_RC_announce, access_keycard_auth, access_tcomsat,

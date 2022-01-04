@@ -23,7 +23,7 @@
 	dir = 4;
 	id_tag = "escape_pod_11";
 	name = "escape pod six controller";
-	pixel_x = -32;
+	pixel_x = -25;
 	tag_door = "escape_pod_11_hatch"
 	},
 /turf/simulated/floor/tiled/monotile,
@@ -4323,9 +4323,6 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 4
 	},
-/obj/effect/floor_decal/corner_techfloor_grid,
-/obj/effect/floor_decal/techfloor/corner,
-/obj/effect/floor_decal/industrial/warning/corner,
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
@@ -4453,8 +4450,13 @@
 /turf/simulated/floor/tiled/dark,
 /area/engineering/storage)
 "kG" = (
-/obj/machinery/teleport/hub,
-/turf/simulated/floor/tiled/techfloor/grid,
+/obj/effect/floor_decal/techfloor{
+	dir = 4
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/dark,
 /area/teleporter/seconddeck)
 "kH" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
@@ -4487,7 +4489,7 @@
 	dir = 1;
 	pixel_y = -22
 	},
-/obj/machinery/teleport/station,
+/obj/machinery/teleport/hub,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/teleporter/seconddeck)
 "kN" = (
@@ -5150,7 +5152,7 @@
 /area/engineering/engine_monitoring)
 "mE" = (
 /turf/simulated/floor/tiled,
-/area/engineering/engineering_monitoring)
+/area/engineering/engineering_bay)
 "mF" = (
 /obj/structure/disposalpipe/segment,
 /obj/effect/floor_decal/techfloor{
@@ -5579,12 +5581,6 @@
 "nB" = (
 /obj/structure/table,
 /obj/random/tank,
-/obj/effect/floor_decal/techfloor{
-	dir = 4
-	},
-/obj/effect/floor_decal/industrial/warning{
-	dir = 4
-	},
 /turf/simulated/floor/tiled/dark,
 /area/teleporter/seconddeck)
 "nC" = (
@@ -5848,7 +5844,7 @@
 	dir = 4;
 	id_tag = "escape_pod_10";
 	name = "escape pod five controller";
-	pixel_x = -32;
+	pixel_x = -25;
 	tag_door = "escape_pod_10_hatch"
 	},
 /turf/simulated/floor/tiled/monotile,
@@ -6388,6 +6384,12 @@
 /obj/structure/network_cable,
 /turf/simulated/floor/tiled/monotile,
 /area/engineering/engineering_monitoring)
+"pP" = (
+/obj/machinery/air_sensor{
+	id_tag = "o2_sensor"
+	},
+/turf/simulated/floor/reinforced/oxygen,
+/area/engineering/atmos)
 "pR" = (
 /obj/structure/cable/cyan{
 	icon_state = "1-2"
@@ -7489,6 +7491,12 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/engineering/engine_room)
+"sn" = (
+/obj/machinery/light/spot{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/white,
+/area/rnd/xenobiology/entry)
 "so" = (
 /obj/machinery/atmospherics/pipe/simple/visible/green{
 	dir = 4
@@ -7891,6 +7899,24 @@
 /obj/machinery/status_display{
 	pixel_x = -32
 	},
+/obj/item/jumpcore,
+/obj/item/jumpcore,
+/obj/item/jumpcore,
+/obj/item/jumpcore,
+/obj/item/jumpcore,
+/obj/item/jumpcore,
+/obj/item/jumpcore,
+/obj/item/jumpcore,
+/obj/item/jumpcore,
+/obj/item/jumpcore,
+/obj/item/jumpcore,
+/obj/item/jumpcore,
+/obj/item/jumpcore,
+/obj/item/jumpcore,
+/obj/item/jumpcore,
+/obj/item/jumpcore,
+/obj/item/jumpcore,
+/obj/item/jumpcore,
 /turf/simulated/floor/tiled/techfloor,
 /area/engineering/shieldbay)
 "tw" = (
@@ -7964,6 +7990,7 @@
 	alarm_id = "xenobio1_alarm";
 	pixel_y = 24
 	},
+/mob/living/slime,
 /turf/simulated/floor/reinforced,
 /area/rnd/xenobiology)
 "tD" = (
@@ -8557,6 +8584,13 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
+/obj/machinery/button/access/interior{
+	id_tag = "xeno_control";
+	name = "Xenobiology Airlock Interior Acces";
+	pixel_x = -25;
+	pixel_y = 25;
+	req_access = list("ACCESS_XENOBIO")
+	},
 /turf/simulated/floor/tiled/white/monotile,
 /area/rnd/xenobiology)
 "ve" = (
@@ -8853,6 +8887,10 @@
 "vS" = (
 /turf/simulated/floor/tiled/dark,
 /area/teleporter/seconddeck)
+"vT" = (
+/obj/effect/paint_stripe/engineering,
+/turf/simulated/wall/r_wall/prepainted,
+/area/rnd/xenobiology/entry)
 "vU" = (
 /obj/structure/disposalpipe/segment,
 /obj/machinery/door/window/brigdoor/northleft{
@@ -10956,8 +10994,8 @@
 /area/storage/cargo)
 "Ce" = (
 /obj/machinery/door/firedoor,
-/obj/machinery/door/airlock/research{
-	id_tag = "xeno_airlock_interior";
+/obj/machinery/door/airlock/research/xenobio{
+	id_tag = "xeno_interior";
 	locked = 1;
 	name = "Xenobiology Internal Airlock"
 	},
@@ -11274,21 +11312,18 @@
 /turf/simulated/floor/reinforced/carbon_dioxide,
 /area/engineering/fuelbay)
 "CZ" = (
-/obj/machinery/embedded_controller/radio/airlock/access_controller{
-	dir = 4;
-	id_tag = "xeno_airlock_control";
-	name = "Xenobiology Access Console";
-	pixel_x = -24;
-	pixel_y = -24;
-	req_access = list("ACCESS_XENOBIO");
-	tag_exterior_door = "xeno_airlock_exterior";
-	tag_interior_door = "xeno_airlock_interior"
-	},
 /obj/effect/floor_decal/corner/purple{
 	dir = 9
 	},
+/obj/machinery/button/access/exterior{
+	id_tag = "xeno_control";
+	name = "Xenobiology Airlock Exterior Acces";
+	pixel_x = -25;
+	pixel_y = -25;
+	req_access = list("ACCESS_XENOBIO")
+	},
 /turf/simulated/floor/tiled,
-/area/hallway/primary/seconddeck)
+/area/rnd/xenobiology/entry)
 "Da" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -11300,7 +11335,7 @@
 	dir = 6
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/primary/seconddeck)
+/area/rnd/xenobiology/entry)
 "Db" = (
 /obj/machinery/atmospherics/valve{
 	dir = 4
@@ -11436,11 +11471,6 @@
 /area/maintenance/seconddeck/foreport)
 "Dt" = (
 /obj/machinery/door/firedoor,
-/obj/machinery/door/airlock/research{
-	id_tag = "xeno_airlock_exterior";
-	locked = 1;
-	name = "Xenobiology External Airlock"
-	},
 /obj/machinery/door/blast/regular{
 	density = 0;
 	icon_state = "pdoor0";
@@ -11449,6 +11479,11 @@
 	opacity = 0
 	},
 /obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/machinery/door/airlock/research/xenobio{
+	id_tag = "xeno_exterior";
+	locked = 1;
+	name = "Xenobiology External Airlock"
+	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/xenobiology/entry)
 "Du" = (
@@ -11459,11 +11494,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/disposalpipe/segment,
 /obj/machinery/door/firedoor,
-/obj/machinery/door/airlock/research{
-	id_tag = "xeno_airlock_exterior";
-	locked = 1;
-	name = "Xenobiology External Airlock"
-	},
 /obj/machinery/door/blast/regular{
 	density = 0;
 	icon_state = "pdoor0";
@@ -11472,6 +11502,11 @@
 	opacity = 0
 	},
 /obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/machinery/door/airlock/research/xenobio{
+	id_tag = "xeno_exterior";
+	locked = 1;
+	name = "Xenobiology External Airlock"
+	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/xenobiology/entry)
 "Dv" = (
@@ -11763,6 +11798,11 @@
 	},
 /turf/simulated/wall/r_wall/map_preset/tan,
 /area/engineering/atmos)
+"Er" = (
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/structure/closet/secure_closet/engineering_trainee_torch,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/engineering/locker_room)
 "Es" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
@@ -11790,8 +11830,8 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/disposalpipe/segment,
 /obj/machinery/door/firedoor,
-/obj/machinery/door/airlock/research{
-	id_tag = "xeno_airlock_interior";
+/obj/machinery/door/airlock/research/xenobio{
+	id_tag = "xeno_interior";
 	locked = 1;
 	name = "Xenobiology Internal Airlock"
 	},
@@ -11996,9 +12036,6 @@
 	pressure_checks_default = 2;
 	pump_direction = 0;
 	use_power = 1
-	},
-/obj/machinery/air_sensor{
-	id_tag = "o2_sensor"
 	},
 /turf/simulated/floor/reinforced/oxygen,
 /area/engineering/atmos)
@@ -12290,9 +12327,6 @@
 /turf/simulated/floor/plating,
 /area/maintenance/seconddeck/aftport)
 "FI" = (
-/obj/effect/floor_decal/corner_techfloor_grid{
-	dir = 8
-	},
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 8;
 	icon_state = "warningcorner"
@@ -12300,6 +12334,11 @@
 /obj/machinery/light{
 	dir = 4
 	},
+/obj/effect/floor_decal/corner_techfloor_grid{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner_techfloor_grid,
+/obj/effect/floor_decal/industrial/warning,
 /turf/simulated/floor/tiled/dark,
 /area/teleporter/seconddeck)
 "FJ" = (
@@ -12342,9 +12381,7 @@
 /turf/simulated/wall/r_wall/map_preset/tan,
 /area/maintenance/seconddeck/forestarboard)
 "FV" = (
-/obj/machinery/computer/teleporter{
-	dir = 1
-	},
+/obj/machinery/teleport/station,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/teleporter/seconddeck)
 "FW" = (
@@ -12563,6 +12600,9 @@
 	},
 /turf/simulated/floor/tiled,
 /area/engineering/engineering_bay)
+"Gz" = (
+/turf/simulated/floor/reinforced/oxygen,
+/area/engineering/atmos)
 "GA" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/blast/shutters{
@@ -13170,8 +13210,8 @@
 /area/vacant/prototype/control)
 "Ik" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
-/obj/structure/closet/secure_closet/engineering_torch,
 /obj/machinery/light,
+/obj/structure/closet/secure_closet/engineering_trainee_torch,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/engineering/locker_room)
 "Il" = (
@@ -14631,11 +14671,19 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 6
 	},
+/mob/living/slime,
 /turf/simulated/floor/reinforced,
 /area/rnd/xenobiology)
 "MO" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 4
+	},
+/obj/machinery/button/access/interior{
+	id_tag = "xeno_control";
+	name = "Xenobiology Airlock Interior Acces";
+	pixel_x = -25;
+	pixel_y = -25;
+	req_access = list("ACCESS_XENOBIO")
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/xenobiology/entry)
@@ -14647,7 +14695,9 @@
 /area/engineering/engine_room)
 "MQ" = (
 /obj/machinery/door/blast/regular/escape_pod{
-	dir = 4
+	dir = 4;
+	id_tag = "escape_pod_10";
+	name = "Escape Pod release Door 10"
 	},
 /turf/simulated/floor/reinforced/airless,
 /area/maintenance/seconddeck/foreport)
@@ -14902,6 +14952,13 @@
 "ND" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
+	},
+/obj/machinery/button/access/exterior{
+	id_tag = "xeno_control";
+	name = "Xenobiology Airlock Exterior Acces";
+	pixel_x = -25;
+	pixel_y = 25;
+	req_access = list("ACCESS_XENOBIO")
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/xenobiology/entry)
@@ -15710,6 +15767,7 @@
 /area/engineering/shieldbay)
 "PJ" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume,
+/mob/living/slime,
 /turf/simulated/floor/reinforced,
 /area/rnd/xenobiology)
 "PL" = (
@@ -15746,9 +15804,6 @@
 	dir = 8;
 	pixel_x = -24
 	},
-/obj/machinery/light{
-	dir = 1
-	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/xenobiology/entry)
 "PO" = (
@@ -15759,7 +15814,9 @@
 /area/maintenance/seconddeck/forestarboard)
 "PP" = (
 /obj/machinery/door/blast/regular/escape_pod{
-	dir = 4
+	dir = 4;
+	id_tag = "escape_pod_11";
+	name = "Escape Pod release Door 11"
 	},
 /turf/simulated/floor/reinforced/airless,
 /area/maintenance/seconddeck/forestarboard)
@@ -16428,15 +16485,6 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/engineering/drone_fabrication)
 "RN" = (
-/obj/machinery/embedded_controller/radio/airlock/access_controller{
-	id_tag = "xeno_airlock_control";
-	name = "Xenobiology Access Console";
-	pixel_x = 8;
-	pixel_y = 24;
-	req_access = list("ACCESS_XENOBIO");
-	tag_exterior_door = "xeno_airlock_exterior";
-	tag_interior_door = "xeno_airlock_interior"
-	},
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
@@ -17645,6 +17693,18 @@
 /obj/effect/floor_decal/industrial/warning,
 /turf/simulated/floor/tiled,
 /area/hallway/primary/seconddeck/fore)
+"VN" = (
+/obj/machinery/embedded_controller/radio/airlock/access_controller{
+	dir = 4;
+	id_tag = "xeno_control";
+	name = "Xenobiology Access Console";
+	pixel_x = -22;
+	req_access = list("ACCESS_XENOBIO");
+	tag_exterior_door = "xeno_exterior";
+	tag_interior_door = "xeno_interior"
+	},
+/turf/simulated/floor/tiled/white,
+/area/rnd/xenobiology/entry)
 "VP" = (
 /obj/structure/closet/radiation,
 /obj/effect/floor_decal/industrial/outline/grey,
@@ -17889,8 +17949,6 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/storage/tech)
 "WA" = (
-/obj/effect/floor_decal/techfloor,
-/obj/effect/floor_decal/industrial/warning,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 9
 	},
@@ -17900,6 +17958,8 @@
 /obj/structure/cable/green{
 	icon_state = "1-8"
 	},
+/obj/effect/floor_decal/corner_techfloor_grid,
+/obj/effect/floor_decal/industrial/warning/corner,
 /turf/simulated/floor/tiled/dark,
 /area/teleporter/seconddeck)
 "WB" = (
@@ -18347,6 +18407,12 @@
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/maintenance/seconddeck/forestarboard)
+"XL" = (
+/obj/machinery/computer/teleporter{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/teleporter/seconddeck)
 "XO" = (
 /obj/machinery/fabricator/imprinter,
 /obj/effect/floor_decal/industrial/outline/yellow,
@@ -18457,12 +18523,12 @@
 	},
 /obj/item/extinguisher,
 /obj/item/storage/box/monkeycubes,
-/obj/item/storage/box/monkeycubes,
 /obj/machinery/button/blast_door{
 	id_tag = "xenobio3_vent";
 	name = "Cell 3 Vent";
 	pixel_x = 6
 	},
+/obj/item/storage/box/monkeycubes,
 /turf/simulated/floor/tiled/white,
 /area/rnd/xenobiology)
 "Yn" = (
@@ -18887,15 +18953,6 @@
 "ZK" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 10
-	},
-/obj/machinery/embedded_controller/radio/airlock/access_controller{
-	dir = 1;
-	id_tag = "xeno_airlock_control";
-	name = "Xenobiology Access Console";
-	pixel_x = 8;
-	pixel_y = -24;
-	tag_exterior_door = "xeno_airlock_exterior";
-	tag_interior_door = "xeno_airlock_interior"
 	},
 /obj/structure/hygiene/shower{
 	dir = 4
@@ -37291,10 +37348,10 @@ CL
 RT
 RT
 RT
-RT
+vT
 Ir
 PN
-YJ
+VN
 ZK
 ED
 RN
@@ -37897,10 +37954,10 @@ BY
 Kn
 VK
 VK
-VK
+Ir
 Dv
 Zz
-YJ
+sn
 HS
 KR
 CO
@@ -38080,7 +38137,7 @@ kH
 wK
 ly
 nz
-kH
+Er
 nv
 pv
 qE
@@ -39104,7 +39161,7 @@ jZ
 km
 nB
 Yy
-Yy
+Ky
 zS
 AN
 TV
@@ -39304,8 +39361,8 @@ mC
 Bd
 jM
 WA
-xC
 kG
+Yy
 Yy
 zS
 AN
@@ -39910,8 +39967,8 @@ sb
 BU
 mU
 FI
-Yy
-Yy
+xC
+XL
 Yy
 KE
 Bw
@@ -40113,9 +40170,9 @@ Fu
 Fu
 Fu
 Fu
-KE
-zV
-zV
+sZ
+sZ
+sZ
 Bx
 Ch
 CE
@@ -40315,8 +40372,8 @@ sZ
 xD
 JR
 sZ
-sZ
-sZ
+Gz
+pP
 sZ
 NH
 Cg

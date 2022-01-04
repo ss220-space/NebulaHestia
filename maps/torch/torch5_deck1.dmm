@@ -3909,6 +3909,9 @@
 /obj/machinery/computer/cryopod{
 	pixel_x = -32
 	},
+/obj/machinery/light/small{
+	dir = 4
+	},
 /turf/simulated/floor/plating,
 /area/shuttle/escape_pod12/station)
 "ake" = (
@@ -4484,6 +4487,9 @@
 	},
 /obj/machinery/computer/cryopod{
 	pixel_x = -32
+	},
+/obj/machinery/light/small{
+	dir = 4
 	},
 /turf/simulated/floor/plating,
 /area/shuttle/escape_pod13/station)
@@ -6689,6 +6695,9 @@
 "aBD" = (
 /obj/structure/table,
 /obj/item/integrated_circuit_printer,
+/obj/machinery/status_display{
+	pixel_y = 32
+	},
 /turf/simulated/floor/tiled/white/monotile,
 /area/rnd/xenoarch/analysis)
 "aBE" = (
@@ -7489,11 +7498,6 @@
 	dir = 6
 	},
 /obj/machinery/portable_atmospherics/canister,
-/obj/machinery/alarm{
-	alarm_id = "curiosity2";
-	pixel_y = 23;
-	req_access = list(list("ACCESS_ENGINE_EQUIP","ACCESS_ATMOS"))
-	},
 /obj/effect/floor_decal/corner/research/mono,
 /turf/simulated/floor/tiled/white/monotile,
 /area/rnd/xenoarch/analysis)
@@ -7504,6 +7508,11 @@
 	tag_west = 1
 	},
 /obj/effect/floor_decal/corner/research/mono,
+/obj/machinery/alarm{
+	alarm_id = "curiosity2";
+	pixel_y = 23;
+	req_access = list(list("ACCESS_ENGINE_EQUIP","ACCESS_ATMOS"))
+	},
 /turf/simulated/floor/tiled/white/monotile,
 /area/rnd/xenoarch/analysis)
 "aGw" = (
@@ -7871,9 +7880,6 @@
 	pixel_y = -25
 	},
 /obj/effect/floor_decal/corner/research/mono,
-/obj/machinery/status_display{
-	pixel_x = -32
-	},
 /turf/simulated/floor/tiled/white/monotile,
 /area/rnd/xenoarch/analysis)
 "aIt" = (
@@ -11146,9 +11152,6 @@
 	dir = 1;
 	icon_state = "shuttle_chair_preview"
 	},
-/obj/machinery/light/small{
-	dir = 8
-	},
 /turf/simulated/floor/plating,
 /area/shuttle/escape_pod12/station)
 "bNL" = (
@@ -11162,9 +11165,6 @@
 /obj/structure/bed/chair/shuttle{
 	dir = 1;
 	icon_state = "shuttle_chair_preview"
-	},
-/obj/machinery/light/small{
-	dir = 8
 	},
 /turf/simulated/floor/plating,
 /area/shuttle/escape_pod13/station)
@@ -11288,9 +11288,6 @@
 	dir = 4;
 	pixel_x = -21
 	},
-/obj/machinery/light/small{
-	dir = 4
-	},
 /obj/machinery/embedded_controller/radio/simple_docking_controller/escape_pod{
 	dir = 8;
 	id_tag = "escape_pod_15";
@@ -11305,9 +11302,6 @@
 /obj/item/radio/intercom{
 	dir = 4;
 	pixel_x = -21
-	},
-/obj/machinery/light/small{
-	dir = 4
 	},
 /obj/machinery/embedded_controller/radio/simple_docking_controller/escape_pod{
 	dir = 8;
@@ -11346,9 +11340,6 @@
 /obj/item/radio/intercom{
 	dir = 4;
 	pixel_x = -21
-	},
-/obj/machinery/light/small{
-	dir = 4
 	},
 /obj/machinery/embedded_controller/radio/simple_docking_controller/escape_pod{
 	dir = 8;
@@ -11425,11 +11416,17 @@
 	dir = 1;
 	icon_state = "open"
 	},
+/obj/machinery/light/small{
+	dir = 4
+	},
 /turf/simulated/floor/plating,
 /area/shuttle/escape_pod15/station)
 "cab" = (
 /obj/machinery/cryopod{
 	dir = 1
+	},
+/obj/machinery/light/small{
+	dir = 4
 	},
 /turf/simulated/floor/plating,
 /area/shuttle/escape_pod16/station)
@@ -11442,6 +11439,9 @@
 /obj/machinery/cryopod{
 	dir = 1;
 	icon_state = "open"
+	},
+/obj/machinery/light/small{
+	dir = 4
 	},
 /turf/simulated/floor/plating,
 /area/shuttle/escape_pod17/station)
@@ -13615,9 +13615,6 @@
 /obj/machinery/atmospherics/unary/freezer{
 	icon_state = "freezer"
 	},
-/obj/item/radio/intercom{
-	pixel_y = 23
-	},
 /obj/effect/floor_decal/corner/research/mono,
 /turf/simulated/floor/tiled/white/monotile,
 /area/rnd/xenoarch/analysis)
@@ -15118,9 +15115,6 @@
 /turf/simulated/floor/plating,
 /area/security/bo)
 "hRj" = (
-/obj/machinery/light{
-	dir = 4
-	},
 /obj/machinery/newscaster{
 	pixel_y = 32
 	},
@@ -16198,6 +16192,9 @@
 /obj/effect/floor_decal/corner/research{
 	dir = 10
 	},
+/obj/structure/extinguisher_cabinet{
+	pixel_y = -32
+	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/locker)
 "jub" = (
@@ -17208,6 +17205,12 @@
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/monotile,
 /area/assembly/chargebay)
+"kUq" = (
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/white,
+/area/rnd/xenoarch/equipment)
 "kUt" = (
 /obj/structure/closet/secure_closet{
 	name = "Secure Evidence Locker";
@@ -17619,6 +17622,10 @@
 /obj/item/folder/red,
 /obj/item/pen,
 /obj/item/taperecorder,
+/obj/machinery/recharger/wallcharger{
+	dir = 1;
+	pixel_y = -24
+	},
 /turf/simulated/floor/tiled/dark,
 /area/security/opscheck)
 "lxl" = (
@@ -18166,6 +18173,12 @@
 "mpy" = (
 /turf/simulated/wall/r_wall/map_preset/tan,
 /area/maintenance/firstdeck/aftstarboard)
+"mqz" = (
+/obj/effect/paint/eggshell,
+/obj/effect/paint_stripe/science,
+/obj/machinery/status_display/supply_display,
+/turf/simulated/wall/r_wall/map_preset/tan,
+/area/rnd/xenoarch/analysis)
 "mqQ" = (
 /obj/machinery/door/airlock/glass/security{
 	id_tag = "BrigFoyer"
@@ -19015,10 +19028,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 5
 	},
-/obj/machinery/camera/network/security{
-	c_tag = "Checkpoint - Deck One";
-	dir = 4
-	},
 /obj/machinery/newscaster{
 	pixel_x = -32
 	},
@@ -19219,6 +19228,10 @@
 	dir = 5
 	},
 /obj/item/stool/padded,
+/obj/machinery/camera/network/security{
+	c_tag = "Checkpoint - Deck One";
+	dir = 4
+	},
 /turf/simulated/floor/tiled/dark,
 /area/security/opscheck)
 "nPO" = (
@@ -20449,9 +20462,6 @@
 /area/rnd/locker)
 "ptb" = (
 /obj/structure/closet/emcloset/torch,
-/obj/structure/extinguisher_cabinet{
-	pixel_x = -32
-	},
 /obj/effect/floor_decal/corner/research{
 	dir = 10
 	},
@@ -25690,6 +25700,12 @@
 	},
 /turf/simulated/floor/tiled/monotile,
 /area/security/brig)
+"xCA" = (
+/obj/effect/floor_decal/corner/paleblue/mono,
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/structure/closet/secure_closet/medical_trainee_torch,
+/turf/simulated/floor/tiled/white/monotile,
+/area/medical/locker)
 "xCS" = (
 /obj/effect/paint_stripe/security,
 /turf/simulated/wall/r_wall/prepainted,
@@ -42267,7 +42283,7 @@ uSl
 rsV
 ayg
 aDN
-wBV
+mqz
 aBy
 aCP
 aDX
@@ -45906,7 +45922,7 @@ ure
 bsu
 hRj
 qCL
-hFH
+kUq
 wHE
 aHi
 jIb
@@ -51150,7 +51166,7 @@ uiY
 sHb
 vZK
 hgt
-vii
+xCA
 pWW
 pmz
 hnN

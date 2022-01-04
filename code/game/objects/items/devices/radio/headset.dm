@@ -251,6 +251,39 @@
 	icon = 'icons/obj/items/device/radio/headsets/headset_mining_alt.dmi'
 	max_keys = 3
 
+/obj/item/radio/headset/pathfinder
+	name = "pathfinder's headset"
+	desc = "A headset with access to the command and exploration channels. It has an inbuilt subspace antenna for better reception."
+	icon = 'icons/obj/items/device/radio/headsets/headset_exploration.dmi'
+	ks1type = /obj/item/encryptionkey/pathfinder
+
+/obj/item/radio/headset/pathfinder/alt
+	name = "pathfinder's bowman headset"
+	icon = 'icons/obj/items/device/radio/headsets/headset_exploration_alt.dmi'
+
+/obj/item/radio/headset/headset_pilot
+	name = "pilot's headset"
+	desc = "A headset for cool-tempered smugglers, cocky flyboys, and bus-drivers like you. It has an inbuilt subspace antenna for better reception."
+	icon = 'icons/obj/items/device/radio/headsets/headset_exploration.dmi'
+	ks1type = /obj/item/encryptionkey/headset_pilot
+
+/obj/item/radio/headset/headset_pilot/alt
+	name = "pilot's bowman headset"
+	icon = 'icons/obj/items/device/radio/headsets/headset_exploration_alt.dmi'
+	max_keys = 3
+
+/obj/item/radio/headset/exploration
+	name = "exploration radio headset"
+	desc = "A headset with access to the exploration channel. It has an inbuilt subspace antenna for better reception."
+	icon = 'icons/obj/items/device/radio/headsets/headset_exploration.dmi'
+	ks1type = /obj/item/encryptionkey/exploration
+
+
+/obj/item/radio/headset/exploration/alt
+	name = "exploration bowman radio headset"
+	icon = 'icons/obj/items/device/radio/headsets/headset_exploration_alt.dmi'
+	max_keys = 3
+
 /obj/item/radio/headset/headset_cargo
 	name = "supply radio headset"
 	desc = "A headset used by the box-pushers."

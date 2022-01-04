@@ -22,6 +22,10 @@
 		"medical" = COLOR_CLOSET_GOLD
 	)
 
+/decl/closet_appearance/secure_closet/torch/medical/trainee
+	extra_decals = list(
+		"medical" = COLOR_BABY_BLUE
+	)
 /obj/structure/closet/secure_closet/counselor
 	closet_appearance = /decl/closet_appearance/secure_closet/torch/medical
 
@@ -91,10 +95,38 @@
 
 /obj/structure/closet/secure_closet/medical_torch
 	name = "medical technician's locker"
-	req_access = list(access_medical_equip)
+	req_access = list(access_medical_doctor)
 	closet_appearance = /decl/closet_appearance/secure_closet/torch/medical
 
 /obj/structure/closet/secure_closet/medical_torch/WillContain()
+	return list(
+		/obj/item/clothing/under/sterile,
+		/obj/item/clothing/accessory/storage/vest/white,
+		/obj/item/clothing/suit/storage/toggle/fr_jacket,
+		/obj/item/clothing/shoes,
+		/obj/item/radio/headset/headset_med,
+		/obj/item/radio/headset/headset_corpsman/alt,
+		/obj/item/taperoll/medical,
+		/obj/item/storage/belt/medical/emt,
+		/obj/item/clothing/mask/gas/half,
+		/obj/item/tank/emergency/oxygen/engi,
+		/obj/item/storage/box/autoinjectors,
+		/obj/item/scanner/health,
+		/obj/item/clothing/glasses/hud/health,
+		/obj/item/storage/firstaid/adv,
+		/obj/item/clothing/suit/storage/medical_chest_rig,
+		/obj/item/clothing/head/hardhat/ems,
+		/obj/item/knife/folding/swiss/medic,
+		new /datum/atom_creator/weighted(list(/obj/item/storage/backpack/medic, /obj/item/storage/backpack/satchel/med)),
+		new /datum/atom_creator/weighted(list(/obj/item/storage/backpack/dufflebag/med, /obj/item/storage/backpack/messenger/med))
+	)
+
+/obj/structure/closet/secure_closet/medical_trainee_torch
+	name = "medical trainee technician's locker"
+	req_access = list(access_medical_equip)
+	closet_appearance = /decl/closet_appearance/secure_closet/torch/medical/trainee
+
+/obj/structure/closet/secure_closet/medical_trainee_torch/WillContain()
 	return list(
 		/obj/item/clothing/under/sterile,
 		/obj/item/clothing/accessory/storage/vest/white,
