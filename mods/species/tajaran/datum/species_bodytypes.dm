@@ -7,7 +7,7 @@
 	bandages_icon =        'icons/mob/bandage.dmi'
 	lip_icon =             'mods/species/tajaran/icons/lips.dmi'
 	health_hud_intensity = 1.75
-	bodytype_flag =        BODY_FLAG_FELINE
+	//bodytype_flag =        BODY_FLAG_FELINE
 
 /decl/bodytype/feline/Initialize()
 	equip_adjust = list(
