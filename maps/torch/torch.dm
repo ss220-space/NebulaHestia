@@ -35,6 +35,7 @@
 	#include "../../mods/species/vox/_vox.dme"
 	#include "../../mods/species/adherent/_adherent.dme"
 	#include "../../mods/species/skrell/_skrell.dme"
+	#include "../../mods/species/neoavians/_neoavians.dme"
 
 	#include "../../mods/content/hearth_culture/_hearth_culture.dme"
 
