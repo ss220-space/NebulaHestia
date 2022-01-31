@@ -712,9 +712,13 @@ var/global/list/slot_flags_enumeration = list(
 
 	if(!blood_data && istype(M))
 		blood_data = REAGENT_DATA(M.vessel, /decl/material/liquid/blood)
-	var/datum/extension/forensic_evidence/forensics = get_or_create_extension(src, /datum/extension/forensic_evidence)
-	forensics.add_data(/datum/forensics/blood_dna, LAZYACCESS(blood_data, "blood_DNA"))
-	add_coating(/decl/material/liquid/blood, amount, blood_data)
+		if(!LAZYACCESS(blood_DNA, M.dna.unique_enzymes))
+			LAZYSET(blood_DNA, M.dna.unique_enzymes, M.dna.b_type)
+			LAZYSET(blood_data, M.dna.unique_enzymes, REAGENT_DATA(M.vessel, M.species.blood_reagent))
+			var/datum/extension/forensic_evidence/forensics = get_or_create_extension(M, /datum/extension/forensic_evidence)
+			forensics.add_data(/datum/forensics/blood_dna, M.dna.unique_enzymes)
+			add_coating(/decl/material/liquid/blood, amount, blood_data)
+		return 1
 	return 1 //we applied blood to the item
 
 var/global/list/blood_overlay_cache = list()
