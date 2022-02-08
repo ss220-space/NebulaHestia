@@ -932,7 +932,9 @@
 /turf/simulated/floor/tiled/dark/monotile,
 /area/medical/morgue)
 "cb" = (
-/obj/item/frame/fire_alarm,
+/obj/item/frame/fire_alarm{
+	pixel_y = 17
+	},
 /turf/simulated/floor/plating,
 /area/vacant/armory)
 "cc" = (
@@ -940,14 +942,6 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/seconddeck/aftstarboard)
 "cd" = (
-/obj/machinery/embedded_controller/radio/airlock/airlock_controller{
-	id_tag = "auxdock_airlock";
-	req_access = list("ACCESS_EXTERNAL");
-	tag_airpump = "auxdock_pump";
-	tag_chamber_sensor = "auxdock_sensor";
-	tag_exterior_door = "auxdock_outer";
-	tag_interior_door = "auxdock_inner"
-	},
 /obj/structure/table/steel_reinforced,
 /turf/simulated/floor/plating,
 /area/maintenance/seconddeck/forestarboard)
@@ -1127,6 +1121,9 @@
 	},
 /obj/structure/window/reinforced,
 /obj/random/ammo,
+/obj/structure/rack{
+	dir = 8
+	},
 /turf/simulated/floor/plating,
 /area/vacant/armory)
 "cv" = (
@@ -1190,6 +1187,7 @@
 	name = "Weapons locker"
 	},
 /obj/structure/window/reinforced,
+/obj/item/ammo_magazine/pistol/small/empty,
 /turf/simulated/floor/plating,
 /area/vacant/armory)
 "cG" = (
@@ -1204,6 +1202,9 @@
 	dir = 8
 	},
 /obj/structure/catwalk,
+/obj/structure/bed/chair{
+	dir = 4
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/seconddeck/forestarboard)
 "cJ" = (
@@ -2597,6 +2598,9 @@
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
+/obj/machinery/firealarm{
+	pixel_y = 21
+	},
 /turf/simulated/floor/plating,
 /area/hallway/primary/seconddeck)
 "fR" = (
@@ -2785,10 +2789,6 @@
 /turf/simulated/floor/plating,
 /area/maintenance/seconddeck/central)
 "gm" = (
-/obj/machinery/firealarm{
-	dir = 1;
-	pixel_y = -24
-	},
 /obj/effect/floor_decal/industrial/warning/corner,
 /turf/simulated/floor/tiled,
 /area/hallway/primary/seconddeck)
@@ -3121,6 +3121,9 @@
 /obj/effect/floor_decal/industrial/warning/corner,
 /obj/structure/extinguisher_cabinet{
 	pixel_x = 32
+	},
+/obj/machinery/status_display{
+	pixel_y = 30
 	},
 /turf/simulated/floor/tiled,
 /area/engineering/engineering_bay)
@@ -3615,11 +3618,6 @@
 "is" = (
 /obj/machinery/sleeper/standard{
 	dir = 1
-	},
-/obj/machinery/vending/wallmed1{
-	dir = 1;
-	name = "Emergency NanoMed";
-	pixel_y = -32
 	},
 /turf/simulated/floor/tiled/white/monotile,
 /area/shuttle/escape_pod11/station)
@@ -4415,7 +4413,7 @@
 /obj/machinery/embedded_controller/radio/simple_docking_controller/escape_pod_berth{
 	id_tag = "escape_pod_11_berth";
 	name = "escape pod six berth controller";
-	pixel_x = -24;
+	pixel_x = -29;
 	pixel_y = 24;
 	tag_door = "escape_pod_11_berth_hatch"
 	},
@@ -4679,9 +4677,6 @@
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/engineering/engine_room)
-"lk" = (
-/turf/simulated/floor/reinforced/airless,
-/area/endeavour_exterior)
 "ll" = (
 /obj/structure/extinguisher_cabinet{
 	pixel_x = 32
@@ -5125,6 +5120,10 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/engineering/atmos)
 "mz" = (
+/obj/machinery/light{
+	dir = 1;
+	icon_state = "tube1"
+	},
 /turf/simulated/open,
 /area/engineering/engineering_bay)
 "mB" = (
@@ -8205,7 +8204,7 @@
 	dir = 1;
 	id_tag = "escape_pod_10_berth";
 	name = "escape pod five berth controller";
-	pixel_x = -24;
+	pixel_x = -29;
 	pixel_y = -24;
 	tag_door = "escape_pod_10_berth_hatch"
 	},
@@ -8557,7 +8556,7 @@
 "uZ" = (
 /obj/machinery/shield_diffuser,
 /turf/simulated/floor/reinforced/airless,
-/area/space)
+/area/maintenance/seconddeck/forestarboard)
 "vb" = (
 /obj/structure/catwalk,
 /obj/machinery/atmospherics/pipe/simple/hidden/fuel{
@@ -9027,10 +9026,6 @@
 /area/shuttle/escape_pod10/station)
 "wn" = (
 /obj/machinery/sleeper/standard,
-/obj/machinery/vending/wallmed1{
-	name = "Emergency NanoMed";
-	pixel_y = 32
-	},
 /turf/simulated/floor/tiled/white/monotile,
 /area/shuttle/escape_pod10/station)
 "wo" = (
@@ -9366,6 +9361,11 @@
 /obj/machinery/computer/cryopod{
 	pixel_y = 32
 	},
+/obj/machinery/vending/wallmed1{
+	dir = 4;
+	name = "Emergency NanoMed";
+	pixel_x = -30
+	},
 /turf/simulated/floor/tiled/monotile,
 /area/shuttle/escape_pod11/station)
 "xf" = (
@@ -9689,14 +9689,19 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/storage/medical)
 "yq" = (
-/obj/structure/rack,
-/obj/random/maintenance/solgov,
-/obj/effect/floor_decal/industrial/outline/grey,
-/obj/random/maintenance/solgov,
-/obj/random/maintenance/solgov,
-/obj/random/maintenance/solgov,
-/turf/simulated/floor/tiled/techfloor,
-/area/maintenance/seconddeck/foreport)
+/obj/structure/catwalk,
+/obj/machinery/embedded_controller/radio/airlock/airlock_controller{
+	dir = 8;
+	id_tag = "auxdock_airlock";
+	pixel_x = 17;
+	req_access = list("ACCESS_EXTERNAL");
+	tag_airpump = "auxdock_pump";
+	tag_chamber_sensor = "auxdock_sensor";
+	tag_exterior_door = "auxdock_outer";
+	tag_interior_door = "auxdock_inner"
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/seconddeck/forestarboard)
 "yr" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4;
@@ -11458,7 +11463,9 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/engineering/atmos)
 "Dq" = (
-/obj/machinery/constructable_frame/computerframe,
+/obj/machinery/constructable_frame/computerframe{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/seconddeck/foreport)
 "Dr" = (
@@ -11467,6 +11474,7 @@
 	dir = 1;
 	icon_state = "railing0-1"
 	},
+/obj/random/junk,
 /turf/simulated/floor/plating,
 /area/maintenance/seconddeck/foreport)
 "Dt" = (
@@ -11623,9 +11631,10 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/seconddeck/aftport)
 "DR" = (
-/obj/random/junk,
-/turf/simulated/floor/plating,
-/area/maintenance/seconddeck/foreport)
+/obj/structure/table/steel,
+/obj/item/deck/cards,
+/turf/simulated/floor/tiled/freezer,
+/area/maintenance/seconddeck/forestarboard)
 "DS" = (
 /obj/structure/cable/green{
 	icon_state = "1-4"
@@ -11924,6 +11933,15 @@
 	},
 /turf/simulated/wall/r_wall/map_preset/tan,
 /area/engineering/fuelbay/aux)
+"EM" = (
+/obj/structure/rack,
+/obj/random/maintenance/solgov,
+/obj/effect/floor_decal/industrial/outline/grey,
+/obj/random/maintenance/solgov,
+/obj/random/maintenance/solgov,
+/obj/random/maintenance/solgov,
+/turf/simulated/floor/tiled/techfloor,
+/area/maintenance/seconddeck/foreport)
 "EN" = (
 /obj/machinery/embedded_controller/radio/airlock/airlock_controller{
 	dir = 8;
@@ -13625,9 +13643,6 @@
 /turf/simulated/floor/tiled/steel_ridged,
 /area/engineering/engineering_bay)
 "Js" = (
-/obj/structure/fireaxecabinet{
-	pixel_x = -32
-	},
 /obj/machinery/computer/air_control{
 	dir = 4;
 	name = "Tank Monitor";
@@ -14221,7 +14236,7 @@
 /area/engineering/atmos)
 "Ls" = (
 /turf/simulated/floor/reinforced/airless,
-/area/space)
+/area/maintenance/seconddeck/forestarboard)
 "Lt" = (
 /obj/machinery/portable_atmospherics/powered/scrubber,
 /obj/effect/floor_decal/industrial/outline/grey,
@@ -15299,6 +15314,9 @@
 /obj/structure/closet/walllocker/skinsuit/engineering{
 	dir = 4
 	},
+/obj/structure/fireaxecabinet{
+	pixel_x = -32
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/engineering/atmos)
 "Ow" = (
@@ -15406,9 +15424,6 @@
 	pixel_y = -28
 	},
 /obj/structure/catwalk,
-/obj/machinery/status_display{
-	pixel_x = -32
-	},
 /turf/simulated/floor/plating,
 /area/engineering/engine_smes)
 "OK" = (
@@ -16678,6 +16693,11 @@
 	},
 /obj/machinery/computer/cryopod{
 	pixel_y = -32
+	},
+/obj/machinery/vending/wallmed1{
+	dir = 4;
+	name = "Emergency NanoMed";
+	pixel_x = -30
 	},
 /turf/simulated/floor/tiled/monotile,
 /area/shuttle/escape_pod10/station)
@@ -18857,9 +18877,10 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/engineering/engine_room)
 "Zp" = (
-/obj/item/ammo_magazine/pistol/small/empty,
+/obj/effect/floor_decal/industrial/outline/grey,
+/obj/machinery/shieldgen,
 /turf/simulated/floor/plating,
-/area/vacant/armory)
+/area/maintenance/seconddeck/foreport)
 "Zr" = (
 /obj/structure/railing/mapped{
 	dir = 8;
@@ -31886,7 +31907,7 @@ Lp
 yl
 dX
 aK
-Zp
+bH
 cF
 aK
 nc
@@ -33074,7 +33095,7 @@ Ls
 Ib
 cd
 cI
-Xl
+yq
 Xl
 hM
 fi
@@ -33473,8 +33494,8 @@ Hb
 Hb
 Hb
 uZ
-lk
-lk
+Ls
+Ls
 bF
 cf
 cJ
@@ -35307,7 +35328,7 @@ vO
 jq
 XP
 SQ
-ce
+DR
 fx
 sV
 bI
@@ -35330,7 +35351,7 @@ BQ
 Cs
 Sm
 OX
-DR
+pi
 Gr
 Hb
 Hb
@@ -35734,7 +35755,7 @@ YD
 Cu
 CX
 RT
-lG
+pi
 Wp
 Hb
 Hb
@@ -35936,7 +35957,7 @@ YD
 YD
 YD
 RT
-yq
+pi
 Wp
 Hb
 Hb
@@ -36138,7 +36159,7 @@ YD
 YD
 YD
 RT
-pi
+Zp
 Wp
 Hb
 Hb
@@ -36340,7 +36361,7 @@ YD
 YD
 YD
 RT
-pi
+EM
 Wp
 Hb
 Hb

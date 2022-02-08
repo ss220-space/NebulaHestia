@@ -588,14 +588,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/fifthdeck/aftstarboard)
-"bN" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/structure/cable/cyan{
-	icon_state = "1-2"
-	},
-/obj/effect/wallframe_spawn/no_grille,
-/turf/simulated/floor/plating,
-/area/maintenance/fifthdeck/aftstarboard)
 "bP" = (
 /obj/effect/floor_decal/corner/paleblue/half{
 	dir = 4
@@ -3151,7 +3143,7 @@
 	pixel_y = -6
 	},
 /obj/machinery/light_switch{
-	pixel_x = 22;
+	pixel_x = -9;
 	pixel_y = 22
 	},
 /turf/simulated/floor/tiled/dark,
@@ -3253,8 +3245,8 @@
 	pixel_y = 30
 	},
 /obj/machinery/light_switch{
-	pixel_x = 22;
-	pixel_y = 22
+	pixel_x = -12;
+	pixel_y = 27
 	},
 /obj/machinery/light{
 	dir = 4
@@ -5966,10 +5958,6 @@
 	c_tag = "Fifth Deck Hallway - Lift";
 	dir = 1
 	},
-/obj/machinery/alarm{
-	dir = 1;
-	pixel_y = -22
-	},
 /turf/simulated/floor/tiled/monotile,
 /area/hallway/primary/fifthdeck/fore)
 "oY" = (
@@ -6426,9 +6414,15 @@
 /turf/simulated/floor/plating,
 /area/maintenance/fifthdeck/aftstarboard)
 "qd" = (
-/obj/structure/dispenser/oxygen,
-/turf/simulated/floor/tiled/monotile,
-/area/quartermaster/expedition/eva)
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/catwalk,
+/obj/machinery/alarm{
+	alarm_id = "curiosity1";
+	dir = 4;
+	pixel_x = -24
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/fifthdeck/aftstarboard)
 "qe" = (
 /obj/structure/closet/toolcloset/excavation,
 /obj/effect/floor_decal/corner/brown/mono,
@@ -6477,7 +6471,6 @@
 /turf/simulated/floor/tiled/monotile,
 /area/quartermaster/expedition)
 "qj" = (
-/obj/machinery/portable_atmospherics/canister/oxygen,
 /turf/simulated/floor/tiled/monotile,
 /area/quartermaster/expedition/eva)
 "qk" = (
@@ -6529,10 +6522,6 @@
 /turf/simulated/floor/tiled/steel_ridged,
 /area/quartermaster/expedition)
 "qr" = (
-/obj/machinery/light_switch{
-	pixel_x = 22;
-	pixel_y = -22
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -6706,6 +6695,11 @@
 "qJ" = (
 /obj/effect/floor_decal/corner/brown/half{
 	dir = 1
+	},
+/obj/machinery/alarm{
+	alarm_id = null;
+	pixel_y = 23;
+	req_access = list(list("ACCESS_ENGINE_EQUIP","ACCESS_ATMOS"))
 	},
 /turf/simulated/floor/tiled/monotile,
 /area/hallway/primary/fifthdeck/fore)
@@ -9674,14 +9668,6 @@
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/opportunity_hangar/start)
-"Df" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/structure/cable/cyan{
-	icon_state = "1-2"
-	},
-/obj/structure/catwalk,
-/turf/simulated/floor/plating,
-/area/maintenance/fifthdeck/aftstarboard)
 "Dl" = (
 /obj/structure/table/steel,
 /obj/machinery/chemical_dispenser/bar_alc/full,
@@ -10545,7 +10531,8 @@
 /obj/structure/cable/cyan{
 	icon_state = "1-2"
 	},
-/turf/simulated/floor/plating,
+/obj/effect/paint_stripe/supply,
+/turf/simulated/wall/map_preset/tan,
 /area/maintenance/fifthdeck/aftstarboard)
 "It" = (
 /turf/simulated/wall/r_wall/prepainted,
@@ -11397,6 +11384,14 @@
 	},
 /turf/simulated/wall/r_titanium,
 /area/curiosity_hangar/start)
+"OK" = (
+/obj/machinery/light_switch{
+	pixel_x = -6;
+	pixel_y = -22
+	},
+/obj/machinery/portable_atmospherics/canister/oxygen,
+/turf/simulated/floor/tiled/monotile,
+/area/quartermaster/expedition/eva)
 "OQ" = (
 /obj/structure/flora/ausbushes/lavendergrass,
 /turf/simulated/floor/grass,
@@ -12191,6 +12186,10 @@
 "UO" = (
 /turf/simulated/floor/tiled,
 /area/hallway/primary/fifthdeck/aft)
+"US" = (
+/obj/structure/dispenser/oxygen,
+/turf/simulated/floor/tiled/monotile,
+/area/quartermaster/expedition/eva)
 "UV" = (
 /obj/structure/flora/ausbushes/ppflowers,
 /turf/simulated/floor/grass,
@@ -34823,10 +34822,10 @@ fz
 EX
 Es
 Qn
-qd
+WH
+hq
+hq
 qj
-WH
-WH
 WU
 qe
 qf
@@ -35025,10 +35024,10 @@ XI
 aD
 aK
 Qn
-Qn
-Qn
-Qn
-Qn
+WH
+qj
+US
+OK
 WU
 WU
 WU
@@ -35226,11 +35225,11 @@ YH
 KW
 yk
 SM
-Df
-Xp
-Df
-Df
-bN
+Iq
+Iq
+Iq
+Iq
+Iq
 Iq
 UE
 Ve
@@ -35429,7 +35428,7 @@ HU
 Nh
 yz
 AU
-AU
+qd
 LB
 pr
 vj
