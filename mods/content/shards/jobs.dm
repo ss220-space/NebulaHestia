@@ -1,6 +1,5 @@
 /datum/job/ai
 	hud_icon = "hudblank"
-	outfit_type = /decl/hierarchy/outfit/job/generic/scientist
 	create_record = FALSE
 	account_allowed = FALSE
 
