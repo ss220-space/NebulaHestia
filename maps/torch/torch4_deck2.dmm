@@ -848,9 +848,11 @@
 	icon_state = "railing0-1"
 	},
 /obj/machinery/button/blast_door{
+	dir = 4;
 	id_tag = "med_lift";
 	name = "Medical Lift Access";
-	pixel_y = -26
+	pixel_x = 9;
+	pixel_y = -30
 	},
 /turf/simulated/floor/tiled/dark,
 /area/medical/morgue)
@@ -1124,6 +1126,10 @@
 /obj/structure/rack{
 	dir = 8
 	},
+/obj/structure/window/reinforced{
+	dir = 4;
+	pixel_x = 3
+	},
 /turf/simulated/floor/plating,
 /area/vacant/armory)
 "cv" = (
@@ -1188,6 +1194,10 @@
 	},
 /obj/structure/window/reinforced,
 /obj/item/ammo_magazine/pistol/small/empty,
+/obj/structure/window/reinforced{
+	dir = 4;
+	pixel_x = 3
+	},
 /turf/simulated/floor/plating,
 /area/vacant/armory)
 "cG" = (
@@ -1232,6 +1242,10 @@
 /obj/random/maintenance/solgov,
 /obj/machinery/door/window/brigdoor/northleft{
 	name = "Weapons locker"
+	},
+/obj/structure/window/reinforced{
+	dir = 4;
+	pixel_x = 3
 	},
 /turf/simulated/floor/plating,
 /area/vacant/armory)
@@ -1480,7 +1494,7 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/storage/medical)
 "dm" = (
-/obj/item/stool/padded,
+/obj/structure/bed/chair/padded/red,
 /turf/simulated/floor/tiled/dark,
 /area/assembly/robotics)
 "dn" = (
@@ -1897,8 +1911,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/light_switch{
+	dir = 1;
 	pixel_x = 24;
-	pixel_y = -24
+	pixel_y = -21
 	},
 /obj/structure/cable/green{
 	icon_state = "2-8"
@@ -1952,7 +1967,8 @@
 /obj/machinery/button/blast_door{
 	id_tag = "med_lift";
 	name = "Medical Lift Access";
-	pixel_y = 24
+	pixel_x = -7;
+	pixel_y = 27
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/storage/medical)
@@ -2450,10 +2466,10 @@
 /turf/simulated/floor/tiled/dark/monotile,
 /area/assembly/robotics)
 "fz" = (
-/obj/item/stool/padded,
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
+/obj/structure/bed/chair/padded/red,
 /turf/simulated/floor/tiled/dark,
 /area/assembly/robotics)
 "fA" = (
@@ -3930,9 +3946,10 @@
 "jg" = (
 /obj/machinery/button/blast_door{
 	desc = "A remote control-switch for the engine radiator viewport shutters.";
+	dir = 8;
 	id_tag = "EngineRadiatorViewport";
 	name = "Engine Radiator Viewport Shutters";
-	pixel_x = 25
+	pixel_x = 24
 	},
 /obj/machinery/atmospherics/pipe/manifold/visible/cyan{
 	dir = 8
@@ -4813,12 +4830,11 @@
 /turf/simulated/floor/tiled,
 /area/hallway/primary/seconddeck)
 "lE" = (
-/obj/machinery/alarm{
-	pixel_y = 24
+/obj/machinery/button/crematorium{
+	pixel_y = 27
 	},
-/obj/structure/catwalk,
-/turf/simulated/floor/plating,
-/area/maintenance/seconddeck/forestarboard)
+/turf/simulated/floor/tiled/dark,
+/area/medical/morgue)
 "lG" = (
 /obj/machinery/shieldgen,
 /obj/effect/floor_decal/industrial/outline/grey,
@@ -4842,8 +4858,9 @@
 /area/engineering/engine_monitoring)
 "lM" = (
 /obj/machinery/light_switch{
-	pixel_x = -22;
-	pixel_y = -22
+	dir = 4;
+	pixel_x = -23;
+	pixel_y = -20
 	},
 /obj/effect/floor_decal/corner/yellow/half{
 	dir = 8
@@ -5515,6 +5532,17 @@
 	},
 /turf/simulated/floor/tiled/monotile,
 /area/engineering/foyer)
+"ns" = (
+/obj/structure/catwalk,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/machinery/alarm{
+	dir = 4;
+	pixel_x = -25
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/seconddeck/forestarboard)
 "nt" = (
 /obj/machinery/atmospherics/pipe/simple/visible/green{
 	dir = 5
@@ -5607,8 +5635,7 @@
 /obj/machinery/button/blast_door{
 	id_tag = "xenobio4";
 	name = "Containment Blast Doors";
-	pixel_x = -6;
-	pixel_y = 24
+	pixel_y = 26
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 4;
@@ -5620,8 +5647,7 @@
 /obj/machinery/button/blast_door{
 	id_tag = "xenobio4_vent";
 	name = "Cell 4 Vent";
-	pixel_x = 6;
-	pixel_y = 24
+	pixel_y = 34
 	},
 /turf/simulated/floor/tiled/white/monotile,
 /area/rnd/xenobiology)
@@ -6133,6 +6159,7 @@
 /obj/machinery/power/apc{
 	dir = 1;
 	name = "north bump";
+	pixel_x = -5;
 	pixel_y = 24
 	},
 /obj/structure/cable/green{
@@ -6867,8 +6894,9 @@
 	dir = 4
 	},
 /obj/machinery/network/pager/engineering{
-	pixel_x = 26;
-	pixel_y = 56
+	dir = 4;
+	pixel_x = 23;
+	pixel_y = 27
 	},
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -6926,14 +6954,16 @@
 	icon_state = "pipe-j2"
 	},
 /obj/machinery/light_switch{
-	pixel_x = -24;
-	pixel_y = 34
+	dir = 4;
+	pixel_x = -23;
+	pixel_y = 35
 	},
 /obj/machinery/button/blast_door{
+	dir = 4;
 	id_tag = "engineeringdeskshutters";
 	name = "Desk Shutter Control";
-	pixel_x = -26;
-	pixel_y = 24
+	pixel_x = -23;
+	pixel_y = 27
 	},
 /obj/structure/cable/green{
 	icon_state = "2-8"
@@ -8639,8 +8669,9 @@
 	dir = 4
 	},
 /obj/machinery/light_switch{
-	pixel_x = 22;
-	pixel_y = 24
+	dir = 8;
+	pixel_x = 23;
+	pixel_y = 27
 	},
 /turf/simulated/floor/tiled/monotile,
 /area/vacant/prototype/control)
@@ -9334,9 +9365,10 @@
 /obj/machinery/atmospherics/pipe/manifold4w/visible/cyan,
 /obj/machinery/button/blast_door{
 	desc = "A remote control-switch for the engine radiator viewport shutters.";
+	dir = 8;
 	id_tag = "EngineRadiatorViewport";
 	name = "Engine Radiator Viewport Shutters";
-	pixel_x = 25
+	pixel_x = 23
 	},
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 1;
@@ -9515,6 +9547,7 @@
 	},
 /obj/structure/catwalk,
 /obj/machinery/alarm{
+	pixel_x = -5;
 	pixel_y = 24
 	},
 /turf/simulated/floor/plating,
@@ -9694,6 +9727,7 @@
 	dir = 8;
 	id_tag = "auxdock_airlock";
 	pixel_x = 17;
+	pixel_y = 5;
 	req_access = list("ACCESS_EXTERNAL");
 	tag_airpump = "auxdock_pump";
 	tag_chamber_sensor = "auxdock_sensor";
@@ -10002,9 +10036,6 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/storage/tech)
 "zi" = (
-/obj/machinery/button/crematorium{
-	pixel_y = -24
-	},
 /obj/item/radio/intercom{
 	dir = 4;
 	pixel_x = -21
@@ -12362,9 +12393,11 @@
 "FJ" = (
 /obj/machinery/button/blast_door{
 	desc = "A remote-control switch.";
+	dir = 4;
 	id_tag = "RubbishOuter";
 	name = "Waste Disposal Maintenance";
-	pixel_x = -24
+	pixel_x = -23;
+	pixel_y = 13
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/disposal)
@@ -13463,8 +13496,9 @@
 /area/hallway/primary/seconddeck)
 "IW" = (
 /obj/machinery/light_switch{
-	pixel_x = 24;
-	pixel_y = -24
+	dir = 1;
+	pixel_x = 23;
+	pixel_y = -21
 	},
 /obj/structure/cable/green{
 	icon_state = "2-4"
@@ -13885,8 +13919,9 @@
 	dir = 8
 	},
 /obj/machinery/light_switch{
+	dir = 1;
 	pixel_x = -24;
-	pixel_y = -24
+	pixel_y = -21
 	},
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -14697,7 +14732,7 @@
 	id_tag = "xeno_control";
 	name = "Xenobiology Airlock Interior Acces";
 	pixel_x = -25;
-	pixel_y = -25;
+	pixel_y = -20;
 	req_access = list("ACCESS_XENOBIO")
 	},
 /turf/simulated/floor/tiled/white,
@@ -16128,9 +16163,10 @@
 /area/engineering/engine_room)
 "QG" = (
 /obj/machinery/button/blast_door{
+	dir = 8;
 	id_tag = "auxfuelvent";
 	name = "Auxiliary Fuel Storage Vent Control";
-	pixel_x = 32;
+	pixel_x = 25;
 	req_access = list("ACCESS_CONSTRUCTION")
 	},
 /turf/simulated/floor/reinforced,
@@ -16575,7 +16611,8 @@
 	icon_state = "1-4"
 	},
 /obj/machinery/light_switch{
-	pixel_y = -24
+	dir = 1;
+	pixel_y = -21
 	},
 /obj/item/chems/spray/cleaner{
 	pixel_x = -5
@@ -16589,6 +16626,11 @@
 	},
 /obj/machinery/computer/operating{
 	name = "Robotics Operating Computer"
+	},
+/obj/machinery/button/holosign{
+	id_tag = "robosurg";
+	pixel_x = 15;
+	pixel_y = 29
 	},
 /turf/simulated/floor/tiled/white,
 /area/assembly/robotics/surgery)
@@ -18094,17 +18136,14 @@
 	req_access = list("ACCESS_ROBOTICS")
 	},
 /obj/machinery/light_switch{
-	pixel_y = -24
+	dir = 1;
+	pixel_y = -21
 	},
 /obj/machinery/button/windowtint{
+	dir = 1;
 	id_tag = "robotics_surg";
 	pixel_x = -6;
-	pixel_y = -24
-	},
-/obj/machinery/button/holosign{
-	id_tag = "robosurg";
-	pixel_x = 6;
-	pixel_y = -24
+	pixel_y = -21
 	},
 /turf/simulated/floor/tiled/white,
 /area/assembly/robotics/surgery)
@@ -31702,7 +31741,7 @@ Lp
 Lp
 Lp
 Lp
-WO
+NJ
 dX
 aK
 bH
@@ -33908,7 +33947,7 @@ sV
 sV
 sV
 sV
-lE
+Xl
 Nf
 OV
 jp
@@ -34108,7 +34147,7 @@ Ip
 NS
 XJ
 NA
-NA
+ns
 NA
 Yz
 Nf
@@ -34331,7 +34370,7 @@ XU
 XU
 XU
 XU
-nc
+NJ
 yi
 yi
 zL
@@ -34922,11 +34961,11 @@ Ue
 Pf
 DH
 be
-sV
+bI
 fB
-sV
+bI
 fv
-sV
+bI
 bI
 fQ
 gi
@@ -35126,9 +35165,9 @@ XP
 XP
 XP
 oq
-sV
+bI
 fw
-sV
+bI
 bI
 fR
 gm
@@ -35330,7 +35369,7 @@ XP
 SQ
 DR
 fx
-sV
+bI
 bI
 fV
 qo
@@ -41574,7 +41613,7 @@ Hb
 Hb
 Hb
 GW
-oK
+lE
 oK
 oK
 Lk

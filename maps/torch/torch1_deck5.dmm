@@ -22,7 +22,8 @@
 	icon_state = "warning"
 	},
 /obj/machinery/light/spot{
-	dir = 4
+	dir = 4;
+	pixel_y = 16
 	},
 /turf/simulated/floor/tiled/monotile,
 /area/quartermaster/hangar)
@@ -2575,7 +2576,8 @@
 /area/maintenance/fifthdeck/fore)
 "gC" = (
 /obj/machinery/light/spot{
-	dir = 4
+	dir = 4;
+	pixel_y = 16
 	},
 /turf/simulated/floor/hangar,
 /area/quartermaster/hangar)
@@ -3137,10 +3139,11 @@
 	dir = 1
 	},
 /obj/machinery/button/blast_door{
+	dir = 8;
 	id_tag = "mine_warehouse";
 	name = "Storage Door Control";
 	pixel_x = 24;
-	pixel_y = -6
+	pixel_y = -3
 	},
 /obj/machinery/light_switch{
 	pixel_x = -9;
@@ -3989,9 +3992,11 @@
 /obj/effect/catwalk_plated,
 /obj/machinery/button/alternate/door{
 	desc = "A remote control-switch for airlocks.";
+	dir = 4;
 	id_tag = "hangarexit";
 	name = "Hangar Exit Door Control";
 	pixel_x = -24;
+	pixel_y = 1;
 	req_access = newlist()
 	},
 /turf/simulated/floor/plating,
@@ -4619,10 +4624,11 @@
 	icon_state = "warningcorner"
 	},
 /obj/machinery/button/blast_door{
+	dir = 4;
 	id_tag = "mine_warehouse";
 	name = "Storage Door Control";
 	pixel_x = -24;
-	pixel_y = -6
+	pixel_y = -3
 	},
 /obj/machinery/light/spot{
 	dir = 1
@@ -4751,7 +4757,8 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/light/spot{
-	dir = 8
+	dir = 8;
+	pixel_y = 16
 	},
 /turf/simulated/floor/plating,
 /area/quartermaster/hangar)
@@ -5705,8 +5712,8 @@
 	pixel_y = 24
 	},
 /obj/machinery/light_switch{
-	pixel_x = 6;
-	pixel_y = 24
+	pixel_x = 10;
+	pixel_y = 27
 	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/storage)
@@ -6256,9 +6263,6 @@
 /area/quartermaster/expedition)
 "pM" = (
 /obj/structure/iv_drip,
-/obj/structure/hygiene/sink/kitchen{
-	pixel_x = 32
-	},
 /obj/effect/decal/cleanable/cobweb2,
 /turf/simulated/floor/plating,
 /area/vacant/infirmary)
@@ -6541,8 +6545,9 @@
 /area/space)
 "qu" = (
 /obj/machinery/light_switch{
+	dir = 1;
 	pixel_x = 22;
-	pixel_y = -22
+	pixel_y = -19
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 2;
@@ -9140,14 +9145,16 @@
 "zv" = (
 /obj/effect/floor_decal/industrial/warning/corner,
 /obj/machinery/button/blast_door{
+	dir = 1;
 	id_tag = "hanger_atmos_storage";
 	name = "Atmospheric Storage Door Control";
 	pixel_x = 6;
-	pixel_y = -24
+	pixel_y = -21
 	},
 /obj/machinery/light_switch{
+	dir = 1;
 	pixel_x = -6;
-	pixel_y = -24
+	pixel_y = -20
 	},
 /obj/machinery/atmospherics/binary/pump/on{
 	dir = 4
@@ -10282,7 +10289,6 @@
 /area/quartermaster/expedition/atmos)
 "Hn" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
-/obj/machinery/light/small,
 /obj/structure/closet/crate/freezer/rations,
 /turf/simulated/floor/tiled/dark/monotile,
 /area/quartermaster/storage)
@@ -12258,11 +12264,17 @@
 /turf/simulated/floor/plating,
 /area/maintenance/fifthdeck/aftstarboard)
 "VB" = (
-/obj/effect/floor_decal/industrial/warning{
-	dir = 8
+/obj/effect/catwalk_plated,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/cable/cyan{
+	icon_state = "1-2"
 	},
-/obj/machinery/light/spot,
-/turf/simulated/floor/tiled/monotile,
+/obj/machinery/light/spot{
+	dir = 8;
+	pixel_y = 16
+	},
+/turf/simulated/floor/plating,
 /area/quartermaster/hangar)
 "VC" = (
 /turf/simulated/floor/reinforced/airless,
@@ -12721,7 +12733,8 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/light/spot{
-	dir = 8
+	dir = 8;
+	pixel_y = 16
 	},
 /turf/simulated/floor/plating,
 /area/quartermaster/hangar)
@@ -31590,7 +31603,7 @@ uE
 UH
 kb
 nO
-eH
+gT
 gT
 eT
 eV
@@ -31602,7 +31615,7 @@ eT
 eT
 eT
 Yj
-eT
+gT
 gT
 eT
 eT
@@ -31611,7 +31624,7 @@ eT
 eT
 eT
 eT
-VB
+gT
 gT
 nU
 nK
@@ -31814,7 +31827,7 @@ mC
 mC
 mC
 mC
-mC
+VB
 nV
 KA
 oF
