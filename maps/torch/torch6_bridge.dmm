@@ -243,10 +243,11 @@
 	target_pressure = 200
 	},
 /obj/machinery/button/alternate/door/bolts{
+	dir = 1;
 	id_tag = "bridgesafe_back";
 	name = "Emergency Exit door-control";
-	pixel_x = 25;
-	pixel_y = -25
+	pixel_x = -7;
+	pixel_y = -20
 	},
 /obj/effect/floor_decal/techfloor/orange,
 /turf/simulated/floor/tiled/techfloor/grid,
@@ -262,6 +263,9 @@
 /obj/structure/table/steel_reinforced,
 /obj/structure/cable/green{
 	icon_state = "2-8"
+	},
+/obj/machinery/photocopier/faxmachine/torch{
+	department = "ISEO Endeavour - Bridge"
 	},
 /turf/simulated/floor/tiled/dark/monotile,
 /area/bridge)
@@ -962,6 +966,7 @@
 "cp" = (
 /obj/structure/table/woodentable_reinforced/ebony/walnut,
 /obj/item/chems/drinks/glass2/coffeecup/metal,
+/obj/item/modular_computer/tablet/lease/preset/command,
 /turf/simulated/floor/wood/walnut,
 /area/crew_quarters/heads/office/co)
 "cq" = (
@@ -990,11 +995,6 @@
 /turf/simulated/floor/tiled/dark,
 /area/bridge/hallway/starboard)
 "cs" = (
-/obj/machinery/alarm{
-	dir = 1;
-	pixel_y = -28;
-	req_access = list(list("ACCESS_ENGINE_EQUIP","ACCESS_ATMOS"))
-	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
@@ -1343,6 +1343,12 @@
 	},
 /obj/effect/floor_decal/corner/darkblue{
 	dir = 6
+	},
+/obj/machinery/alarm{
+	dir = 8;
+	pixel_x = 23;
+	pixel_y = 1;
+	req_access = list(list("ACCESS_ENGINE_EQUIP","ACCESS_ATMOS"))
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/bridge/fore)
@@ -2096,13 +2102,15 @@
 /area/command/captainmess)
 "eZ" = (
 /obj/machinery/light_switch{
+	dir = 1;
 	pixel_x = 4;
-	pixel_y = -24
+	pixel_y = -23
 	},
 /obj/machinery/button/windowtint{
+	dir = 1;
 	id_tag = "offmess_windows";
 	pixel_x = -4;
-	pixel_y = -24
+	pixel_y = -23
 	},
 /turf/simulated/floor/carpet/blue2,
 /area/command/captainmess)
@@ -2421,29 +2429,33 @@
 /area/crew_quarters/heads/cobed)
 "fK" = (
 /obj/machinery/button/blast_door{
+	dir = 4;
 	id_tag = "cap_window";
 	name = "CO's Office Window Blast Door Control";
-	pixel_x = -38;
-	pixel_y = 33
+	pixel_x = -24;
+	pixel_y = 47
 	},
 /obj/machinery/button/windowtint{
+	dir = 4;
 	id_tag = "co_windows";
-	pixel_x = -26;
-	pixel_y = 33
+	pixel_x = -23;
+	pixel_y = 56
 	},
 /obj/machinery/button/alternate/door{
 	desc = "A remote control-switch for the office door.";
+	dir = 4;
 	id_tag = "captaindoorfore";
 	name = "Fore Office Door Control";
-	pixel_x = -38;
-	pixel_y = 24
+	pixel_x = -24;
+	pixel_y = 27
 	},
 /obj/machinery/button/alternate/door{
 	desc = "A remote control-switch for the office door.";
+	dir = 4;
 	id_tag = "captaindoor";
 	name = "Aft Office Door Control";
-	pixel_x = -26;
-	pixel_y = 24
+	pixel_x = -24;
+	pixel_y = 37
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
@@ -2453,8 +2465,9 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/light_switch{
+	dir = 4;
 	pixel_x = -23;
-	pixel_y = -25
+	pixel_y = -21
 	},
 /turf/simulated/floor/wood/walnut,
 /area/crew_quarters/heads/office/co)
@@ -2618,17 +2631,6 @@
 /obj/effect/floor_decal/corner/darkblue/three_quarters,
 /turf/simulated/floor/tiled/dark,
 /area/bridge/storage)
-"fW" = (
-/obj/structure/cable/green{
-	icon_state = "0-2"
-	},
-/obj/effect/wallframe_spawn/reinforced/polarized{
-	id = "cmo_windows"
-	},
-/obj/machinery/door/firedoor,
-/obj/effect/paint_stripe/medical,
-/turf/simulated/floor/plating,
-/area/crew_quarters/heads/office/cmo)
 "fY" = (
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 4
@@ -2959,13 +2961,13 @@
 /turf/simulated/floor/tiled,
 /area/command/captainmess)
 "hh" = (
-/obj/effect/wallframe_spawn/reinforced/polarized{
-	id = "xo_windows"
-	},
 /obj/machinery/door/blast/shutters{
 	dir = 4;
 	id_tag = "hop_office_desk";
 	name = "XO Queue Privacy Shutters"
+	},
+/obj/effect/wallframe_spawn/reinforced/polarized{
+	id = "xo_windows"
 	},
 /obj/effect/paint_stripe/command,
 /obj/structure/cable/green,
@@ -3493,10 +3495,12 @@
 /obj/item/folder,
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/light_switch{
+	dir = 4;
 	pixel_x = -24;
 	pixel_y = 6
 	},
 /obj/machinery/button/windowtint{
+	dir = 4;
 	id_tag = "cos_windows";
 	pixel_x = -24;
 	pixel_y = -6
@@ -3672,6 +3676,10 @@
 /obj/structure/table/woodentable/walnut,
 /obj/item/chems/drinks/glass2/coffeecup/metal,
 /obj/item/chems/drinks/glass2/coffeecup/metal,
+/obj/item/radio/intercom{
+	dir = 4;
+	pixel_x = -22
+	},
 /turf/simulated/floor/carpet/green,
 /area/crew_quarters/heads/office/xo)
 "jO" = (
@@ -3875,12 +3883,6 @@
 /turf/simulated/floor/tiled,
 /area/hallway/primary/bridge/aft)
 "kv" = (
-/obj/machinery/button/alternate/door/bolts{
-	id_tag = "bridgesafe_front";
-	name = "safe room door-control";
-	pixel_x = 25;
-	pixel_y = -1
-	},
 /obj/structure/bed/chair/padded/blue{
 	dir = 8;
 	icon_state = "chair_preview"
@@ -4424,9 +4426,6 @@
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 8
 	},
-/obj/structure/fireaxecabinet{
-	pixel_x = 32
-	},
 /obj/item/modular_computer/laptop/preset/custom_loadout/standard,
 /obj/structure/table{
 	name = "plastic table frame"
@@ -4549,10 +4548,13 @@
 	},
 /obj/machinery/power/apc{
 	name = "south bump";
-	pixel_y = -28
+	pixel_x = -3;
+	pixel_y = -25
 	},
 /obj/structure/cable/green,
-/obj/effect/floor_decal/corner/darkblue/half,
+/obj/effect/floor_decal/corner/paleblue{
+	dir = 10
+	},
 /turf/simulated/floor/tiled/monotile,
 /area/hallway/primary/bridge/aft)
 "mX" = (
@@ -4886,6 +4888,7 @@
 /obj/random/maintenance/solgov/clean,
 /obj/machinery/button/blast_door{
 	desc = "A remote control-switch for shutters.";
+	dir = 8;
 	id_tag = "bridge_checkpoint_shutters";
 	name = "Checkpoint Window Shutters";
 	pixel_x = 26;
@@ -4893,13 +4896,19 @@
 	},
 /obj/machinery/button/blast_door{
 	desc = "A remote control-switch for shutters.";
+	dir = 8;
 	id_tag = "bridge_hallway_shutters";
 	name = "Hallway Checkpoint Shutters";
 	pixel_x = 26;
-	pixel_y = 37
+	pixel_y = 35
 	},
 /obj/effect/floor_decal/corner/red/half{
 	dir = 4
+	},
+/obj/machinery/light_switch{
+	dir = 8;
+	pixel_x = 25;
+	pixel_y = 44
 	},
 /turf/simulated/floor/tiled/dark/monotile,
 /area/security/bridgecheck)
@@ -5104,8 +5113,9 @@
 	dir = 4
 	},
 /obj/machinery/light_switch{
+	dir = 4;
 	pixel_x = -23;
-	pixel_y = 25
+	pixel_y = -28
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 1
@@ -5253,11 +5263,19 @@
 /turf/simulated/floor/wood/walnut,
 /area/crew_quarters/heads/office/xo)
 "pB" = (
-/obj/item/toy/shipmodel,
 /obj/structure/table/woodentable_reinforced/walnut,
-/obj/random_multi/single_item/runtime,
+/obj/item/toy/shipmodel{
+	pixel_y = 16
+	},
 /obj/effect/floor_decal/spline/plain/beige{
 	dir = 4
+	},
+/obj/random_multi/single_item/runtime,
+/obj/machinery/button/blast_door{
+	desc = "A remote control-switch for shutters.";
+	id_tag = "hop_office_desk";
+	name = "Queue Desk Privacy Shutter";
+	req_access = list("ACCESS_HEAD_OF_PERSONNEL")
 	},
 /turf/simulated/floor/wood/walnut,
 /area/crew_quarters/heads/office/xo)
@@ -5602,13 +5620,25 @@
 /obj/item/pen/blue,
 /obj/random/clipboard,
 /obj/item/storage/medical_lolli_jar,
+/obj/machinery/button/windowtint{
+	dir = 4;
+	id_tag = "cmo_windows";
+	pixel_x = -23;
+	pixel_y = -8;
+	range = 11
+	},
+/obj/machinery/button/alternate/door{
+	desc = "A remote control-switch for the office door.";
+	dir = 4;
+	id_tag = "cmodoor";
+	name = "CMO's Office Door Control";
+	pixel_x = -24;
+	pixel_y = 1;
+	req_access = list("ACCESS_CHIEF_MEDICAL_OFFICER")
+	},
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/heads/office/cmo)
 "qw" = (
-/obj/machinery/light_switch{
-	pixel_x = -23;
-	pixel_y = 25
-	},
 /obj/effect/floor_decal/corner/red/mono,
 /obj/machinery/newscaster{
 	pixel_x = -32
@@ -5637,10 +5667,12 @@
 /obj/effect/floor_decal/corner/darkblue/mono,
 /obj/effect/floor_decal/industrial/outline/grey,
 /obj/structure/noticeboard{
+	dir = 4;
 	pixel_x = -32
 	},
 /obj/machinery/keycard_auth/torch{
-	pixel_y = -24
+	pixel_x = 9;
+	pixel_y = -22
 	},
 /turf/simulated/floor/tiled/dark/monotile,
 /area/crew_quarters/heads/office/sea)
@@ -5668,7 +5700,7 @@
 /obj/item/stool/padded,
 /obj/machinery/alarm{
 	dir = 1;
-	pixel_y = -28;
+	pixel_y = -21;
 	req_access = list(list("ACCESS_ENGINE_EQUIP","ACCESS_ATMOS"))
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -6277,7 +6309,8 @@
 "sx" = (
 /obj/structure/table/woodentable/walnut,
 /obj/item/storage/secure/safe{
-	pixel_y = -24
+	pixel_x = -21;
+	pixel_y = -4
 	},
 /obj/effect/floor_decal/corner/darkblue{
 	dir = 9
@@ -6558,8 +6591,9 @@
 	dir = 8
 	},
 /obj/machinery/light_switch{
+	dir = 8;
 	pixel_x = 23;
-	pixel_y = 24
+	pixel_y = 18
 	},
 /obj/machinery/alarm{
 	dir = 8;
@@ -6723,16 +6757,18 @@
 /area/bridge/storage)
 "tW" = (
 /obj/machinery/button/alternate/door/bolts{
+	dir = 4;
 	id_tag = "bridge_safe_exterior";
 	name = "safe room door-control";
-	pixel_x = -25;
+	pixel_x = -23;
 	pixel_y = -1
 	},
 /obj/effect/floor_decal/techfloor/orange{
 	dir = 9
 	},
 /obj/machinery/light_switch{
-	pixel_x = -24;
+	dir = 4;
+	pixel_x = -23;
 	pixel_y = 8
 	},
 /obj/structure/bed/chair/padded/blue{
@@ -6750,6 +6786,10 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 10
+	},
+/obj/structure/fireaxecabinet{
+	pixel_x = 1;
+	pixel_y = 25
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/crew_quarters/safe_room/bridge)
@@ -7034,7 +7074,8 @@
 /obj/item/flame/lighter/zippo/random,
 /obj/random/smokes,
 /obj/structure/sign/warning/smoking{
-	pixel_x = 26
+	dir = 8;
+	pixel_x = 35
 	},
 /turf/simulated/floor/carpet/blue2,
 /area/crew_quarters/heads/office/sgr)
@@ -7321,13 +7362,15 @@
 /obj/item/folder,
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/button/windowtint{
+	dir = 4;
 	id_tag = "ce_windows";
-	pixel_x = -24;
-	pixel_y = 6
+	pixel_x = -23;
+	pixel_y = 3
 	},
 /obj/machinery/light_switch{
-	pixel_x = -24;
-	pixel_y = -6
+	dir = 4;
+	pixel_x = -23;
+	pixel_y = -5
 	},
 /obj/item/paper/monitorkey,
 /obj/machinery/firealarm{
@@ -7346,7 +7389,8 @@
 	},
 /obj/item/radio/intercom{
 	dir = 8;
-	pixel_x = 20
+	pixel_x = 20;
+	pixel_y = 5
 	},
 /obj/effect/floor_decal/techfloor{
 	dir = 6
@@ -7376,16 +7420,18 @@
 /obj/item/stamp/sea,
 /obj/machinery/button/alternate/door{
 	desc = "A remote control-switch for the office door.";
+	dir = 1;
 	id_tag = "seaforedoor";
 	name = "SEA's Office Door Control";
-	pixel_x = -6;
-	pixel_y = -25;
+	pixel_x = -8;
+	pixel_y = -22;
 	req_access = list("ACCESS_TORCH_SENIOR_ADVISOR")
 	},
 /obj/machinery/button/windowtint{
+	dir = 1;
 	id_tag = "sea_windows";
 	pixel_x = 9;
-	pixel_y = -24
+	pixel_y = -21
 	},
 /obj/machinery/photocopier/faxmachine/torch{
 	department = "Torch - Senior Enlisted Advisor"
@@ -7445,10 +7491,11 @@
 /area/crew_quarters/heads/office/sgr)
 "vY" = (
 /obj/structure/table/woodentable/walnut,
-/obj/item/flashlight/lamp/green,
 /obj/structure/noticeboard{
-	pixel_x = 32
+	dir = 8;
+	pixel_x = 33
 	},
+/obj/item/modular_computer/tablet/lease/preset/command,
 /turf/simulated/floor/carpet/blue2,
 /area/crew_quarters/heads/office/sgr)
 "wa" = (
@@ -7695,8 +7742,9 @@
 "wE" = (
 /obj/structure/table/woodentable/walnut,
 /obj/machinery/firealarm{
-	dir = 1;
-	pixel_y = -24
+	dir = 4;
+	pixel_x = 22;
+	pixel_y = -1
 	},
 /obj/item/pen/retractable/green,
 /obj/item/pen/retractable/red{
@@ -7712,6 +7760,10 @@
 	pixel_y = 7
 	},
 /obj/item/pen,
+/obj/item/flashlight/lamp/green{
+	pixel_x = 1;
+	pixel_y = 8
+	},
 /turf/simulated/floor/carpet/blue2,
 /area/crew_quarters/heads/office/sgr)
 "wJ" = (
@@ -8249,21 +8301,7 @@
 /obj/item/chems/drinks/ice,
 /obj/machinery/light,
 /obj/machinery/keycard_auth/torch{
-	pixel_y = -24
-	},
-/obj/machinery/button/alternate/door{
-	desc = "A remote control-switch for the office door.";
-	id_tag = "cmodoor";
-	name = "CMO's Office Door Control";
-	pixel_x = -5;
-	pixel_y = -35;
-	req_access = list("ACCESS_CHIEF_MEDICAL_OFFICER")
-	},
-/obj/machinery/button/windowtint{
-	id_tag = "cmo_windows";
-	pixel_x = 7;
-	pixel_y = -34;
-	range = 11
+	pixel_y = -21
 	},
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/heads/office/cmo)
@@ -8569,7 +8607,8 @@
 	id_tag = "bridge_eva_pump"
 	},
 /obj/machinery/oxygen_pump{
-	pixel_x = -32
+	dir = 8;
+	pixel_x = -26
 	},
 /obj/effect/floor_decal/techfloor{
 	dir = 8
@@ -8607,9 +8646,6 @@
 	opacity = 0
 	},
 /obj/effect/floor_decal/corner/red/mono,
-/obj/machinery/status_display{
-	pixel_x = -32
-	},
 /turf/simulated/floor/tiled/monotile,
 /area/hallway/primary/bridge/fore)
 "Ab" = (
@@ -8730,6 +8766,7 @@
 "Aw" = (
 /obj/effect/floor_decal/corner/darkblue/mono,
 /obj/machinery/button/blast_door{
+	dir = 4;
 	id_tag = "bridge blast";
 	name = "Bridge Window Lockdown Control";
 	pixel_x = -30
@@ -8939,7 +8976,6 @@
 /area/aux_eva)
 "Bs" = (
 /obj/machinery/computer/modular/preset/cardslot/command,
-/obj/item/modular_computer/tablet/lease/preset/command,
 /obj/machinery/newscaster{
 	pixel_y = 32
 	},
@@ -8987,6 +9023,7 @@
 /obj/structure/network_cable,
 /obj/item/chems/drinks/glass2/coffeecup/metal,
 /obj/machinery/button/blast_door{
+	dir = 4;
 	id_tag = "bridge sensors";
 	name = "Bridge Sensor Shroud Control";
 	pixel_x = -28;
@@ -9250,7 +9287,8 @@
 	},
 /obj/machinery/alarm{
 	dir = 8;
-	pixel_x = 24
+	pixel_x = 22;
+	pixel_y = 8
 	},
 /turf/simulated/floor/tiled/dark,
 /area/crew_quarters/heads/office/xo)
@@ -9645,6 +9683,7 @@
 "Eb" = (
 /obj/effect/floor_decal/corner/darkblue/mono,
 /obj/machinery/button/blast_door{
+	dir = 4;
 	id_tag = "bridge blast";
 	name = "Bridge Window Lockdown Control";
 	pixel_x = -30
@@ -9697,6 +9736,9 @@
 	pixel_y = -4
 	},
 /obj/effect/paint_stripe/command,
+/obj/structure/fireaxecabinet{
+	pixel_x = 32
+	},
 /turf/simulated/wall/r_wall/prepainted,
 /area/crew_quarters/safe_room/bridge)
 "Ep" = (
@@ -10223,7 +10265,8 @@
 /area/maintenance/bridge/foreport)
 "GM" = (
 /obj/machinery/oxygen_pump{
-	pixel_x = -32
+	dir = 8;
+	pixel_x = -26
 	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume/external_air{
 	dir = 4;
@@ -11046,13 +11089,15 @@
 	dir = 9
 	},
 /obj/machinery/button/blast_door{
+	dir = 4;
 	id_tag = "heads_meeting";
 	name = "Bridge Meeting Room Shutters Control";
-	pixel_x = -26;
-	pixel_y = 7;
+	pixel_x = -25;
+	pixel_y = 2;
 	req_access = list("ACCESS_BRIDGE")
 	},
 /obj/machinery/button/windowtint{
+	dir = 4;
 	id_tag = "meeting_windows";
 	pixel_x = -24;
 	pixel_y = -7
@@ -11407,7 +11452,7 @@
 	desc = "A remote control-switch for the office door.";
 	id_tag = "cedoor";
 	name = "CE's Office Door Control";
-	pixel_y = -27;
+	pixel_y = -21;
 	req_access = list("ACCESS_CHIEF_ENGINEER")
 	},
 /obj/effect/floor_decal/industrial/outline/grey,
@@ -11554,8 +11599,8 @@
 	display_name = "Bridge Deck Dock";
 	frequency = 1331;
 	id_tag = "perseverance_shuttle_dock_airlock";
-	pixel_x = 24;
-	pixel_y = 24;
+	pixel_x = 22;
+	pixel_y = 28;
 	req_access = list(list("ACCESS_BRIDGE","ACCESS_TORCH_CREW"));
 	tag_airpump = "perseverance_shuttle_dock_pump";
 	tag_chamber_sensor = "perseverance_shuttle_dock_sensor";
@@ -11565,7 +11610,10 @@
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
-/turf/simulated/floor/tiled/steel_grid,
+/obj/effect/floor_decal/corner/darkblue/half{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/monotile,
 /area/bridge)
 "Md" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -11698,8 +11746,8 @@
 /obj/effect/floor_decal/spline/plain/beige{
 	dir = 1
 	},
-/obj/item/radio/intercom{
-	pixel_y = 23
+/obj/machinery/status_display{
+	pixel_y = 33
 	},
 /turf/simulated/floor/wood/walnut,
 /area/crew_quarters/heads/office/xo)
@@ -11760,7 +11808,7 @@
 /obj/machinery/button/windowtint{
 	id_tag = "xo_windows";
 	pixel_x = 8;
-	pixel_y = 39
+	pixel_y = 37
 	},
 /obj/machinery/papershredder,
 /obj/effect/floor_decal/spline/plain/beige{
@@ -11824,14 +11872,6 @@
 /obj/item/folder/nt,
 /obj/item/folder/yellow,
 /obj/item/folder,
-/obj/machinery/button/blast_door{
-	desc = "A remote control-switch for shutters.";
-	id_tag = "hop_office_desk";
-	name = "Queue Desk Privacy Shutter";
-	pixel_x = 24;
-	pixel_y = -6;
-	req_access = list("ACCESS_HEAD_OF_PERSONNEL")
-	},
 /obj/effect/floor_decal/corner/darkblue/mono,
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 8
@@ -12034,9 +12074,6 @@
 /obj/effect/floor_decal/corner/darkblue{
 	dir = 5
 	},
-/obj/machinery/status_display{
-	pixel_y = 32
-	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/bridge/fore)
 "Oi" = (
@@ -12066,13 +12103,15 @@
 	dir = 9
 	},
 /obj/machinery/button/blast_door{
+	dir = 4;
 	id_tag = "bblastdoors";
 	name = "Bridge Internal Hallway Lockdown Control";
-	pixel_x = -26;
-	pixel_y = -7;
+	pixel_x = -25;
+	pixel_y = -1;
 	req_access = list("ACCESS_BRIDGE")
 	},
 /obj/machinery/light_switch{
+	dir = 4;
 	pixel_x = -24;
 	pixel_y = 7
 	},
@@ -12845,18 +12884,19 @@
 	dir = 8;
 	icon_state = "console"
 	},
-/obj/item/modular_computer/tablet/lease/preset/command,
 /obj/machinery/button/alternate/door{
 	desc = "A remote control-switch for the office door.";
+	dir = 8;
 	id_tag = "repdoor";
 	name = "SCGR's Office Door Control";
-	pixel_x = 27;
+	pixel_x = 25;
 	pixel_y = 5;
 	req_access = list("ACCESS_TORCH_REPRESENTATIVE")
 	},
 /obj/machinery/button/windowtint{
+	dir = 8;
 	id_tag = "sgr_windows";
-	pixel_x = 25;
+	pixel_x = 24;
 	pixel_y = -6;
 	range = 11
 	},
@@ -13069,6 +13109,9 @@
 	opacity = 0
 	},
 /obj/effect/floor_decal/corner/red/mono,
+/obj/machinery/status_display{
+	pixel_y = 32
+	},
 /turf/simulated/floor/tiled/monotile,
 /area/hallway/primary/bridge/fore)
 "Tf" = (
@@ -13195,6 +13238,7 @@
 /obj/item/sticky_pad/random,
 /obj/item/flashlight/lamp/green,
 /obj/structure/noticeboard{
+	dir = 8;
 	pixel_x = 32
 	},
 /turf/simulated/floor/wood/walnut,
@@ -13311,7 +13355,8 @@
 /obj/effect/floor_decal/corner/blue/three_quarters,
 /obj/machinery/light{
 	dir = 1;
-	icon_state = "tube1"
+	icon_state = "tube1";
+	pixel_x = 7
 	},
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/disposal,
@@ -13413,7 +13458,7 @@
 /obj/item/radio/intercom{
 	dir = 8;
 	pixel_x = 22;
-	pixel_y = 4
+	pixel_y = 9
 	},
 /turf/simulated/floor/lino,
 /area/command/captainmess)
@@ -13639,9 +13684,6 @@
 /area/hallway/primary/bridge/fore)
 "Vs" = (
 /obj/effect/floor_decal/corner/darkblue/mono,
-/obj/machinery/status_display{
-	pixel_x = 32
-	},
 /turf/simulated/floor/tiled/dark/monotile,
 /area/crew_quarters/heads/office/xo)
 "Vw" = (
@@ -14357,7 +14399,7 @@
 "YJ" = (
 /obj/machinery/firealarm{
 	dir = 8;
-	pixel_x = -24
+	pixel_x = -20
 	},
 /obj/effect/floor_decal/corner/red/mono,
 /obj/structure/closet/secure_closet{
@@ -28693,7 +28735,7 @@ FQ
 lA
 Xx
 kJ
-fW
+kJ
 Cv
 pI
 WL
@@ -32322,7 +32364,7 @@ xi
 je
 it
 je
-Sk
+Ie
 Kc
 Hg
 Nc
@@ -32528,7 +32570,7 @@ Sk
 Ky
 Mc
 Lg
-Ie
+Sk
 Sk
 ad
 ad
@@ -32725,7 +32767,7 @@ ad
 ad
 ad
 ad
-ad
+Zj
 Sk
 Sk
 Jg

@@ -16,8 +16,6 @@
 /turf/simulated/floor/plating,
 /area/maintenance/substation/thirddeck)
 "ad" = (
-/obj/random/torchcloset,
-/obj/random/maintenance/solgov,
 /obj/structure/sign/warning/airlock{
 	pixel_y = 32
 	},
@@ -34,6 +32,7 @@
 /area/maintenance/thirddeck/starboard)
 "ae" = (
 /obj/machinery/button/alternate/door/bolts{
+	dir = 4;
 	id_tag = "dormfour";
 	pixel_x = -24
 	},
@@ -91,6 +90,7 @@
 /obj/item/bedsheet/brown,
 /obj/structure/bed,
 /obj/machinery/button/alternate/door/bolts{
+	dir = 8;
 	id_tag = "dormthree";
 	pixel_x = 24
 	},
@@ -206,6 +206,7 @@
 /area/maintenance/thirddeck/starboard)
 "ba" = (
 /obj/structure/rack,
+/obj/random/maintenance/solgov,
 /obj/random/maintenance/solgov,
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/starboard)
@@ -785,6 +786,13 @@
 /obj/structure/catwalk,
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/aftstarboard)
+"ct" = (
+/obj/structure/railing/mapped{
+	dir = 4;
+	icon_state = "railing0-1"
+	},
+/turf/simulated/open,
+/area/maintenance/thirddeck/starboard)
 "cu" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/atmospherics/binary/passive_gate,
@@ -964,7 +972,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 5
 	},
-/obj/machinery/honey_extractor,
 /obj/machinery/alarm{
 	dir = 4;
 	pixel_x = -23
@@ -1331,6 +1338,16 @@
 	},
 /turf/simulated/floor/tiled/monotile,
 /area/tcommsat/storage)
+"du" = (
+/obj/structure/railing/mapped{
+	dir = 8;
+	icon_state = "railing0-1"
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/thirddeck/starboard)
 "dv" = (
 /obj/effect/paint_stripe/engineering,
 /turf/simulated/wall/map_preset/tan,
@@ -1407,6 +1424,9 @@
 /obj/effect/floor_decal/corner/black/diagonal,
 /obj/machinery/status_display{
 	pixel_y = 32
+	},
+/obj/machinery/light{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/galley)
@@ -1785,12 +1805,15 @@
 "eF" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/machinery/door/firedoor,
 /obj/structure/disposalpipe/segment,
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
-/obj/machinery/door/airlock/maintenance,
+/obj/effect/floor_decal/industrial/warning{
+	dir = 8;
+	icon_state = "warning"
+	},
+/obj/structure/catwalk,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/maintenance/thirddeck/starboard)
 "eG" = (
@@ -2157,9 +2180,6 @@
 /turf/simulated/floor/tiled/freezer,
 /area/crew_quarters/head)
 "fq" = (
-/obj/machinery/light{
-	dir = 1
-	},
 /obj/structure/closet/shipping_wall/filled{
 	pixel_y = 32
 	},
@@ -2320,6 +2340,9 @@
 	icon_state = "1-4"
 	},
 /obj/structure/catwalk,
+/obj/effect/floor_decal/industrial/warning/corner{
+	dir = 1
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/starboard)
 "fL" = (
@@ -2428,7 +2451,7 @@
 /obj/structure/bed/chair,
 /obj/item/radio/intercom{
 	dir = 4;
-	pixel_x = -23
+	pixel_x = -21
 	},
 /turf/simulated/floor/carpet/blue,
 /area/storage/service)
@@ -2914,7 +2937,7 @@
 	},
 /obj/machinery/airlock_sensor{
 	id_tag = "bsa_sensor";
-	pixel_x = -21;
+	pixel_x = -25;
 	pixel_y = -10
 	},
 /obj/machinery/embedded_controller/radio/airlock/airlock_controller{
@@ -3059,9 +3082,6 @@
 /obj/structure/railing/mapped{
 	dir = 1;
 	icon_state = "railing0-1"
-	},
-/obj/structure/closet/hydrant{
-	pixel_x = 32
 	},
 /turf/simulated/floor/plating,
 /area/engineering/atmos/aux)
@@ -3984,6 +4004,7 @@
 	icon_state = "railing0-1"
 	},
 /obj/machinery/atmospherics/valve/shutoff,
+/obj/structure/railing/mapped,
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/aftstarboard)
 "jw" = (
@@ -4248,7 +4269,7 @@
 	},
 /obj/machinery/firealarm{
 	dir = 4;
-	pixel_x = 24
+	pixel_x = 18
 	},
 /turf/simulated/floor/tiled/dark,
 /area/crew_quarters/mess)
@@ -4871,6 +4892,13 @@
 /obj/item/radio/beacon,
 /turf/simulated/floor/tiled/techfloor,
 /area/crew_quarters/safe_room/thirddeck)
+"lI" = (
+/obj/structure/railing/mapped,
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/thirddeck/starboard)
 "lJ" = (
 /obj/effect/floor_decal/corner/green{
 	dir = 5
@@ -5050,6 +5078,9 @@
 	icon_state = "pipe-c"
 	},
 /obj/structure/catwalk,
+/obj/structure/closet/hydrant{
+	pixel_y = 32
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/forestarboard)
 "mf" = (
@@ -5426,7 +5457,7 @@
 "nm" = (
 /obj/machinery/alarm{
 	dir = 4;
-	pixel_x = -23
+	pixel_x = -21
 	},
 /turf/simulated/floor/carpet/blue,
 /area/storage/service)
@@ -5566,7 +5597,7 @@
 /obj/effect/floor_decal/industrial/warning,
 /obj/machinery/button/access/exterior{
 	id_tag = "bsa_airlock";
-	pixel_x = -20;
+	pixel_x = -25;
 	pixel_y = -20
 	},
 /turf/simulated/floor/airless,
@@ -7601,6 +7632,9 @@
 /area/crew_quarters/recreation)
 "sM" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/light/small{
+	dir = 8
+	},
 /turf/simulated/floor/tiled,
 /area/crew_quarters/cryolocker)
 "sN" = (
@@ -7699,6 +7733,7 @@
 	name = "Bar";
 	sort_type = "Bar"
 	},
+/obj/item/stool/bar/padded,
 /turf/simulated/floor/tiled/dark/monotile,
 /area/crew_quarters/mess)
 "sZ" = (
@@ -8263,8 +8298,9 @@
 	dir = 4
 	},
 /obj/machinery/light_switch{
-	pixel_x = 26;
-	pixel_y = 26
+	dir = 8;
+	pixel_x = 23;
+	pixel_y = 27
 	},
 /turf/simulated/floor/wood/walnut,
 /area/crew_quarters/recreation)
@@ -8567,6 +8603,10 @@
 	},
 /obj/structure/disposalpipe/segment,
 /obj/effect/catwalk_plated,
+/obj/machinery/firealarm{
+	dir = 4;
+	pixel_x = 24
+	},
 /turf/simulated/floor/plating,
 /area/hallway/primary/thirddeck/fore)
 "vI" = (
@@ -8871,8 +8911,9 @@
 /area/chapel/main)
 "wy" = (
 /obj/machinery/firealarm{
-	dir = 1;
-	pixel_y = -24
+	dir = 4;
+	pixel_x = 19;
+	pixel_y = -1
 	},
 /turf/simulated/floor/wood/walnut,
 /area/crew_quarters/recreation)
@@ -8930,6 +8971,7 @@
 	},
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/item/radio/intercom{
+	pixel_x = 15;
 	pixel_y = 23
 	},
 /turf/simulated/floor/tiled/monotile,
@@ -9616,10 +9658,6 @@
 /obj/structure/disposalpipe/segment,
 /obj/machinery/light{
 	dir = 4
-	},
-/obj/machinery/firealarm{
-	dir = 4;
-	pixel_x = 24
 	},
 /turf/simulated/floor/tiled/monotile,
 /area/hallway/primary/thirddeck/fore)
@@ -10515,8 +10553,8 @@
 /area/crew_quarters/sleep/cryo)
 "Bu" = (
 /obj/machinery/light_switch{
-	pixel_x = -24;
-	pixel_y = 6
+	pixel_x = -9;
+	pixel_y = 28
 	},
 /obj/structure/flora/pottedplant,
 /turf/simulated/floor/wood/maple,
@@ -11181,7 +11219,7 @@
 "DB" = (
 /obj/machinery/button/access/interior{
 	id_tag = "bsa_airlock";
-	pixel_x = -20;
+	pixel_x = -9;
 	pixel_y = -20
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden{
@@ -11789,6 +11827,7 @@
 	},
 /obj/machinery/power/apc{
 	name = "south bump";
+	pixel_x = -5;
 	pixel_y = -24
 	},
 /obj/effect/floor_decal/corner/black/diagonal,
@@ -11884,7 +11923,7 @@
 "Fl" = (
 /obj/machinery/alarm{
 	dir = 8;
-	pixel_x = 25;
+	pixel_x = 22;
 	req_access = list(list("ACCESS_ENGINE_EQUIP","ACCESS_ATMOS"))
 	},
 /obj/structure/bed/chair/wood/maple{
@@ -12186,6 +12225,17 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/port)
+"Gf" = (
+/obj/structure/railing/mapped{
+	dir = 8;
+	icon_state = "railing0-1"
+	},
+/obj/structure/railing/mapped,
+/obj/effect/floor_decal/industrial/warning/corner{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/thirddeck/starboard)
 "Gh" = (
 /obj/effect/floor_decal/industrial/outline/grey,
 /obj/machinery/camera/network/command{
@@ -12199,7 +12249,10 @@
 /area/tcommsat/chamber)
 "Gi" = (
 /obj/item/stool,
-/obj/item/frame/fire_alarm,
+/obj/item/frame/fire_alarm{
+	dir = 8;
+	pixel_x = -18
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/vacant/cargo)
 "Gj" = (
@@ -12513,7 +12566,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/alarm{
 	dir = 8;
-	pixel_x = 24
+	pixel_x = 22
 	},
 /turf/simulated/floor/tiled/dark/monotile,
 /area/crew_quarters/mess)
@@ -12563,6 +12616,7 @@
 /area/maintenance/thirddeck/port)
 "Hg" = (
 /obj/machinery/button/alternate/door/bolts{
+	dir = 4;
 	id_tag = "dormtwo";
 	pixel_x = -24
 	},
@@ -12872,8 +12926,8 @@
 /area/crew_quarters/sleep/dorms/hallway)
 "IB" = (
 /obj/machinery/light_switch{
-	pixel_x = -24;
-	pixel_y = 6
+	pixel_x = -9;
+	pixel_y = 29
 	},
 /obj/structure/flora/pottedplant,
 /turf/simulated/floor/wood/maple,
@@ -12885,6 +12939,7 @@
 /obj/structure/bed,
 /obj/item/bedsheet/brown,
 /obj/machinery/button/alternate/door/bolts{
+	dir = 8;
 	id_tag = "dormone";
 	pixel_x = 24
 	},
@@ -14556,6 +14611,9 @@
 "NG" = (
 /obj/structure/glass_tank/aquarium,
 /obj/machinery/door/firedoor,
+/mob/living/simple_animal/aquatic/fish/grump{
+	name = "semen fish"
+	},
 /turf/simulated/floor/plating,
 /area/crew_quarters/mess)
 "NH" = (
@@ -14722,10 +14780,11 @@
 	},
 /obj/effect/floor_decal/corner/black/diagonal,
 /obj/machinery/button/blast_door{
+	dir = 1;
 	id_tag = "kitchen";
 	name = "Kitchen Shutters";
 	pixel_x = 6;
-	pixel_y = -22
+	pixel_y = -21
 	},
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/galley)
@@ -15374,6 +15433,17 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled,
 /area/hallway/primary/thirddeck/aft)
+"Qt" = (
+/obj/structure/railing/mapped{
+	dir = 4;
+	icon_state = "railing0-1"
+	},
+/obj/structure/railing/mapped,
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/thirddeck/starboard)
 "Qu" = (
 /obj/machinery/door/blast/shutters{
 	dir = 4;
@@ -15869,9 +15939,6 @@
 /area/thruster/d3port)
 "Sj" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
-/obj/machinery/light/small{
-	dir = 8
-	},
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/item/radio/intercom{
 	dir = 4;
@@ -16229,17 +16296,21 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/aftport)
+"Tl" = (
+/turf/simulated/open,
+/area/maintenance/thirddeck/starboard)
 "Tm" = (
 /obj/machinery/light{
 	dir = 8
 	},
-/obj/structure/table,
 /obj/effect/floor_decal/corner/green{
 	dir = 5
 	},
 /obj/effect/floor_decal/corner/green{
 	dir = 9
 	},
+/obj/structure/table,
+/obj/machinery/honey_extractor,
 /turf/simulated/floor/tiled,
 /area/hydroponics)
 "Tn" = (
@@ -16660,7 +16731,8 @@
 /area/maintenance/thirddeck/forestarboard)
 "Uz" = (
 /obj/effect/paint_stripe/engineering,
-/turf/simulated/wall/prepainted,
+/obj/effect/paint_stripe/engineering,
+/turf/simulated/wall/map_preset/tan,
 /area/maintenance/thirddeck/forestarboard)
 "UA" = (
 /obj/effect/wallframe_spawn/reinforced,
@@ -16709,9 +16781,6 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/thirddeck/port)
 "UF" = (
-/obj/item/storage/secure/safe{
-	pixel_x = 32
-	},
 /obj/structure/closet/secure_closet/personal/empty,
 /turf/simulated/floor/tiled/freezer,
 /area/crew_quarters/pool)
@@ -16888,8 +16957,9 @@
 	dir = 8
 	},
 /obj/machinery/light_switch{
+	dir = 1;
 	pixel_x = -21;
-	pixel_y = -24
+	pixel_y = -21
 	},
 /obj/structure/cable/green{
 	icon_state = "2-8"
@@ -17316,9 +17386,15 @@
 /turf/simulated/floor/tiled/dark,
 /area/crew_quarters/mess)
 "WH" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
 /obj/structure/disposalpipe/segment,
-/turf/simulated/floor/tiled/dark/monotile,
-/area/crew_quarters/mess)
+/obj/structure/catwalk,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/maintenance/thirddeck/starboard)
 "WI" = (
 /obj/structure/hygiene/faucet,
 /turf/simulated/floor/pool,
@@ -17360,7 +17436,7 @@
 /obj/machinery/power/apc{
 	dir = 1;
 	name = "north bump";
-	pixel_y = 24
+	pixel_y = 23
 	},
 /obj/structure/cable/green{
 	icon_state = "0-8"
@@ -17375,8 +17451,9 @@
 	pixel_y = 24
 	},
 /obj/machinery/light_switch{
-	pixel_x = 24;
-	pixel_y = 18
+	dir = 8;
+	pixel_x = 23;
+	pixel_y = 11
 	},
 /obj/machinery/button/holosign{
 	id_tag = "chapel";
@@ -17459,7 +17536,7 @@
 	},
 /obj/machinery/alarm{
 	dir = 4;
-	pixel_x = -25
+	pixel_x = -24
 	},
 /turf/simulated/floor/tiled/dark,
 /area/teleporter/thirddeck)
@@ -17730,8 +17807,9 @@
 	dir = 4
 	},
 /obj/machinery/light_switch{
+	dir = 1;
 	pixel_x = 6;
-	pixel_y = -24
+	pixel_y = -22
 	},
 /obj/structure/table/woodentable/maple,
 /obj/item/sticky_pad,
@@ -18306,7 +18384,7 @@
 /obj/machinery/power/apc{
 	dir = 4;
 	name = "east bump";
-	pixel_x = 24
+	pixel_x = 23
 	},
 /obj/structure/cable/green{
 	icon_state = "0-2"
@@ -26731,7 +26809,7 @@ LS
 BX
 BX
 BX
-BX
+BV
 BV
 BV
 ln
@@ -35204,7 +35282,7 @@ kQ
 PO
 sY
 nh
-WH
+nh
 pe
 pY
 Xn
@@ -37819,7 +37897,7 @@ aQ
 MJ
 db
 Zr
-cm
+WH
 fH
 dD
 lx
@@ -38021,8 +38099,8 @@ aQ
 Pd
 Gz
 EF
-Eu
-dD
+du
+Gf
 dD
 dD
 OE
@@ -38223,8 +38301,8 @@ aQ
 WZ
 da
 oH
-Eu
-Eu
+Tl
+lI
 Wb
 Wb
 Wb
@@ -38425,8 +38503,8 @@ aQ
 Wl
 da
 Uv
-Eu
-dD
+ct
+Qt
 Wb
 Rf
 Rf
