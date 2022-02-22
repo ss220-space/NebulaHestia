@@ -26,7 +26,7 @@
 /obj/item/forensics/sample/print/merge_evidence_list(var/list/new_evidence)
 	for(var/datum/fingerprint/newprint in new_evidence)
 		for(var/datum/fingerprint/F in evidence)
-			if(F.merge(newprint))	
+			if(F.merge(newprint))
 				new_evidence -= newprint
 				break
 	..()
@@ -42,7 +42,7 @@
 	F.full_print = M.get_full_print()
 	F.completeness = 100
 	var/datum/forensics/fingerprints/FP = new()
-	FP.data = F
+	FP.data = list(F)
 	merge_evidence_list(list(FP))
 	SetName("[initial(name)] (\the [M])")
 	update_icon()
