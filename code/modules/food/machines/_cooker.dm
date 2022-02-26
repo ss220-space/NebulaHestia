@@ -101,6 +101,10 @@
 	var/old_power = use_power
 	if (!isliving(user))
 		return
+	if(stat & (NOPOWER|BROKEN))
+		update_use_power(POWER_USE_OFF)
+		to_chat(user, "It seems [src] to be unpowered right now.")
+		return
 	if (!user.check_dexterity(DEXTERITY_SIMPLE_MACHINES))
 		return
 	if (user.stat || user.restrained() || user.incapacitated())
@@ -144,6 +148,9 @@
 	if(use_power != POWER_USE_OFF)
 		heat_up()
 	. = ..()
+	if(stat & (NOPOWER|BROKEN))
+		update_use_power(POWER_USE_OFF)
+		return
 
 /obj/machinery/appliance/cooker/update_cooking_power()
 	var/temp_scale = 0
